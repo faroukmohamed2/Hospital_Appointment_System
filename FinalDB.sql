@@ -346,3 +346,14 @@ Create Table StoreMedicine(
 );
 
 -- the final trigger wont work the logic would be implimented in C#
+
+Create table ManagerReport(
+	UserID int DEFAULT 0,
+	ReportNum int,
+	Report varchar(2000),
+
+	primary key (UserID,ReportNum),
+	foreign key (UserID) references sysUser
+		ON DELETE SET DEFAULT
+		ON UPDATE CASCADE
+);
