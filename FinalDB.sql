@@ -138,8 +138,8 @@ BEGIN
 END;
 
 
-Create Table Clinc(
-	ClincID int PRIMARY KEY,
+Create Table Clinic(
+	ClinicID int PRIMARY KEY,
 	DoctorID int,
 
 	foreign key (DoctorID) references Doctor
@@ -204,9 +204,9 @@ Create Table ClinicAppointment(
 	ClinicAppointmentID int PRIMARY KEY,
 	DateAndTime DATETIME NOT NULL UNIQUE,
 	PatientID int,
-	ClincID int,
+	ClinicID int,
 
-	foreign key (ClincID) references Clinc
+	foreign key (ClinicID) references Clinic
 		ON DELETE CASCADE
 		ON UPDATE CASCADE,
 		
