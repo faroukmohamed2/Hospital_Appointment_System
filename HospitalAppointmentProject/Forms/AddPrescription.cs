@@ -16,5 +16,15 @@ namespace HospitalAppointmentSystem
         {
             InitializeComponent();
         }
+
+        private void addpre_hover(object sender, EventArgs e)
+        {
+            addpre.Cursor = Cursors.Hand;
+        }
+
+        private void addprelabel_hover(object sender, EventArgs e)
+        {
+            addprelabel.Cursor = Cursors.Hand;
+        }
     }
 }

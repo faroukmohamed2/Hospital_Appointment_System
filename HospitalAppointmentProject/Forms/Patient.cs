@@ -79,5 +79,27 @@ namespace HospitalAppointmentSystem
         {
             Prescript.Cursor = Cursors.Hand;
         }
+
+        private void medhistlablel_hover(object sender, EventArgs e)
+        {
+            midhistlablel.Cursor = Cursors.Hand;
+        }
+
+        private void medHistory_hover(object sender, EventArgs e)
+        {
+            medHistory.Cursor = Cursors.Hand;
+        }
+
+        private void dfeed_hover(object sender, EventArgs e)
+        {
+            dfeed.Cursor = Cursors.Hand;
+        }
+
+
+
+        private void dfeedlabel_hover(object sender, EventArgs e)
+        {
+            dfeedlabel.Cursor = Cursors.Hand;
+        }
     }
 }

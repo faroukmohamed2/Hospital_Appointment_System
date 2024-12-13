@@ -1,6 +1,6 @@
 ﻿namespace HospitalAppointmentSystem
 {
-    partial class Prescriptions
+    partial class Admin
     {
         /// <summary>
         /// Required designer variable.
@@ -28,17 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Prescriptions));
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.appointlabel = new System.Windows.Forms.Label();
-            this.Medicines = new System.Windows.Forms.ListBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Admin));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.preNum = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.Pharmacies = new System.Windows.Forms.DataGridView();
-            this.label3 = new System.Windows.Forms.Label();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.Home = new System.Windows.Forms.ToolStripButton();
             this.settings = new System.Windows.Forms.ToolStripSplitButton();
@@ -49,106 +40,32 @@
             this.profile = new System.Windows.Forms.ToolStripSplitButton();
             this.viewProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.removeAccountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitprogram = new System.Windows.Forms.ToolStripButton();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.modHos = new System.Windows.Forms.PictureBox();
+            this.modHoslabel = new System.Windows.Forms.Label();
+            this.Modphlabel = new System.Windows.Forms.Label();
+            this.log = new System.Windows.Forms.PictureBox();
+            this.loglabel = new System.Windows.Forms.Label();
+            this.Modph = new System.Windows.Forms.PictureBox();
+            this.reports = new System.Windows.Forms.PictureBox();
+            this.reportslabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Pharmacies)).BeginInit();
             this.toolStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.modHos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.log)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Modph)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reports)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(60, 140);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(469, 150);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // appointlabel
-            // 
-            this.appointlabel.AutoSize = true;
-            this.appointlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.appointlabel.Location = new System.Drawing.Point(56, 93);
-            this.appointlabel.Name = "appointlabel";
-            this.appointlabel.Size = new System.Drawing.Size(157, 22);
-            this.appointlabel.TabIndex = 51;
-            this.appointlabel.Text = "Your Prescriptions";
-            // 
-            // Medicines
-            // 
-            this.Medicines.FormattingEnabled = true;
-            this.Medicines.ItemHeight = 16;
-            this.Medicines.Location = new System.Drawing.Point(757, 140);
-            this.Medicines.Name = "Medicines";
-            this.Medicines.Size = new System.Drawing.Size(194, 132);
-            this.Medicines.TabIndex = 52;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(-3, -5);
+            this.pictureBox1.Location = new System.Drawing.Point(2, -1);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(158, 86);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 53;
+            this.pictureBox1.TabIndex = 37;
             this.pictureBox1.TabStop = false;
-            // 
-            // preNum
-            // 
-            this.preNum.FormattingEnabled = true;
-            this.preNum.Location = new System.Drawing.Point(609, 140);
-            this.preNum.Name = "preNum";
-            this.preNum.Size = new System.Drawing.Size(121, 24);
-            this.preNum.TabIndex = 54;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(548, 112);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(182, 16);
-            this.label1.TabIndex = 55;
-            this.label1.Text = "select prescription by number";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(56, 372);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(165, 24);
-            this.comboBox1.TabIndex = 56;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(53, 344);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(104, 16);
-            this.label2.TabIndex = 57;
-            this.label2.Text = "select Medicine ";
-            // 
-            // Pharmacies
-            // 
-            this.Pharmacies.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Pharmacies.Location = new System.Drawing.Point(259, 372);
-            this.Pharmacies.Name = "Pharmacies";
-            this.Pharmacies.RowHeadersWidth = 51;
-            this.Pharmacies.RowTemplate.Height = 24;
-            this.Pharmacies.Size = new System.Drawing.Size(471, 150);
-            this.Pharmacies.TabIndex = 58;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(256, 344);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(135, 16);
-            this.label3.TabIndex = 59;
-            this.label3.Text = "Medicine Available in";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // toolStrip1
             // 
@@ -160,10 +77,10 @@
             this.contactus,
             this.profile,
             this.exitprogram});
-            this.toolStrip1.Location = new System.Drawing.Point(1066, 0);
+            this.toolStrip1.Location = new System.Drawing.Point(760, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(40, 629);
-            this.toolStrip1.TabIndex = 60;
+            this.toolStrip1.Size = new System.Drawing.Size(40, 450);
+            this.toolStrip1.TabIndex = 52;
             this.toolStrip1.Text = "toolStrip1";
             // 
             // Home
@@ -220,8 +137,7 @@
             this.profile.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.profile.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.viewProfileToolStripMenuItem,
-            this.editProfileToolStripMenuItem,
-            this.removeAccountToolStripMenuItem});
+            this.editProfileToolStripMenuItem});
             this.profile.Image = ((System.Drawing.Image)(resources.GetObject("profile.Image")));
             this.profile.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.profile.Name = "profile";
@@ -231,20 +147,14 @@
             // viewProfileToolStripMenuItem
             // 
             this.viewProfileToolStripMenuItem.Name = "viewProfileToolStripMenuItem";
-            this.viewProfileToolStripMenuItem.Size = new System.Drawing.Size(204, 26);
+            this.viewProfileToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.viewProfileToolStripMenuItem.Text = "view profile";
             // 
             // editProfileToolStripMenuItem
             // 
             this.editProfileToolStripMenuItem.Name = "editProfileToolStripMenuItem";
-            this.editProfileToolStripMenuItem.Size = new System.Drawing.Size(204, 26);
+            this.editProfileToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.editProfileToolStripMenuItem.Text = "Edit profile";
-            // 
-            // removeAccountToolStripMenuItem
-            // 
-            this.removeAccountToolStripMenuItem.Name = "removeAccountToolStripMenuItem";
-            this.removeAccountToolStripMenuItem.Size = new System.Drawing.Size(204, 26);
-            this.removeAccountToolStripMenuItem.Text = "Remove Account";
             // 
             // exitprogram
             // 
@@ -255,31 +165,120 @@
             this.exitprogram.Size = new System.Drawing.Size(37, 24);
             this.exitprogram.Text = "exit";
             // 
-            // Prescriptions
+            // modHos
+            // 
+            this.modHos.Image = ((System.Drawing.Image)(resources.GetObject("modHos.Image")));
+            this.modHos.Location = new System.Drawing.Point(113, 139);
+            this.modHos.Name = "modHos";
+            this.modHos.Size = new System.Drawing.Size(67, 63);
+            this.modHos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.modHos.TabIndex = 58;
+            this.modHos.TabStop = false;
+            this.modHos.MouseHover += new System.EventHandler(this.modHos_hover);
+            // 
+            // modHoslabel
+            // 
+            this.modHoslabel.AutoSize = true;
+            this.modHoslabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.modHoslabel.Location = new System.Drawing.Point(186, 157);
+            this.modHoslabel.Name = "modHoslabel";
+            this.modHoslabel.Size = new System.Drawing.Size(141, 22);
+            this.modHoslabel.TabIndex = 57;
+            this.modHoslabel.Text = "Modify Hospitals";
+            this.modHoslabel.MouseHover += new System.EventHandler(this.modHoslabel_hover);
+            // 
+            // Modphlabel
+            // 
+            this.Modphlabel.AutoSize = true;
+            this.Modphlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Modphlabel.Location = new System.Drawing.Point(186, 231);
+            this.Modphlabel.Name = "Modphlabel";
+            this.Modphlabel.Size = new System.Drawing.Size(161, 22);
+            this.Modphlabel.TabIndex = 59;
+            this.Modphlabel.Text = "Modify Pharmacies";
+            this.Modphlabel.MouseHover += new System.EventHandler(this.Modphlabel_hover);
+            // 
+            // log
+            // 
+            this.log.Image = ((System.Drawing.Image)(resources.GetObject("log.Image")));
+            this.log.Location = new System.Drawing.Point(113, 291);
+            this.log.Name = "log";
+            this.log.Size = new System.Drawing.Size(67, 63);
+            this.log.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.log.TabIndex = 62;
+            this.log.TabStop = false;
+            this.log.MouseHover += new System.EventHandler(this.log_hover);
+            // 
+            // loglabel
+            // 
+            this.loglabel.AutoSize = true;
+            this.loglabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loglabel.Location = new System.Drawing.Point(186, 309);
+            this.loglabel.Name = "loglabel";
+            this.loglabel.Size = new System.Drawing.Size(124, 22);
+            this.loglabel.TabIndex = 61;
+            this.loglabel.Text = "User Activities";
+            this.loglabel.MouseHover += new System.EventHandler(this.loglabel_hover);
+            // 
+            // Modph
+            // 
+            this.Modph.Image = ((System.Drawing.Image)(resources.GetObject("Modph.Image")));
+            this.Modph.Location = new System.Drawing.Point(113, 208);
+            this.Modph.Name = "Modph";
+            this.Modph.Size = new System.Drawing.Size(67, 63);
+            this.Modph.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.Modph.TabIndex = 63;
+            this.Modph.TabStop = false;
+            this.Modph.MouseHover += new System.EventHandler(this.modph_hover);
+            // 
+            // reports
+            // 
+            this.reports.Image = ((System.Drawing.Image)(resources.GetObject("reports.Image")));
+            this.reports.Location = new System.Drawing.Point(422, 139);
+            this.reports.Name = "reports";
+            this.reports.Size = new System.Drawing.Size(67, 63);
+            this.reports.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.reports.TabIndex = 65;
+            this.reports.TabStop = false;
+            this.reports.MouseHover += new System.EventHandler(this.reports_hover);
+            // 
+            // reportslabel
+            // 
+            this.reportslabel.AutoSize = true;
+            this.reportslabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.reportslabel.Location = new System.Drawing.Point(495, 157);
+            this.reportslabel.Name = "reportslabel";
+            this.reportslabel.Size = new System.Drawing.Size(137, 22);
+            this.reportslabel.TabIndex = 64;
+            this.reportslabel.Text = "System Reports";
+            this.reportslabel.MouseHover += new System.EventHandler(this.reportslabel_hover);
+            // 
+            // Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(241)))), ((int)(((byte)(232)))));
-            this.ClientSize = new System.Drawing.Size(1106, 629);
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.reports);
+            this.Controls.Add(this.reportslabel);
+            this.Controls.Add(this.Modph);
+            this.Controls.Add(this.log);
+            this.Controls.Add(this.loglabel);
+            this.Controls.Add(this.Modphlabel);
+            this.Controls.Add(this.modHos);
+            this.Controls.Add(this.modHoslabel);
             this.Controls.Add(this.toolStrip1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.Pharmacies);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.preNum);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.Medicines);
-            this.Controls.Add(this.appointlabel);
-            this.Controls.Add(this.dataGridView1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Prescriptions";
-            this.Text = "Prescriptions";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Name = "Admin";
+            this.Text = "Admin";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Pharmacies)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.modHos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.log)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Modph)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reports)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -287,16 +286,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Label appointlabel;
-        private System.Windows.Forms.ListBox Medicines;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.ComboBox preNum;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView Pharmacies;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton Home;
         private System.Windows.Forms.ToolStripSplitButton settings;
@@ -307,7 +297,14 @@
         private System.Windows.Forms.ToolStripSplitButton profile;
         private System.Windows.Forms.ToolStripMenuItem viewProfileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editProfileToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem removeAccountToolStripMenuItem;
         private System.Windows.Forms.ToolStripButton exitprogram;
+        private System.Windows.Forms.PictureBox modHos;
+        private System.Windows.Forms.Label modHoslabel;
+        private System.Windows.Forms.Label Modphlabel;
+        private System.Windows.Forms.PictureBox log;
+        private System.Windows.Forms.Label loglabel;
+        private System.Windows.Forms.PictureBox Modph;
+        private System.Windows.Forms.PictureBox reports;
+        private System.Windows.Forms.Label reportslabel;
     }
 }

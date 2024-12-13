@@ -1,6 +1,6 @@
 ﻿namespace HospitalAppointmentSystem
 {
-    partial class Medicla_History
+    partial class UserActivities
     {
         /// <summary>
         /// Required designer variable.
@@ -28,10 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Medicla_History));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserActivities));
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.users = new System.Windows.Forms.DataGridView();
+            this.FNlabel = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Ybills = new System.Windows.Forms.Label();
-            this.appointlabel = new System.Windows.Forms.Label();
+            this.UserID = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.Home = new System.Windows.Forms.ToolStripButton();
             this.settings = new System.Windows.Forms.ToolStripSplitButton();
@@ -42,40 +46,79 @@
             this.profile = new System.Windows.Forms.ToolStripSplitButton();
             this.viewProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.removeAccountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitprogram = new System.Windows.Forms.ToolStripButton();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.users)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(-5, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(158, 86);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 38;
+            this.pictureBox1.TabStop = false;
+            // 
+            // users
+            // 
+            this.users.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.users.Location = new System.Drawing.Point(277, 120);
+            this.users.Name = "users";
+            this.users.RowHeadersWidth = 51;
+            this.users.RowTemplate.Height = 24;
+            this.users.Size = new System.Drawing.Size(579, 300);
+            this.users.TabIndex = 39;
+            // 
+            // FNlabel
+            // 
+            this.FNlabel.AutoSize = true;
+            this.FNlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FNlabel.Location = new System.Drawing.Point(42, 120);
+            this.FNlabel.Name = "FNlabel";
+            this.FNlabel.Size = new System.Drawing.Size(115, 20);
+            this.FNlabel.TabIndex = 79;
+            this.FNlabel.Text = "System Users";
+            // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(99, 109);
+            this.dataGridView1.Location = new System.Drawing.Point(277, 465);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(588, 228);
-            this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.Size = new System.Drawing.Size(579, 145);
+            this.dataGridView1.TabIndex = 80;
             // 
-            // Ybills
+            // UserID
             // 
-            this.Ybills.AutoSize = true;
-            this.Ybills.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Ybills.Location = new System.Drawing.Point(73, 53);
-            this.Ybills.Name = "Ybills";
-            this.Ybills.Size = new System.Drawing.Size(0, 22);
-            this.Ybills.TabIndex = 36;
+            this.UserID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.UserID.Location = new System.Drawing.Point(134, 465);
+            this.UserID.Name = "UserID";
+            this.UserID.Size = new System.Drawing.Size(127, 22);
+            this.UserID.TabIndex = 81;
             // 
-            // appointlabel
+            // label1
             // 
-            this.appointlabel.AutoSize = true;
-            this.appointlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.appointlabel.Location = new System.Drawing.Point(95, 63);
-            this.appointlabel.Name = "appointlabel";
-            this.appointlabel.Size = new System.Drawing.Size(175, 22);
-            this.appointlabel.TabIndex = 37;
-            this.appointlabel.Text = "Your Medical History";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(56, 467);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(62, 20);
+            this.label1.TabIndex = 82;
+            this.label1.Text = "UserID";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(12, 435);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(275, 16);
+            this.label2.TabIndex = 83;
+            this.label2.Text = "Write the userID to see a specific user Activity";
             // 
             // toolStrip1
             // 
@@ -87,10 +130,10 @@
             this.contactus,
             this.profile,
             this.exitprogram});
-            this.toolStrip1.Location = new System.Drawing.Point(760, 0);
+            this.toolStrip1.Location = new System.Drawing.Point(913, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(40, 450);
-            this.toolStrip1.TabIndex = 51;
+            this.toolStrip1.Size = new System.Drawing.Size(40, 699);
+            this.toolStrip1.TabIndex = 84;
             this.toolStrip1.Text = "toolStrip1";
             // 
             // Home
@@ -147,8 +190,7 @@
             this.profile.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.profile.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.viewProfileToolStripMenuItem,
-            this.editProfileToolStripMenuItem,
-            this.removeAccountToolStripMenuItem});
+            this.editProfileToolStripMenuItem});
             this.profile.Image = ((System.Drawing.Image)(resources.GetObject("profile.Image")));
             this.profile.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.profile.Name = "profile";
@@ -158,20 +200,14 @@
             // viewProfileToolStripMenuItem
             // 
             this.viewProfileToolStripMenuItem.Name = "viewProfileToolStripMenuItem";
-            this.viewProfileToolStripMenuItem.Size = new System.Drawing.Size(204, 26);
+            this.viewProfileToolStripMenuItem.Size = new System.Drawing.Size(170, 26);
             this.viewProfileToolStripMenuItem.Text = "view profile";
             // 
             // editProfileToolStripMenuItem
             // 
             this.editProfileToolStripMenuItem.Name = "editProfileToolStripMenuItem";
-            this.editProfileToolStripMenuItem.Size = new System.Drawing.Size(204, 26);
+            this.editProfileToolStripMenuItem.Size = new System.Drawing.Size(170, 26);
             this.editProfileToolStripMenuItem.Text = "Edit profile";
-            // 
-            // removeAccountToolStripMenuItem
-            // 
-            this.removeAccountToolStripMenuItem.Name = "removeAccountToolStripMenuItem";
-            this.removeAccountToolStripMenuItem.Size = new System.Drawing.Size(204, 26);
-            this.removeAccountToolStripMenuItem.Text = "Remove Account";
             // 
             // exitprogram
             // 
@@ -182,19 +218,25 @@
             this.exitprogram.Size = new System.Drawing.Size(37, 24);
             this.exitprogram.Text = "exit";
             // 
-            // Medicla_History
+            // UserActivities
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(241)))), ((int)(((byte)(232)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(953, 699);
             this.Controls.Add(this.toolStrip1);
-            this.Controls.Add(this.appointlabel);
-            this.Controls.Add(this.Ybills);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.UserID);
             this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.FNlabel);
+            this.Controls.Add(this.users);
+            this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Medicla_History";
-            this.Text = "Medicla History";
+            this.Name = "UserActivities";
+            this.Text = "UserActivities";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.users)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
@@ -205,9 +247,13 @@
 
         #endregion
 
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.DataGridView users;
+        private System.Windows.Forms.Label FNlabel;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Label Ybills;
-        private System.Windows.Forms.Label appointlabel;
+        private System.Windows.Forms.TextBox UserID;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton Home;
         private System.Windows.Forms.ToolStripSplitButton settings;
@@ -218,7 +264,6 @@
         private System.Windows.Forms.ToolStripSplitButton profile;
         private System.Windows.Forms.ToolStripMenuItem viewProfileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editProfileToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem removeAccountToolStripMenuItem;
         private System.Windows.Forms.ToolStripButton exitprogram;
     }
 }

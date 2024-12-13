@@ -30,14 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddPrescription));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.pEmail = new System.Windows.Forms.TextBox();
-            this.FNlabel = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.DName = new System.Windows.Forms.TextBox();
-            this.Ddiscription = new System.Windows.Forms.RichTextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.preDate = new System.Windows.Forms.DateTimePicker();
-            this.label3 = new System.Windows.Forms.Label();
             this.Home = new System.Windows.Forms.ToolStripButton();
             this.settings = new System.Windows.Forms.ToolStripSplitButton();
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -49,12 +41,20 @@
             this.editProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.removeAccountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitprogram = new System.Windows.Forms.ToolStripButton();
+            this.pEmail = new System.Windows.Forms.TextBox();
+            this.FNlabel = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.DName = new System.Windows.Forms.TextBox();
+            this.Ddiscription = new System.Windows.Forms.RichTextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.preDate = new System.Windows.Forms.DateTimePicker();
+            this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.Add = new System.Windows.Forms.Label();
-            this.addappoint = new System.Windows.Forms.PictureBox();
+            this.addprelabel = new System.Windows.Forms.Label();
+            this.addpre = new System.Windows.Forms.PictureBox();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.addappoint)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.addpre)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -72,79 +72,6 @@
             this.toolStrip1.Size = new System.Drawing.Size(40, 468);
             this.toolStrip1.TabIndex = 53;
             this.toolStrip1.Text = "toolStrip1";
-            // 
-            // pEmail
-            // 
-            this.pEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pEmail.Location = new System.Drawing.Point(187, 126);
-            this.pEmail.Name = "pEmail";
-            this.pEmail.Size = new System.Drawing.Size(170, 22);
-            this.pEmail.TabIndex = 54;
-            // 
-            // FNlabel
-            // 
-            this.FNlabel.AutoSize = true;
-            this.FNlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FNlabel.Location = new System.Drawing.Point(53, 126);
-            this.FNlabel.Name = "FNlabel";
-            this.FNlabel.Size = new System.Drawing.Size(108, 20);
-            this.FNlabel.TabIndex = 55;
-            this.FNlabel.Text = "Pateint Email";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(46, 175);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(120, 20);
-            this.label1.TabIndex = 57;
-            this.label1.Text = "Disease Name";
-            // 
-            // DName
-            // 
-            this.DName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.DName.Location = new System.Drawing.Point(187, 175);
-            this.DName.Name = "DName";
-            this.DName.Size = new System.Drawing.Size(170, 22);
-            this.DName.TabIndex = 56;
-            // 
-            // Ddiscription
-            // 
-            this.Ddiscription.Location = new System.Drawing.Point(187, 229);
-            this.Ddiscription.Name = "Ddiscription";
-            this.Ddiscription.Size = new System.Drawing.Size(170, 96);
-            this.Ddiscription.TabIndex = 58;
-            this.Ddiscription.Text = "";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 229);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(157, 20);
-            this.label2.TabIndex = 59;
-            this.label2.Text = "Disease Discription";
-            // 
-            // preDate
-            // 
-            this.preDate.Location = new System.Drawing.Point(187, 354);
-            this.preDate.Name = "preDate";
-            this.preDate.Size = new System.Drawing.Size(200, 22);
-            this.preDate.TabIndex = 60;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Enabled = false;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(137, 354);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(41, 20);
-            this.label3.TabIndex = 61;
-            this.label3.Text = "date";
-            this.label3.Visible = false;
             // 
             // Home
             // 
@@ -235,6 +162,79 @@
             this.exitprogram.Size = new System.Drawing.Size(37, 24);
             this.exitprogram.Text = "exit";
             // 
+            // pEmail
+            // 
+            this.pEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pEmail.Location = new System.Drawing.Point(187, 126);
+            this.pEmail.Name = "pEmail";
+            this.pEmail.Size = new System.Drawing.Size(170, 22);
+            this.pEmail.TabIndex = 54;
+            // 
+            // FNlabel
+            // 
+            this.FNlabel.AutoSize = true;
+            this.FNlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FNlabel.Location = new System.Drawing.Point(53, 126);
+            this.FNlabel.Name = "FNlabel";
+            this.FNlabel.Size = new System.Drawing.Size(108, 20);
+            this.FNlabel.TabIndex = 55;
+            this.FNlabel.Text = "Pateint Email";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(46, 175);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(120, 20);
+            this.label1.TabIndex = 57;
+            this.label1.Text = "Disease Name";
+            // 
+            // DName
+            // 
+            this.DName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.DName.Location = new System.Drawing.Point(187, 175);
+            this.DName.Name = "DName";
+            this.DName.Size = new System.Drawing.Size(170, 22);
+            this.DName.TabIndex = 56;
+            // 
+            // Ddiscription
+            // 
+            this.Ddiscription.Location = new System.Drawing.Point(187, 229);
+            this.Ddiscription.Name = "Ddiscription";
+            this.Ddiscription.Size = new System.Drawing.Size(170, 96);
+            this.Ddiscription.TabIndex = 58;
+            this.Ddiscription.Text = "";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(12, 229);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(157, 20);
+            this.label2.TabIndex = 59;
+            this.label2.Text = "Disease Discription";
+            // 
+            // preDate
+            // 
+            this.preDate.Location = new System.Drawing.Point(187, 354);
+            this.preDate.Name = "preDate";
+            this.preDate.Size = new System.Drawing.Size(200, 22);
+            this.preDate.TabIndex = 60;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Enabled = false;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(137, 354);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(41, 20);
+            this.label3.TabIndex = 61;
+            this.label3.Text = "date";
+            this.label3.Visible = false;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
@@ -245,25 +245,27 @@
             this.pictureBox1.TabIndex = 36;
             this.pictureBox1.TabStop = false;
             // 
-            // Add
+            // addprelabel
             // 
-            this.Add.AutoSize = true;
-            this.Add.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Add.Location = new System.Drawing.Point(466, 353);
-            this.Add.Name = "Add";
-            this.Add.Size = new System.Drawing.Size(38, 20);
-            this.Add.TabIndex = 63;
-            this.Add.Text = "Add";
+            this.addprelabel.AutoSize = true;
+            this.addprelabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addprelabel.Location = new System.Drawing.Point(466, 353);
+            this.addprelabel.Name = "addprelabel";
+            this.addprelabel.Size = new System.Drawing.Size(38, 20);
+            this.addprelabel.TabIndex = 63;
+            this.addprelabel.Text = "Add";
+            this.addprelabel.MouseHover += new System.EventHandler(this.addprelabel_hover);
             // 
-            // addappoint
+            // addpre
             // 
-            this.addappoint.Image = ((System.Drawing.Image)(resources.GetObject("addappoint.Image")));
-            this.addappoint.Location = new System.Drawing.Point(393, 334);
-            this.addappoint.Name = "addappoint";
-            this.addappoint.Size = new System.Drawing.Size(67, 57);
-            this.addappoint.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.addappoint.TabIndex = 62;
-            this.addappoint.TabStop = false;
+            this.addpre.Image = ((System.Drawing.Image)(resources.GetObject("addpre.Image")));
+            this.addpre.Location = new System.Drawing.Point(393, 334);
+            this.addpre.Name = "addpre";
+            this.addpre.Size = new System.Drawing.Size(67, 57);
+            this.addpre.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.addpre.TabIndex = 62;
+            this.addpre.TabStop = false;
+            this.addpre.MouseHover += new System.EventHandler(this.addpre_hover);
             // 
             // AddPrescription
             // 
@@ -271,8 +273,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(241)))), ((int)(((byte)(232)))));
             this.ClientSize = new System.Drawing.Size(672, 468);
-            this.Controls.Add(this.Add);
-            this.Controls.Add(this.addappoint);
+            this.Controls.Add(this.addprelabel);
+            this.Controls.Add(this.addpre);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.preDate);
             this.Controls.Add(this.label2);
@@ -289,7 +291,7 @@
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.addappoint)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.addpre)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -318,7 +320,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker preDate;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label Add;
-        private System.Windows.Forms.PictureBox addappoint;
+        private System.Windows.Forms.Label addprelabel;
+        private System.Windows.Forms.PictureBox addpre;
     }
 }
