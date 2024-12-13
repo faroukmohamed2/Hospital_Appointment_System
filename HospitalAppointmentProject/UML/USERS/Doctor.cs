@@ -1,0 +1,133 @@
+﻿using HospitalAppointmentProject.UML.Appointments;
+using HospitalAppointmentProject.UML.FeedBacks;
+using HospitalAppointmentProject.UML.Paper;
+using HospitalAppointmentProject.UML.PLACES;
+using HospitalAppointmentProject.UML.theMedicalHistory;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace HospitalAppointmentProject.UML.USERS
+{
+    internal class Doctor : sysUser
+    {
+        private Hospital _DoctorHospital;
+        private List<FeedBack> _FeedBacks;
+        private List<Clinic> _Clincs;
+        private List<HospitalAppointment> _Appointments;
+        private List<Patient> _myPatients;
+        private Department _DoctorDepartment;
+        private List<ClinicAppointment> _ClinicAppointments;
+        Hospital DoctorHospital
+        {
+            get
+            {
+                // add queries
+                return _DoctorHospital;
+            }
+            set
+            {
+                // add queries
+                _DoctorHospital = value;
+            }
+        }
+
+        public List<FeedBack> FeedBacks
+        {
+            get
+            {
+                // add query
+                return _FeedBacks;
+            }
+            set
+            {
+                // don't add query
+                _FeedBacks = value;
+            }
+        }
+
+        public List<Clinic> Clincs
+        {
+            get
+            {
+                // add query
+                return _Clincs;
+            }
+            set
+            {
+                // don't add query
+                _Clincs = value;
+            }
+        }
+
+        public List<HospitalAppointment> Appointments
+        {
+            get
+            {
+                // add query
+                return _Appointments;
+            }
+            set
+            {
+                // don't add query
+                _Appointments = value;
+            }
+        }
+
+        public Department DoctorDepartment
+        {
+            get
+            {
+                // add query
+                return _DoctorDepartment;
+            }
+            set
+            {
+                // add query
+                _DoctorDepartment = value;
+            }
+        }
+
+        public List<Patient> myPatients
+        {
+            get 
+            {
+                // add query
+                return _myPatients;
+            }
+            set 
+            { 
+                _myPatients = value;
+            }
+        }
+
+        public List<ClinicAppointment> ClinicAppointments 
+        {
+            get
+            {
+                return _ClinicAppointments;
+            }
+            set
+            {
+                _ClinicAppointments = value;
+            }
+        }
+
+        public Doctor(int? UserID = null, string Email = null, string UserPassword = null, int? Age = null, char? Gender = null, string First_Name = null, string Last_Name = null,
+            List<ActivityLog> ActivityLogs = null,Hospital DoctorHospital = null, List<Clinic> Clincs = null, Department DoctorDepartment = null, List<Bill> Bills = null, List<HospitalAppointment> Appointments = null,List<Patient> myPatients = null,List<ClinicAppointment> ClinicAppointments = null) :
+            base(UserID, Email, UserPassword, Age, Gender, First_Name, Last_Name, ActivityLogs, UserType.Doctor)
+        {
+            this.myPatients = myPatients;
+            this.Clincs = Clincs;
+            this.DoctorDepartment = DoctorDepartment;   
+            this.DoctorHospital = DoctorHospital;
+            this.FeedBacks = FeedBacks;
+            this.Appointments = Appointments;
+            this.ClinicAppointments = ClinicAppointments;
+        }
+
+        //add more functions as u need
+    }
+}
