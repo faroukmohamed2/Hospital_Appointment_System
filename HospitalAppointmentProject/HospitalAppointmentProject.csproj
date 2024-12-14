@@ -71,6 +71,12 @@
     <Compile Include="Forms\Appoint.Designer.cs">
       <DependentUpon>Appoint.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ContactUs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ContactUs.Designer.cs">
+      <DependentUpon>ContactUs.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Doctor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,11 +89,53 @@
     <Compile Include="Forms\Doctor_Appointments.Designer.cs">
       <DependentUpon>Doctor_Appointments.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\EditProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditProfile.Designer.cs">
+      <DependentUpon>EditProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FireDoctor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FireDoctor.Designer.cs">
+      <DependentUpon>FireDoctor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\HireDoctor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\HireDoctor.Designer.cs">
+      <DependentUpon>HireDoctor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\HospitalManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\HospitalManager.Designer.cs">
+      <DependentUpon>HospitalManager.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ManageHospitals.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ManageHospitals.Designer.cs">
+      <DependentUpon>ManageHospitals.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ManagePharmacy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ManagePharmacy.Designer.cs">
+      <DependentUpon>ManagePharmacy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Medicines.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Medicines.Designer.cs">
+      <DependentUpon>Medicines.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Medicla_History.cs">
       <SubType>Form</SubType>
@@ -125,6 +173,12 @@
     <Compile Include="Forms\PatientInfo.Designer.cs">
       <DependentUpon>PatientInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\PharmacyManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PharmacyManager.Designer.cs">
+      <DependentUpon>PharmacyManager.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Prescriptions.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,6 +208,12 @@
     </Compile>
     <Compile Include="Forms\UserActivities.Designer.cs">
       <DependentUpon>UserActivities.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\YourProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\YourProfile.Designer.cs">
+      <DependentUpon>YourProfile.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -189,14 +249,38 @@
     <EmbeddedResource Include="Forms\Appoint.resx">
       <DependentUpon>Appoint.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ContactUs.resx">
+      <DependentUpon>ContactUs.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Doctor.resx">
       <DependentUpon>Doctor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Doctor_Appointments.resx">
       <DependentUpon>Doctor_Appointments.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditProfile.resx">
+      <DependentUpon>EditProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FireDoctor.resx">
+      <DependentUpon>FireDoctor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HireDoctor.resx">
+      <DependentUpon>HireDoctor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HospitalManager.resx">
+      <DependentUpon>HospitalManager.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ManageHospitals.resx">
+      <DependentUpon>ManageHospitals.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ManagePharmacy.resx">
+      <DependentUpon>ManagePharmacy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Medicines.resx">
+      <DependentUpon>Medicines.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Medicla_History.resx">
       <DependentUpon>Medicla_History.cs</DependentUpon>
@@ -216,6 +300,9 @@
     <EmbeddedResource Include="Forms\PatientInfo.resx">
       <DependentUpon>PatientInfo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PharmacyManager.resx">
+      <DependentUpon>PharmacyManager.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Prescriptions.resx">
       <DependentUpon>Prescriptions.cs</DependentUpon>
     </EmbeddedResource>
@@ -230,6 +317,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\UserActivities.resx">
       <DependentUpon>UserActivities.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\YourProfile.resx">
+      <DependentUpon>YourProfile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

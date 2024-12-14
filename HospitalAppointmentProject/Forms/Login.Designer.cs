@@ -61,6 +61,8 @@
             this.contactus = new System.Windows.Forms.ToolStripButton();
             this.exitprogram = new System.Windows.Forms.ToolStripButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.retlogin = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -354,20 +356,20 @@
             // viewToolStripMenuItem
             // 
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            this.viewToolStripMenuItem.Size = new System.Drawing.Size(125, 26);
+            this.viewToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.viewToolStripMenuItem.Text = "view";
             this.viewToolStripMenuItem.Click += new System.EventHandler(this.viewToolStripMenuItem_Click);
             // 
             // toolsToolStripMenuItem
             // 
             this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
-            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(125, 26);
+            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.toolsToolStripMenuItem.Text = "tools";
             // 
             // editToolStripMenuItem
             // 
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(125, 26);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.editToolStripMenuItem.Text = "Edit";
             // 
             // contactus
@@ -398,12 +400,33 @@
             this.pictureBox1.TabIndex = 34;
             this.pictureBox1.TabStop = false;
             // 
+            // retlogin
+            // 
+            this.retlogin.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.retlogin.Location = new System.Drawing.Point(827, 394);
+            this.retlogin.Name = "retlogin";
+            this.retlogin.Size = new System.Drawing.Size(75, 28);
+            this.retlogin.TabIndex = 36;
+            this.retlogin.Text = "login";
+            this.retlogin.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(671, 400);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(127, 16);
+            this.label1.TabIndex = 35;
+            this.label1.Text = "Return to login page";
+            // 
             // login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(241)))), ((int)(((byte)(232)))));
             this.ClientSize = new System.Drawing.Size(969, 476);
+            this.Controls.Add(this.retlogin);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.signup);
@@ -475,5 +498,7 @@
         private System.Windows.Forms.ToolStripMenuItem toolsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button retlogin;
+        private System.Windows.Forms.Label label1;
     }
 }
