@@ -8,13 +8,13 @@ namespace HospitalAppointmentProject.UML.Paper
 {
     internal class Prescription
     {
-        private int? _PrescriptionID;
-        private string _DateAndTime;
-        private string _DiseaseName;
-        private int? _PatientID;
-        private string _DiseaseDescription;
-        private int? _DoctorID;
-        private List<Medicine> _Medicines;
+        public int? _PrescriptionID;
+        public string _DateAndTime;
+        public string _DiseaseName;
+        public int? _PatientID;
+        public string _DiseaseDescription;
+        public int? _DoctorID;
+        public List<Medicine> _Medicines;
 
         // add queries to the setters & getters
         public int? PrescriptionID
