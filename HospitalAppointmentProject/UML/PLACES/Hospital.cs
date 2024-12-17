@@ -10,9 +10,9 @@ namespace HospitalAppointmentProject.UML.PLACES
 {
     internal class Hospital : Place
     {
-        private List<Department> _HospitalsDepartments;
-        private List<Doctor> _Doctors;
-        private List<HospitalAppointment> _Appointments;
+        public List<Department> _HospitalsDepartments;
+        public List<Doctor> _Doctors;
+        public List<HospitalAppointment> _Appointments;
 
         
         public List<Department> HospitalsDepartments
