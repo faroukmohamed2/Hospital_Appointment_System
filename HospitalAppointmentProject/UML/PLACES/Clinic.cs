@@ -11,9 +11,9 @@ namespace HospitalAppointmentProject.UML.PLACES
 {
     internal class Clinic : Place
     {
-        private List<ClinicAppointment> _ClinicAppointments;
-        private Department _ClinicDepartment;
-        private int? _DoctorID;
+        public List<ClinicAppointment> _ClinicAppointments;
+        public Department _ClinicDepartment;
+        public int? _DoctorID;
 
         
         public List<ClinicAppointment> ClinicAppointments
