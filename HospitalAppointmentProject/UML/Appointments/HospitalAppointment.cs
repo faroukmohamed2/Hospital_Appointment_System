@@ -8,10 +8,10 @@ namespace HospitalAppointmentProject.UML.Appointments
 {
     internal class HospitalAppointment
     {
-        private int? _HospitalAppointmentID;
-        private string _DateAndTime;
-        private int? _DoctorID;
-        private int? _PatientID;
+        public int? _HospitalAppointmentID;
+        public string _DateAndTime;
+        public int? _DoctorID;
+        public int? _PatientID;
 
         // add queries to the setters & getters
         public int? HospitalAppointmentID
