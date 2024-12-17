@@ -13,14 +13,14 @@ namespace HospitalAppointmentProject.UML.USERS
         
         public UserType user_type;
 
-        private int? _UserID;
-        private string _Email;
-        private string _UserPassword;
-        private int? _Age;
-        private char? _Gender;
-        private string _First_Name;
-        private string _Last_Name;
-        private List<ActivityLog> _ActivityLogs;
+        public int? _UserID;
+        public string _Email;
+        public string _UserPassword;
+        public int? _Age;
+        public char? _Gender;
+        public string _First_Name;
+        public string _Last_Name;
+        public List<ActivityLog> _ActivityLogs;
 
         public int? UserID
         {
