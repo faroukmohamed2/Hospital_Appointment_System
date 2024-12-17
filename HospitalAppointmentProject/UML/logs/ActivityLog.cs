@@ -9,9 +9,9 @@ namespace HospitalAppointmentProject.UML.USERS
 {
     internal class ActivityLog
     {
-        private int? _UserID;
-        private string _DatenTime;
-        private string _ActivityType;
+        public int? _UserID;
+        public string _DatenTime;
+        public string _ActivityType;
 
 
         // add queries to the setters & getters
