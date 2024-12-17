@@ -13,13 +13,13 @@ namespace HospitalAppointmentProject.UML.USERS
 {
     internal class Doctor : sysUser
     {
-        private Hospital _DoctorHospital;
-        private List<FeedBack> _FeedBacks;
-        private List<Clinic> _Clincs;
-        private List<HospitalAppointment> _Appointments;
-        private List<Patient> _myPatients;
-        private Department _DoctorDepartment;
-        private List<ClinicAppointment> _ClinicAppointments;
+        public Hospital _DoctorHospital;
+        public List<FeedBack> _FeedBacks;
+        public List<Clinic> _Clincs;
+        public List<HospitalAppointment> _Appointments;
+        public List<Patient> _myPatients;
+        public Department _DoctorDepartment;
+        public List<ClinicAppointment> _ClinicAppointments;
         Hospital DoctorHospital
         {
             get
