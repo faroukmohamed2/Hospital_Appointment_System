@@ -8,7 +8,7 @@ namespace HospitalAppointmentProject.UML.PLACES
 {
     internal class Pharmacy : Place
     {
-        private List<Medicine> _Medicines;
+        public List<Medicine> _Medicines;
 
         
         public List<Medicine> Medicines
