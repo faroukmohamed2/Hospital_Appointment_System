@@ -8,10 +8,10 @@ namespace HospitalAppointmentProject.UML.FeedBacks
 {
     internal class FeedBack
     {
-        private int? _FeedBackID;
-        private string _theFeedBack;
-        private int? _PatientID;
-        private int? _DoctorID;
+        public int? _FeedBackID;
+        public string _theFeedBack;
+        public int? _PatientID;
+        public int? _DoctorID;
 
         //add queries to the next setters & getters
         public int? FeedBackID { get { return _FeedBackID; } set { _FeedBackID = value; } }
