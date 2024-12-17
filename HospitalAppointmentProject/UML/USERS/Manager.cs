@@ -9,7 +9,7 @@ namespace HospitalAppointmentProject.UML.USERS
 {
     internal class Manager : sysUser
     {
-        private List<Place> _ManagedPlace;
+        public List<Place> _ManagedPlace;
 
         public List<Place> ManagedPlace
         {
