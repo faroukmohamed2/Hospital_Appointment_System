@@ -8,9 +8,9 @@ namespace HospitalAppointmentProject.UML
 {
     internal class Department
     {
-        private int? _DepartmentID;
-        private string _DepartmentName;
-        private string _Location; // when loading the hospitals locantions are required
+        public int? _DepartmentID;
+        public string _DepartmentName;
+        public string _Location; // when loading the hospitals locantions are required
 
         // add queries to setters & getters
         public int? DepartmentID { get { return _DepartmentID; } set { _DepartmentID = value; } }
