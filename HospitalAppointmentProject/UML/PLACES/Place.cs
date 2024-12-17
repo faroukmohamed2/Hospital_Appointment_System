@@ -10,16 +10,16 @@ namespace HospitalAppointmentProject.UML.PLACES
     enum PlaceType { None,Hospital,Pharmacy,Clinic };
     internal class Place
     {
-        private int? _PlaceID;
-        private string _PlaceName;
-        private string _Email;
-        private string _PhoneNumber;
-        private string _StartingTime; 
-        private string _EndingTime;   
-        private bool? _IsAvailable; 
-        private string _PlaceLocation;
-        private string _OpenDays; 
-        private PlaceType _Type; 
+        public int? _PlaceID;
+        public string _PlaceName;
+        public string _Email;
+        public string _PhoneNumber;
+        public string _StartingTime; 
+        public string _EndingTime;   
+        public bool? _IsAvailable; 
+        public string _PlaceLocation;
+        public string _OpenDays; 
+        public PlaceType _Type; 
 
         public int? PlaceID
         {
