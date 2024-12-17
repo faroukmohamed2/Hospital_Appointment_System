@@ -8,11 +8,11 @@ namespace HospitalAppointmentProject.UML
 {
     internal class Medicine
     {
-        private int? _MedicineID;
-        private string _MedicineName;
-        private string _Active_Ingredinet;
-        private int? _Quantity; // needed just for the pharmacy
-        private string _Dose; //for Prescriptions
+        public int? _MedicineID;
+        public string _MedicineName;
+        public string _Active_Ingredinet;
+        public int? _Quantity; // needed just for the pharmacy
+        public string _Dose; //for Prescriptions
 
         // add queries to the setters & getters
         public int? MedicineID { get { return _MedicineID; } set { _MedicineID = value; } }
