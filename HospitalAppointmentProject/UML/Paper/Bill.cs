@@ -8,11 +8,11 @@ namespace HospitalAppointmentProject.UML.Paper
 {
     internal class Bill
     {
-        private int? _BillID;
-        private float? _Price;
-        private string _DatenTime;
-        private int? _PatientID;
-        private int? _PlaceID;
+        public int? _BillID;
+        public float? _Price;
+        public string _DatenTime;
+        public int? _PatientID;
+        public int? _PlaceID;
         bool _IsPaid;
 
 
