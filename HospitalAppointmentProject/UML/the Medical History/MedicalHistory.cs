@@ -9,11 +9,11 @@ namespace HospitalAppointmentProject.UML.theMedicalHistory
 {
     internal class MedicalHistory
     {
-        private int? _PatientID;
-        private string _DiseaseDescription;
-        private int? _AtYear;
-        private bool? _IsCured;
-        private List<Prescription> _PrescriptionList;
+        public int? _PatientID;
+        public string _DiseaseDescription;
+        public int? _AtYear;
+        public bool? _IsCured;
+        public List<Prescription> _PrescriptionList;
 
         public int? PatientID
         { 
