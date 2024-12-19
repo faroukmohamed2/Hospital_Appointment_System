@@ -12,9 +12,11 @@ namespace HospitalAppointmentSystem
 {
     public partial class Admin : Form
     {
-        public Admin()
+        Form mainform;
+        public Admin(Form mainform)
         {
             InitializeComponent();
+            this.mainform = mainform;
         }
 
         private void modHos_hover(object sender, EventArgs e)
@@ -55,6 +57,30 @@ namespace HospitalAppointmentSystem
         private void reportslabel_hover(object sender, EventArgs e)
         {
             reportslabel.Cursor = Cursors.Hand;
+        }
+
+        private void exitprogram_Click(object sender, EventArgs e)
+        {
+            mainform.Close();
+        }
+
+        private void contactus_Click(object sender, EventArgs e)
+        {
+            ContactUs cu = new ContactUs(this, mainform);
+            this.Hide();
+            cu.Show();
+        }
+
+        private void admin_close(object sender, FormClosedEventArgs e)
+        {
+            mainform.Close();
+        }
+
+        private void modHoslabel_Click(object sender, EventArgs e)
+        {
+            ModifyHospitals modh = new ModifyHospitals(this, mainform);
+            this.Hide();
+            modh.Show();
         }
     }
 }

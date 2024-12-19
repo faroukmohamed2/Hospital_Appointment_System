@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Patient));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.Home = new System.Windows.Forms.ToolStripButton();
             this.settings = new System.Windows.Forms.ToolStripSplitButton();
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -73,7 +72,6 @@
             this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Right;
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.Home,
             this.settings,
             this.contactus,
             this.profile,
@@ -83,15 +81,6 @@
             this.toolStrip1.Size = new System.Drawing.Size(40, 612);
             this.toolStrip1.TabIndex = 28;
             this.toolStrip1.Text = "toolStrip1";
-            // 
-            // Home
-            // 
-            this.Home.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.Home.Image = ((System.Drawing.Image)(resources.GetObject("Home.Image")));
-            this.Home.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.Home.Name = "Home";
-            this.Home.Size = new System.Drawing.Size(37, 24);
-            this.Home.Text = "home page";
             // 
             // settings
             // 
@@ -109,19 +98,19 @@
             // viewToolStripMenuItem
             // 
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            this.viewToolStripMenuItem.Size = new System.Drawing.Size(125, 26);
+            this.viewToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.viewToolStripMenuItem.Text = "view";
             // 
             // toolsToolStripMenuItem
             // 
             this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
-            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(125, 26);
+            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.toolsToolStripMenuItem.Text = "tools";
             // 
             // editToolStripMenuItem
             // 
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(125, 26);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.editToolStripMenuItem.Text = "Edit";
             // 
             // contactus
@@ -132,6 +121,7 @@
             this.contactus.Name = "contactus";
             this.contactus.Size = new System.Drawing.Size(37, 24);
             this.contactus.Text = "contact us";
+            this.contactus.Click += new System.EventHandler(this.contactus_Click);
             // 
             // profile
             // 
@@ -172,6 +162,7 @@
             this.exitprogram.Name = "exitprogram";
             this.exitprogram.Size = new System.Drawing.Size(37, 24);
             this.exitprogram.Text = "exit";
+            this.exitprogram.Click += new System.EventHandler(this.exitprogram_Click);
             // 
             // appointlabel
             // 
@@ -182,6 +173,7 @@
             this.appointlabel.Size = new System.Drawing.Size(151, 22);
             this.appointlabel.TabIndex = 29;
             this.appointlabel.Text = "New Appointment";
+            this.appointlabel.Click += new System.EventHandler(this.appointlabel_Click);
             this.appointlabel.MouseHover += new System.EventHandler(this.appointlabel_hover);
             // 
             // greeting
@@ -203,6 +195,7 @@
             this.showAppointmentslabel.Size = new System.Drawing.Size(204, 22);
             this.showAppointmentslabel.TabIndex = 37;
             this.showAppointmentslabel.Text = "Upcoming Appointments";
+            this.showAppointmentslabel.Click += new System.EventHandler(this.showAppointmentslabel_Click);
             this.showAppointmentslabel.MouseHover += new System.EventHandler(this.showAppointmentslabel_hover);
             // 
             // EditAppointmentslabel
@@ -214,6 +207,7 @@
             this.EditAppointmentslabel.Size = new System.Drawing.Size(155, 22);
             this.EditAppointmentslabel.TabIndex = 39;
             this.EditAppointmentslabel.Text = "Edit Appointments";
+            this.EditAppointmentslabel.Click += new System.EventHandler(this.EditAppointmentslabel_Click);
             this.EditAppointmentslabel.MouseHover += new System.EventHandler(this.EditAppointmentslabel_hover);
             // 
             // DocSearchlabel
@@ -225,6 +219,7 @@
             this.DocSearchlabel.Size = new System.Drawing.Size(134, 22);
             this.DocSearchlabel.TabIndex = 41;
             this.DocSearchlabel.Text = "Search Doctors";
+            this.DocSearchlabel.Click += new System.EventHandler(this.DocSearchlabel_Click);
             this.DocSearchlabel.MouseHover += new System.EventHandler(this.DocSearchlabel_hover);
             // 
             // Prescriptionslabel
@@ -236,6 +231,7 @@
             this.Prescriptionslabel.Size = new System.Drawing.Size(114, 22);
             this.Prescriptionslabel.TabIndex = 43;
             this.Prescriptionslabel.Text = "Prescriptions";
+            this.Prescriptionslabel.Click += new System.EventHandler(this.Prescriptionslabel_Click);
             this.Prescriptionslabel.MouseHover += new System.EventHandler(this.Prescriptionslabel_hover);
             // 
             // Prescript
@@ -247,6 +243,7 @@
             this.Prescript.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.Prescript.TabIndex = 42;
             this.Prescript.TabStop = false;
+            this.Prescript.Click += new System.EventHandler(this.Prescript_Click);
             this.Prescript.MouseHover += new System.EventHandler(this.Prescript_hover);
             // 
             // DocSearch
@@ -258,6 +255,7 @@
             this.DocSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.DocSearch.TabIndex = 40;
             this.DocSearch.TabStop = false;
+            this.DocSearch.Click += new System.EventHandler(this.DocSearch_Click);
             this.DocSearch.MouseHover += new System.EventHandler(this.DocSearch_hover);
             // 
             // EditAppointments
@@ -269,6 +267,7 @@
             this.EditAppointments.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.EditAppointments.TabIndex = 38;
             this.EditAppointments.TabStop = false;
+            this.EditAppointments.Click += new System.EventHandler(this.EditAppointments_Click);
             this.EditAppointments.MouseHover += new System.EventHandler(this.EditAppointments_hover);
             // 
             // showappoints
@@ -280,6 +279,7 @@
             this.showappoints.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.showappoints.TabIndex = 36;
             this.showappoints.TabStop = false;
+            this.showappoints.Click += new System.EventHandler(this.showappoints_Click);
             this.showappoints.MouseHover += new System.EventHandler(this.showappoints_hover);
             // 
             // addappoint
@@ -308,12 +308,13 @@
             // medHistory
             // 
             this.medHistory.Image = ((System.Drawing.Image)(resources.GetObject("medHistory.Image")));
-            this.medHistory.Location = new System.Drawing.Point(575, 341);
+            this.medHistory.Location = new System.Drawing.Point(575, 332);
             this.medHistory.Name = "medHistory";
-            this.medHistory.Size = new System.Drawing.Size(67, 50);
+            this.medHistory.Size = new System.Drawing.Size(67, 59);
             this.medHistory.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.medHistory.TabIndex = 44;
             this.medHistory.TabStop = false;
+            this.medHistory.Click += new System.EventHandler(this.medHistory_Click);
             this.medHistory.MouseHover += new System.EventHandler(this.medHistory_hover);
             // 
             // midhistlablel
@@ -325,6 +326,7 @@
             this.midhistlablel.Size = new System.Drawing.Size(175, 22);
             this.midhistlablel.TabIndex = 45;
             this.midhistlablel.Text = "Your Medical History";
+            this.midhistlablel.Click += new System.EventHandler(this.midhistlablel_Click);
             this.midhistlablel.MouseHover += new System.EventHandler(this.medhistlablel_hover);
             // 
             // dfeed
@@ -336,6 +338,7 @@
             this.dfeed.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.dfeed.TabIndex = 62;
             this.dfeed.TabStop = false;
+            this.dfeed.Click += new System.EventHandler(this.dfeed_Click);
             this.dfeed.MouseHover += new System.EventHandler(this.dfeed_hover);
             // 
             // dfeedlabel
@@ -347,6 +350,7 @@
             this.dfeedlabel.Size = new System.Drawing.Size(156, 22);
             this.dfeedlabel.TabIndex = 61;
             this.dfeedlabel.Text = "Doctor Feedbacks";
+            this.dfeedlabel.Click += new System.EventHandler(this.dfeedlabel_Click);
             this.dfeedlabel.MouseHover += new System.EventHandler(this.dfeedlabel_hover);
             // 
             // Patient
@@ -375,6 +379,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Patient";
             this.Text = "Patient";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.patient_close);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Prescript)).EndInit();
@@ -393,7 +398,6 @@
         #endregion
 
         private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripButton Home;
         private System.Windows.Forms.ToolStripSplitButton settings;
         private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolsToolStripMenuItem;

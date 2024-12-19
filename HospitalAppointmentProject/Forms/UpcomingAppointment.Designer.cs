@@ -33,8 +33,6 @@
             this.CurrentAppointments = new System.Windows.Forms.ComboBox();
             this.Cancellabel = new System.Windows.Forms.Label();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.Home = new System.Windows.Forms.ToolStripButton();
             this.settings = new System.Windows.Forms.ToolStripSplitButton();
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -46,6 +44,8 @@
             this.editProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.removeAccountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitprogram = new System.Windows.Forms.ToolStripButton();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.Cancel = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.Appointments)).BeginInit();
@@ -99,25 +99,6 @@
             this.toolStrip1.TabIndex = 45;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 107);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(162, 22);
-            this.label1.TabIndex = 46;
-            this.label1.Text = "Your Appointments";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(489, 131);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(187, 16);
-            this.label2.TabIndex = 47;
-            this.label2.Text = "Select Appointments to cancel";
-            // 
             // Home
             // 
             this.Home.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -126,6 +107,7 @@
             this.Home.Name = "Home";
             this.Home.Size = new System.Drawing.Size(37, 24);
             this.Home.Text = "home page";
+            this.Home.Click += new System.EventHandler(this.Home_Click);
             // 
             // settings
             // 
@@ -166,6 +148,7 @@
             this.contactus.Name = "contactus";
             this.contactus.Size = new System.Drawing.Size(37, 24);
             this.contactus.Text = "contact us";
+            this.contactus.Click += new System.EventHandler(this.contactus_Click);
             // 
             // profile
             // 
@@ -206,6 +189,26 @@
             this.exitprogram.Name = "exitprogram";
             this.exitprogram.Size = new System.Drawing.Size(37, 24);
             this.exitprogram.Text = "exit";
+            this.exitprogram.Click += new System.EventHandler(this.exitprogram_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(12, 107);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(162, 22);
+            this.label1.TabIndex = 46;
+            this.label1.Text = "Your Appointments";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(489, 131);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(187, 16);
+            this.label2.TabIndex = 47;
+            this.label2.Text = "Select Appointments to cancel";
             // 
             // Cancel
             // 
@@ -245,6 +248,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "UpcomingAppointment";
             this.Text = "UpcomingAppointment";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.upAppointments_close);
             ((System.ComponentModel.ISupportInitialize)(this.Appointments)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();

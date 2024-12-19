@@ -137,11 +137,11 @@
     <Compile Include="Forms\Medicines.Designer.cs">
       <DependentUpon>Medicines.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Medicla_History.cs">
+    <Compile Include="Forms\Medical_History.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Medicla_History.Designer.cs">
-      <DependentUpon>Medicla_History.cs</DependentUpon>
+    <Compile Include="Forms\Medical_History.Designer.cs">
+      <DependentUpon>Medical_History.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\ModifyHospitals.cs">
       <SubType>Form</SubType>
@@ -282,8 +282,8 @@
     <EmbeddedResource Include="Forms\Medicines.resx">
       <DependentUpon>Medicines.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Medicla_History.resx">
-      <DependentUpon>Medicla_History.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Medical_History.resx">
+      <DependentUpon>Medical_History.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ModifyHospitals.resx">
       <DependentUpon>ModifyHospitals.cs</DependentUpon>

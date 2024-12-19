@@ -54,7 +54,7 @@
             // Appoints
             // 
             this.Appoints.FormattingEnabled = true;
-            this.Appoints.Location = new System.Drawing.Point(282, 131);
+            this.Appoints.Location = new System.Drawing.Point(292, 131);
             this.Appoints.Name = "Appoints";
             this.Appoints.Size = new System.Drawing.Size(142, 24);
             this.Appoints.TabIndex = 35;
@@ -82,7 +82,7 @@
             // AvaTimes
             // 
             this.AvaTimes.FormattingEnabled = true;
-            this.AvaTimes.Location = new System.Drawing.Point(282, 189);
+            this.AvaTimes.Location = new System.Drawing.Point(292, 189);
             this.AvaTimes.Name = "AvaTimes";
             this.AvaTimes.Size = new System.Drawing.Size(142, 24);
             this.AvaTimes.TabIndex = 43;
@@ -116,7 +116,7 @@
             this.contactus,
             this.profile,
             this.exitprogram});
-            this.toolStrip1.Location = new System.Drawing.Point(641, 0);
+            this.toolStrip1.Location = new System.Drawing.Point(666, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(40, 433);
             this.toolStrip1.TabIndex = 46;
@@ -130,6 +130,7 @@
             this.Home.Name = "Home";
             this.Home.Size = new System.Drawing.Size(37, 24);
             this.Home.Text = "home page";
+            this.Home.Click += new System.EventHandler(this.Home_Click);
             // 
             // settings
             // 
@@ -170,6 +171,7 @@
             this.contactus.Name = "contactus";
             this.contactus.Size = new System.Drawing.Size(37, 24);
             this.contactus.Text = "contact us";
+            this.contactus.Click += new System.EventHandler(this.contactus_Click);
             // 
             // profile
             // 
@@ -210,13 +212,14 @@
             this.exitprogram.Name = "exitprogram";
             this.exitprogram.Size = new System.Drawing.Size(37, 24);
             this.exitprogram.Text = "exit";
+            this.exitprogram.Click += new System.EventHandler(this.exitprogram_Click);
             // 
             // reschedule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(241)))), ((int)(((byte)(232)))));
-            this.ClientSize = new System.Drawing.Size(681, 433);
+            this.ClientSize = new System.Drawing.Size(706, 433);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.changeappoint);
             this.Controls.Add(this.label1);
@@ -227,6 +230,8 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "reschedule";
             this.Text = "reschedule";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.reschedule_close);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.res_close);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();

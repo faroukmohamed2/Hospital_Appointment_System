@@ -53,7 +53,6 @@
             this.passloglabel = new System.Windows.Forms.Label();
             this.signup = new System.Windows.Forms.Button();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.Home = new System.Windows.Forms.ToolStripButton();
             this.settings = new System.Windows.Forms.ToolStripSplitButton();
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -62,7 +61,8 @@
             this.exitprogram = new System.Windows.Forms.ToolStripButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.retlogin = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.retloginlabel = new System.Windows.Forms.Label();
+            this.upshowpass = new System.Windows.Forms.CheckBox();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -78,6 +78,7 @@
             this.Submit.Text = "Submit";
             this.Submit.UseVisualStyleBackColor = true;
             this.Submit.Visible = false;
+            this.Submit.Click += new System.EventHandler(this.Submit_Click);
             // 
             // genderlabel
             // 
@@ -133,6 +134,7 @@
             this.confirmPass.Enabled = false;
             this.confirmPass.Location = new System.Drawing.Point(448, 234);
             this.confirmPass.Name = "confirmPass";
+            this.confirmPass.PasswordChar = '*';
             this.confirmPass.Size = new System.Drawing.Size(136, 22);
             this.confirmPass.TabIndex = 17;
             this.confirmPass.Visible = false;
@@ -155,6 +157,7 @@
             this.SetPassword.Enabled = false;
             this.SetPassword.Location = new System.Drawing.Point(448, 188);
             this.SetPassword.Name = "SetPassword";
+            this.SetPassword.PasswordChar = '*';
             this.SetPassword.Size = new System.Drawing.Size(136, 22);
             this.SetPassword.TabIndex = 15;
             this.SetPassword.Visible = false;
@@ -265,6 +268,7 @@
             this.log_in_here.TabIndex = 5;
             this.log_in_here.Text = "login";
             this.log_in_here.UseVisualStyleBackColor = true;
+            this.log_in_here.Click += new System.EventHandler(this.log_in_here_Click);
             // 
             // showpass
             // 
@@ -321,7 +325,6 @@
             this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Right;
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.Home,
             this.settings,
             this.contactus,
             this.exitprogram});
@@ -330,15 +333,6 @@
             this.toolStrip1.Size = new System.Drawing.Size(40, 476);
             this.toolStrip1.TabIndex = 25;
             this.toolStrip1.Text = "toolStrip1";
-            // 
-            // Home
-            // 
-            this.Home.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.Home.Image = ((System.Drawing.Image)(resources.GetObject("Home.Image")));
-            this.Home.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.Home.Name = "Home";
-            this.Home.Size = new System.Drawing.Size(37, 24);
-            this.Home.Text = "home page";
             // 
             // settings
             // 
@@ -380,6 +374,7 @@
             this.contactus.Name = "contactus";
             this.contactus.Size = new System.Drawing.Size(37, 24);
             this.contactus.Text = "contact us";
+            this.contactus.Click += new System.EventHandler(this.contactus_Click);
             // 
             // exitprogram
             // 
@@ -389,6 +384,7 @@
             this.exitprogram.Name = "exitprogram";
             this.exitprogram.Size = new System.Drawing.Size(37, 24);
             this.exitprogram.Text = "exit";
+            this.exitprogram.Click += new System.EventHandler(this.exitprogram_Click);
             // 
             // pictureBox1
             // 
@@ -402,6 +398,7 @@
             // 
             // retlogin
             // 
+            this.retlogin.Enabled = false;
             this.retlogin.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.retlogin.Location = new System.Drawing.Point(827, 394);
             this.retlogin.Name = "retlogin";
@@ -409,15 +406,32 @@
             this.retlogin.TabIndex = 36;
             this.retlogin.Text = "login";
             this.retlogin.UseVisualStyleBackColor = true;
+            this.retlogin.Visible = false;
+            this.retlogin.Click += new System.EventHandler(this.retlogin_Click);
             // 
-            // label1
+            // retloginlabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(671, 400);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(127, 16);
-            this.label1.TabIndex = 35;
-            this.label1.Text = "Return to login page";
+            this.retloginlabel.AutoSize = true;
+            this.retloginlabel.Enabled = false;
+            this.retloginlabel.Location = new System.Drawing.Point(671, 400);
+            this.retloginlabel.Name = "retloginlabel";
+            this.retloginlabel.Size = new System.Drawing.Size(127, 16);
+            this.retloginlabel.TabIndex = 35;
+            this.retloginlabel.Text = "Return to login page";
+            this.retloginlabel.Visible = false;
+            // 
+            // upshowpass
+            // 
+            this.upshowpass.AutoSize = true;
+            this.upshowpass.Enabled = false;
+            this.upshowpass.Location = new System.Drawing.Point(599, 188);
+            this.upshowpass.Name = "upshowpass";
+            this.upshowpass.Size = new System.Drawing.Size(122, 20);
+            this.upshowpass.TabIndex = 37;
+            this.upshowpass.Text = "show password";
+            this.upshowpass.UseVisualStyleBackColor = true;
+            this.upshowpass.Visible = false;
+            this.upshowpass.CheckedChanged += new System.EventHandler(this.upshowpass_CheckedChanged);
             // 
             // login
             // 
@@ -425,8 +439,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(241)))), ((int)(((byte)(232)))));
             this.ClientSize = new System.Drawing.Size(969, 476);
+            this.Controls.Add(this.upshowpass);
             this.Controls.Add(this.retlogin);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.retloginlabel);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.signup);
@@ -455,6 +470,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "login";
             this.Text = "login";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.login_close);
             this.Load += new System.EventHandler(this.login_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
@@ -490,7 +506,6 @@
         private System.Windows.Forms.Label passloglabel;
         private System.Windows.Forms.Button signup;
         private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripButton Home;
         private System.Windows.Forms.ToolStripButton contactus;
         private System.Windows.Forms.ToolStripButton exitprogram;
         private System.Windows.Forms.ToolStripSplitButton settings;
@@ -499,6 +514,7 @@
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button retlogin;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label retloginlabel;
+        private System.Windows.Forms.CheckBox upshowpass;
     }
 }

@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace HospitalAppointmentSystem
 {
-    public partial class reschedule : Form
+    public partial class Medical_History : Form
     {
         Form prevform, mainform;
 
@@ -22,6 +22,7 @@ namespace HospitalAppointmentSystem
 
         private void contactus_Click(object sender, EventArgs e)
         {
+
             ContactUs cu = new ContactUs(this, mainform);
             this.Hide();
             cu.Show();
@@ -32,16 +33,12 @@ namespace HospitalAppointmentSystem
             mainform.Close();
         }
 
-        private void reschedule_close(object sender, FormClosingEventArgs e)
-        {
-        }
-
-        private void res_close(object sender, FormClosedEventArgs e)
+        private void Mh_close(object sender, FormClosedEventArgs e)
         {
             prevform.Show();
         }
 
-        public reschedule(Form prevform, Form mainform)
+        public Medical_History(Form prevform, Form mainform)
         {
             InitializeComponent();
             this.prevform = prevform;

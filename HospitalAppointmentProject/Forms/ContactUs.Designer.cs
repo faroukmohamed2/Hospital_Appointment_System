@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ContactUs));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.Home = new System.Windows.Forms.ToolStripButton();
             this.settings = new System.Windows.Forms.ToolStripSplitButton();
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -58,7 +57,6 @@
             this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Right;
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.Home,
             this.settings,
             this.toolStripButton1,
             this.profile,
@@ -68,15 +66,6 @@
             this.toolStrip1.Size = new System.Drawing.Size(40, 328);
             this.toolStrip1.TabIndex = 69;
             this.toolStrip1.Text = "toolStrip1";
-            // 
-            // Home
-            // 
-            this.Home.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.Home.Image = ((System.Drawing.Image)(resources.GetObject("Home.Image")));
-            this.Home.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.Home.Name = "Home";
-            this.Home.Size = new System.Drawing.Size(37, 24);
-            this.Home.Text = "home page";
             // 
             // settings
             // 
@@ -94,19 +83,19 @@
             // viewToolStripMenuItem
             // 
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            this.viewToolStripMenuItem.Size = new System.Drawing.Size(125, 26);
+            this.viewToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.viewToolStripMenuItem.Text = "view";
             // 
             // toolsToolStripMenuItem
             // 
             this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
-            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(125, 26);
+            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.toolsToolStripMenuItem.Text = "tools";
             // 
             // editToolStripMenuItem
             // 
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(125, 26);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.editToolStripMenuItem.Text = "Edit";
             // 
             // toolStripButton1
@@ -164,6 +153,7 @@
             this.exitprogram.Name = "exitprogram";
             this.exitprogram.Size = new System.Drawing.Size(37, 24);
             this.exitprogram.Text = "exit";
+            this.exitprogram.Click += new System.EventHandler(this.exitprogram_Click);
             // 
             // pictureBox1
             // 
@@ -230,6 +220,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ContactUs";
             this.Text = "ContactUs";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.contactus_close);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -243,7 +234,6 @@
         #endregion
 
         private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripButton Home;
         private System.Windows.Forms.ToolStripSplitButton settings;
         private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolsToolStripMenuItem;

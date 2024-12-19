@@ -39,7 +39,7 @@
             this.HosPN = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.HosLoction = new System.Windows.Forms.TextBox();
+            this.HosLocation = new System.Windows.Forms.TextBox();
             this.AddHos = new System.Windows.Forms.Button();
             this.UpHos = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
@@ -155,13 +155,13 @@
             this.label4.TabIndex = 65;
             this.label4.Text = "Hospital Location";
             // 
-            // HosLoction
+            // HosLocation
             // 
-            this.HosLoction.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.HosLoction.Location = new System.Drawing.Point(227, 338);
-            this.HosLoction.Name = "HosLoction";
-            this.HosLoction.Size = new System.Drawing.Size(127, 22);
-            this.HosLoction.TabIndex = 66;
+            this.HosLocation.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.HosLocation.Location = new System.Drawing.Point(227, 338);
+            this.HosLocation.Name = "HosLocation";
+            this.HosLocation.Size = new System.Drawing.Size(127, 22);
+            this.HosLocation.TabIndex = 66;
             // 
             // AddHos
             // 
@@ -171,6 +171,7 @@
             this.AddHos.TabIndex = 68;
             this.AddHos.Text = "Add Hospital";
             this.AddHos.UseVisualStyleBackColor = true;
+            this.AddHos.Click += new System.EventHandler(this.AddHos_Click);
             // 
             // UpHos
             // 
@@ -180,6 +181,7 @@
             this.UpHos.TabIndex = 69;
             this.UpHos.Text = "Update Hospital";
             this.UpHos.UseVisualStyleBackColor = true;
+            this.UpHos.Click += new System.EventHandler(this.UpHos_Click);
             // 
             // label5
             // 
@@ -214,8 +216,9 @@
             this.delHos.Name = "delHos";
             this.delHos.Size = new System.Drawing.Size(119, 23);
             this.delHos.TabIndex = 73;
-            this.delHos.Text = "Update Hospital";
+            this.delHos.Text = "Delete Hospital";
             this.delHos.UseVisualStyleBackColor = true;
+            this.delHos.Click += new System.EventHandler(this.delHos_Click);
             // 
             // label7
             // 
@@ -259,6 +262,7 @@
             this.Home.Name = "Home";
             this.Home.Size = new System.Drawing.Size(37, 24);
             this.Home.Text = "home page";
+            this.Home.Click += new System.EventHandler(this.Home_Click);
             // 
             // settings
             // 
@@ -299,6 +303,7 @@
             this.contactus.Name = "contactus";
             this.contactus.Size = new System.Drawing.Size(37, 24);
             this.contactus.Text = "contact us";
+            this.contactus.Click += new System.EventHandler(this.contactus_Click);
             // 
             // profile
             // 
@@ -332,6 +337,7 @@
             this.exitprogram.Name = "exitprogram";
             this.exitprogram.Size = new System.Drawing.Size(37, 24);
             this.exitprogram.Text = "exit";
+            this.exitprogram.Click += new System.EventHandler(this.exitprogram_Click);
             // 
             // ModifyHospitals
             // 
@@ -348,7 +354,7 @@
             this.Controls.Add(this.delHosID);
             this.Controls.Add(this.UpHos);
             this.Controls.Add(this.AddHos);
-            this.Controls.Add(this.HosLoction);
+            this.Controls.Add(this.HosLocation);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.HosPN);
             this.Controls.Add(this.label3);
@@ -362,6 +368,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ModifyHospitals";
             this.Text = "ModifyHospitals";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.modHos_close);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
@@ -382,7 +389,7 @@
         private System.Windows.Forms.TextBox HosPN;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox HosLoction;
+        private System.Windows.Forms.TextBox HosLocation;
         private System.Windows.Forms.Button AddHos;
         private System.Windows.Forms.Button UpHos;
         private System.Windows.Forms.Label label5;

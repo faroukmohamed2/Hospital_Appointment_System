@@ -12,9 +12,23 @@ namespace HospitalAppointmentSystem
 {
     public partial class ContactUs : Form
     {
-        public ContactUs()
+        Form prevform;
+        Form mainprogram;
+        public ContactUs(Form prevform, Form mainprogram)
         {
             InitializeComponent();
+            this.prevform = prevform;
+            this.mainprogram = mainprogram;
+        }
+
+        private void contactus_close(object sender, FormClosedEventArgs e)
+        {
+            prevform.Show();
+        }
+
+        private void exitprogram_Click(object sender, EventArgs e)
+        {
+            mainprogram.Close();
         }
     }
 }

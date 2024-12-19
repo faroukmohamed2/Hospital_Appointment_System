@@ -12,9 +12,11 @@ namespace HospitalAppointmentSystem
 {
     public partial class Patient : Form
     {
-        public Patient()
+        Form mainform;
+        public Patient(Form mainform)
         {
             InitializeComponent();
+            this.mainform = mainform;
         }
 
         private void newAppointmentToolStripMenuItem_Click(object sender, EventArgs e)
@@ -29,7 +31,9 @@ namespace HospitalAppointmentSystem
 
         private void addappoint_Click(object sender, EventArgs e)
         {
-
+            Appoint app = new Appoint(this, mainform);
+            this.Hide();
+            app.Show();
         }
 
         private void addappoint_hover(object sender, EventArgs e)
@@ -100,6 +104,114 @@ namespace HospitalAppointmentSystem
         private void dfeedlabel_hover(object sender, EventArgs e)
         {
             dfeedlabel.Cursor = Cursors.Hand;
+        }
+
+        private void appointlabel_Click(object sender, EventArgs e)
+        {
+            Appoint app = new Appoint(this, mainform);
+            this.Hide();
+            app.Show();
+        }
+
+        private void patient_close(object sender, FormClosedEventArgs e)
+        {
+            mainform.Close();
+        }
+
+        private void showappoints_Click(object sender, EventArgs e)
+        {
+            UpcomingAppointment upapp = new UpcomingAppointment(this, mainform);
+            this.Hide();
+            upapp.Show();
+        }
+
+        private void contactus_Click(object sender, EventArgs e)
+        {
+            ContactUs cu = new ContactUs(this, mainform);
+            this.Hide();
+            cu.Show();
+        }
+
+        private void exitprogram_Click(object sender, EventArgs e)
+        {
+            mainform.Close();
+        }
+
+        private void showAppointmentslabel_Click(object sender, EventArgs e)
+        {
+            UpcomingAppointment upapp = new UpcomingAppointment(this, mainform);
+            this.Hide();
+            upapp.Show();
+        }
+
+        private void EditAppointmentslabel_Click(object sender, EventArgs e)
+        {
+            reschedule re = new reschedule(this, mainform);
+            this.Hide();
+            re.Show();
+        }
+
+        private void EditAppointments_Click(object sender, EventArgs e)
+        {
+            reschedule re = new reschedule(this, mainform);
+            this.Hide();
+            re.Show();
+        }
+
+        private void dfeedlabel_Click(object sender, EventArgs e)
+        {
+            PateintsFeedbacks sd = new PateintsFeedbacks(this,  mainform);
+            this.Hide();
+            sd.Show();
+        }
+
+        private void dfeed_Click(object sender, EventArgs e)
+        {
+            PateintsFeedbacks sd = new PateintsFeedbacks(this, mainform);
+            this.Hide();
+            sd.Show();
+        }
+
+        private void DocSearch_Click(object sender, EventArgs e)
+        {
+            Search_Doctors sd = new Search_Doctors(this, mainform);
+            this.Hide();
+            sd.Show();
+        }
+
+        private void DocSearchlabel_Click(object sender, EventArgs e)
+        {
+            Search_Doctors sd = new Search_Doctors(this, mainform);
+            this.Hide();
+            sd.Show();
+        }
+
+        private void Prescript_Click(object sender, EventArgs e)
+        {
+            Prescriptions p = new Prescriptions(this, mainform);
+            this.Hide();
+            p.Show();
+        }
+
+        private void Prescriptionslabel_Click(object sender, EventArgs e)
+        {
+            Prescriptions p = new Prescriptions(this, mainform);
+            this.Hide();
+            p.Show();
+        }
+
+        private void medHistory_Click(object sender, EventArgs e)
+        {
+            Medical_History mh = new Medical_History(this, mainform);
+            this.Hide();
+            mh.Show();
+        }
+
+        private void midhistlablel_Click(object sender, EventArgs e)
+        {
+            Medical_History mh = new Medical_History(this, mainform);
+            this.Hide();
+            mh.Show();
         }
     }
 }

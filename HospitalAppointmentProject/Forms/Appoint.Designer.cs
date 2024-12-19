@@ -126,6 +126,7 @@
             this.addappoint.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.addappoint.TabIndex = 42;
             this.addappoint.TabStop = false;
+            this.addappoint.Click += new System.EventHandler(this.addappoint_Click);
             this.addappoint.MouseHover += new System.EventHandler(this.Add_hover);
             // 
             // Add
@@ -208,6 +209,7 @@
             this.Home.Name = "Home";
             this.Home.Size = new System.Drawing.Size(37, 24);
             this.Home.Text = "home page";
+            this.Home.Click += new System.EventHandler(this.Home_Click);
             // 
             // settings
             // 
@@ -248,6 +250,7 @@
             this.contactus.Name = "contactus";
             this.contactus.Size = new System.Drawing.Size(37, 24);
             this.contactus.Text = "contact us";
+            this.contactus.Click += new System.EventHandler(this.contactus_Click);
             // 
             // profile
             // 
@@ -288,6 +291,7 @@
             this.exitprogram.Name = "exitprogram";
             this.exitprogram.Size = new System.Drawing.Size(37, 24);
             this.exitprogram.Text = "exit";
+            this.exitprogram.Click += new System.EventHandler(this.exitprogram_Click);
             // 
             // Bill
             // 
@@ -333,6 +337,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Name = "Appoint";
             this.Text = "Appoint";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Appoin_close);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.addappoint)).EndInit();
             this.toolStrip1.ResumeLayout(false);

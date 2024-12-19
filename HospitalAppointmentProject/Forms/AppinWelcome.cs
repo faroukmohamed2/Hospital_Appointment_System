@@ -24,9 +24,20 @@ namespace HospitalAppointmentSystem
 
         private void login_Click(object sender, EventArgs e)
         {
-            login log = new login();
-            log.Show();
+            login log = new login(this, this);
             this.Hide();
+            log.Show();
+        }
+
+        private void contactus_Click(object sender, EventArgs e)
+        {
+            ContactUs cu = new ContactUs(this, this);
+            this.Hide();
+            cu.Show();
+        }
+        private void exitprogram_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
