@@ -7,18 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using HospitalAppointmentProject.UML.USERS;
 
 namespace HospitalAppointmentSystem
 {
     public partial class Patient : Form
     {
         Form mainform;
-        Patient patirnt;
-        public Patient(Form mainform, Patient patirnt)
+        int? patient_id;
+        public Patient(Form mainform, int? patient_id)
         {
             InitializeComponent();
             this.mainform = mainform;
-            this.patirnt = patirnt;
+            this.patient_id = patient_id;
         }
 
         private void newAppointmentToolStripMenuItem_Click(object sender, EventArgs e)

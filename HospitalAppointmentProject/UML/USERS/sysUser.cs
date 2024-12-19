@@ -9,7 +9,7 @@ using System.Data;
 using DBapplication;
 namespace HospitalAppointmentProject.UML.USERS
 {
-    enum UserType { None,Patient,Doctor,Manager,PharmacyManager, HospitalManger,Admin };
+    enum UserType { None,Patient,Doctor,Manager,PharmacyManager, HospitalManager,Admin };
    
     internal class sysUser
     {
@@ -183,6 +183,10 @@ namespace HospitalAppointmentProject.UML.USERS
             object manPHcheck = DataBase.Manager.ExecuteScalar(chechPHman);
             if (manPHcheck != null && manPHcheck != DBNull.Value)
                 return UserType.PharmacyManager;
+            string chechhosman = $"select ManagerID from HospitalManager where ManagerID = {_UserID}";
+            object manhoscheck = DataBase.Manager.ExecuteScalar(chechhosman);
+            if (manhoscheck != null && manhoscheck != DBNull.Value)
+                return UserType.HospitalManager;
             return UserType.None;
         }
         public int SignUp() {

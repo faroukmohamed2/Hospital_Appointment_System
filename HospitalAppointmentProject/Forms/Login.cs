@@ -215,9 +215,20 @@ namespace HospitalAppointmentSystem
                     return;
                 }
             }
-            Admin Adm = new Admin(mainform);
-            this.Hide();
-            Adm.Show();
+            User = new sysUser(null, Email.Text, Password.Text, null, null, null, null);
+
+            UserType user = User.LogIn();
+            MessageBox.Show(user.ToString());
+            switch(user)
+            {
+                case UserType.Patient:
+                    Patient p = new Patient(mainform, User._UserID);
+                    this.Hide();
+                    p.Show();
+                    break;
+
+            }
+
         }
         private bool isvalidemail()
         {
