@@ -1,6 +1,6 @@
 ﻿namespace HospitalAppointmentSystem
 {
-    partial class Medicines
+    partial class medicines
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Medicines));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(medicines));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.Home = new System.Windows.Forms.ToolStripButton();
             this.settings = new System.Windows.Forms.ToolStripSplitButton();
@@ -86,6 +86,7 @@
             this.Home.Name = "Home";
             this.Home.Size = new System.Drawing.Size(37, 24);
             this.Home.Text = "home page";
+            this.Home.Click += new System.EventHandler(this.Home_Click);
             // 
             // settings
             // 
@@ -126,6 +127,7 @@
             this.contactus.Name = "contactus";
             this.contactus.Size = new System.Drawing.Size(37, 24);
             this.contactus.Text = "contact us";
+            this.contactus.Click += new System.EventHandler(this.contactus_Click);
             // 
             // profile
             // 
@@ -173,6 +175,7 @@
             this.exitprogram.Name = "exitprogram";
             this.exitprogram.Size = new System.Drawing.Size(37, 24);
             this.exitprogram.Text = "exit";
+            this.exitprogram.Click += new System.EventHandler(this.exitprogram_Click);
             // 
             // pictureBox1
             // 
@@ -305,7 +308,7 @@
             this.addMed.TabStop = false;
             this.addMed.MouseHover += new System.EventHandler(this.addmed_hover);
             // 
-            // Medicines
+            // medicines
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -326,8 +329,9 @@
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Medicines";
+            this.Name = "medicines";
             this.Text = "Medicines";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Med_close);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

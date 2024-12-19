@@ -6,9 +6,11 @@ using System.Drawing;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using HospitalAppointmentProject.UML.USERS;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 namespace HospitalAppointmentSystem
 {
     public partial class login : Form
@@ -16,9 +18,12 @@ namespace HospitalAppointmentSystem
         Form prevform, mainform;
         TextBox[] signUpAllboxes, loginAllboxes;
         Label[] loginlabels, signUpLabels;
+        sysUser User;
+        const int _STARTINGID = 50000;
         public login(Form prevform, Form mainform)
         {
             InitializeComponent();
+
             this.prevform = prevform;
             this.mainform = mainform;
             signUpAllboxes = new TextBox[]{ Fname, LName, SignupEmail, SetPassword, confirmPass, Age};
@@ -114,6 +119,8 @@ namespace HospitalAppointmentSystem
             upshowpass.Enabled = false;
             Submit.Enabled = false;
             Submit.Visible = false;
+            Gender.Enabled = false;
+            Gender.Visible = false;
         }
         private void show_signup()
         {
@@ -131,6 +138,8 @@ namespace HospitalAppointmentSystem
             upshowpass.Enabled = true;
             Submit.Enabled = true;
             Submit.Visible = true;
+            Gender.Visible = true;
+            Gender.Enabled = true;
 
         }
         /////////////////////////////////////////////////////////////////
@@ -206,9 +215,14 @@ namespace HospitalAppointmentSystem
                     return;
                 }
             }
-            Patient pat = new Patient(mainform);
+            Admin Adm = new Admin(mainform);
             this.Hide();
-            pat.Show();
+            Adm.Show();
+        }
+        private bool isvalidemail()
+        {
+            string emailPattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
+            return Regex.IsMatch(SignupEmail.Text, emailPattern);
         }
 
         private void contactus_Click(object sender, EventArgs e)
@@ -227,6 +241,48 @@ namespace HospitalAppointmentSystem
                     return;
                 }
             }
+            if (SetPassword.Text.Length < 8)
+            {
+                MessageBox.Show("the password must be greater than 8 letters");
+                return;
+            }
+            if (SetPassword.Text != confirmPass.Text)
+            {
+                MessageBox.Show("the confirm password doesn't match the password");
+                return;
+            }
+            int age;
+            if (!int.TryParse(Age.Text, out age))
+            {
+                MessageBox.Show("the age must be a number");
+                return;
+            }
+            if (Gender.SelectedIndex == -1)
+            {
+                MessageBox.Show("Please Selcect the gender");
+                return;
+            }
+            if (!isvalidemail())
+            {
+                MessageBox.Show("your email is wrong");
+                return;
+            }
+            char gend = '?';
+            if (Gender.SelectedIndex == 0)
+                gend = 'M';
+            else
+                gend = 'F';
+            User = new sysUser(null, SignupEmail.Text, SetPassword.Text, age,  gend, Fname.Text, LName.Text);
+            User._UserID = _STARTINGID;
+            int res = User.SignUp();
+            if (res != 0){
+                MessageBox.Show("you signed up successfully");
+            }
+            else
+            {
+                MessageBox.Show("the email is already exist please change it");
+            }
+
         }
 
         private void upshowpass_CheckedChanged(object sender, EventArgs e)

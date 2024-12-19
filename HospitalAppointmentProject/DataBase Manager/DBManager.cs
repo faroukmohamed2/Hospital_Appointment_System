@@ -5,14 +5,14 @@ using System.Text;
 using System.Data.SqlClient;
 using System.Data;
 using System.Windows.Forms;
-
+using HospitalAppointmentSystem;
 namespace DBapplication
 {
     public class DBManager
     {
         //TODO: Make Sure to change Connection String to your Database 
 
-        static string DB_Connection_String = @"";
+        static string DB_Connection_String = @"Data Source=DESKTOP-V28B0V2\SQLEXPRESS;Initial Catalog=HospitalAppointmentSystem;Integrated Security=True;";
         SqlConnection myConnection;
 
         public DBManager()

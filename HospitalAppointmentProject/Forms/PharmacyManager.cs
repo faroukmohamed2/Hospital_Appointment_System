@@ -12,9 +12,11 @@ namespace HospitalAppointmentSystem
 {
     public partial class PharmacyManager : Form
     {
-        public PharmacyManager()
+        Form mainform;
+        public PharmacyManager(Form mainform)
         {
             InitializeComponent();
+            this.mainform = mainform;
         }
 
         private void manphlabel_hover(object sender, EventArgs e)
@@ -35,6 +37,53 @@ namespace HospitalAppointmentSystem
         private void manmed_hover(object sender, EventArgs e)
         {
             manmed.Cursor = Cursors.Hand;
+        }
+
+        private void phman_close(object sender, FormClosedEventArgs e)
+        {
+            mainform.Close();
+        }
+
+        private void exitprogram_Click(object sender, EventArgs e)
+        {
+            mainform.Close();
+
+        }
+
+        private void contactus_Click(object sender, EventArgs e)
+        {
+
+            ContactUs cu = new ContactUs(this, mainform);
+            this.Hide();
+            cu.Show();
+        }
+
+        private void manph_Click(object sender, EventArgs e)
+        {
+            ManagePharmacy mph = new ManagePharmacy(this, mainform);
+            this.Hide();
+            mph.Show();
+        }
+
+        private void manphlabel_Click(object sender, EventArgs e)
+        {
+            ManagePharmacy mph = new ManagePharmacy(this, mainform);
+            this.Hide();
+            mph.Show();
+        }
+
+        private void manmed_Click(object sender, EventArgs e)
+        {
+            medicines med = new medicines(this, mainform);
+            this.Hide();
+            med.Show();
+        }
+
+        private void manmedlabel_Click(object sender, EventArgs e)
+        {
+            medicines med = new medicines(this, mainform);
+            this.Hide();
+            med.Show();
         }
     }
 }

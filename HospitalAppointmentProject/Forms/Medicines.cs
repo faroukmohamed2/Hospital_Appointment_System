@@ -10,11 +10,14 @@ using System.Windows.Forms;
 
 namespace HospitalAppointmentSystem
 {
-    public partial class Medicines : Form
+    public partial class medicines : Form
     {
-        public Medicines()
+        Form prevform, mainform;
+        public medicines(Form prevform, Form mainform)
         {
             InitializeComponent();
+            this.prevform = prevform;
+            this.mainform = mainform;
         }
 
         private void greeting_Click(object sender, EventArgs e)
@@ -36,6 +39,30 @@ namespace HospitalAppointmentSystem
         private void addmedlabel_hover(object sender, EventArgs e)
         {
             addmedlabel.Cursor = Cursors.Hand;
+        }
+
+        private void exitprogram_Click(object sender, EventArgs e)
+        {
+            mainform.Close();
+        }
+
+        private void contactus_Click(object sender, EventArgs e)
+        {
+
+            ContactUs cu = new ContactUs(this, mainform);
+            this.Hide();
+            cu.Show();
+        }
+
+        private void Home_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            prevform.Show();
+        }
+
+        private void Med_close(object sender, FormClosedEventArgs e)
+        {
+            prevform.Show();
         }
 
         private void addmed_hover(object sender, EventArgs e)

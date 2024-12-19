@@ -12,9 +12,12 @@ namespace HospitalAppointmentSystem
 {
     public partial class FireDoctor : Form
     {
-        public FireDoctor()
+        Form prevform, mainform;
+        public FireDoctor(Form prevform, Form mainform)
         {
             InitializeComponent();
+            this.prevform = prevform;
+            this.mainform = mainform;
         }
 
         private void firedoclabel_hover(object sender, EventArgs e)
@@ -30,6 +33,30 @@ namespace HospitalAppointmentSystem
         private void updoc_hover(object sender, EventArgs e)
         {
             updoc.Cursor = Cursors.Hand;
+        }
+
+        private void Home_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            prevform.Show();
+        }
+
+        private void exitprogram_Click(object sender, EventArgs e)
+        {
+            mainform.Close();
+        }
+
+        private void contactus_Click(object sender, EventArgs e)
+        {
+
+            ContactUs cu = new ContactUs(this, mainform);
+            this.Hide();
+            cu.Show();
+        }
+
+        private void firedoc_close(object sender, FormClosedEventArgs e)
+        {
+            prevform.Show();
         }
 
         private void updoclabel_hover(object sender, EventArgs e)

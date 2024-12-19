@@ -13,10 +13,12 @@ namespace HospitalAppointmentSystem
     public partial class Patient : Form
     {
         Form mainform;
-        public Patient(Form mainform)
+        Patient patirnt;
+        public Patient(Form mainform, Patient patirnt)
         {
             InitializeComponent();
             this.mainform = mainform;
+            this.patirnt = patirnt;
         }
 
         private void newAppointmentToolStripMenuItem_Click(object sender, EventArgs e)
@@ -91,7 +93,7 @@ namespace HospitalAppointmentSystem
 
         private void medHistory_hover(object sender, EventArgs e)
         {
-            medHistory.Cursor = Cursors.Hand;
+          
         }
 
         private void dfeed_hover(object sender, EventArgs e)

@@ -4,10 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Data.SqlClient;
+using System.Data;
+using DBapplication;
 namespace HospitalAppointmentProject.UML.USERS
 {
-    enum UserType { None,Patient,Doctor,Manager,Admin };
+    enum UserType { None,Patient,Doctor,Manager,PharmacyManager, HospitalManger,Admin };
+   
     internal class sysUser
     {
         
@@ -22,6 +25,7 @@ namespace HospitalAppointmentProject.UML.USERS
         public string _Last_Name;
         public List<ActivityLog> _ActivityLogs;
 
+        
         public int? UserID
         {
             get
@@ -151,8 +155,52 @@ namespace HospitalAppointmentProject.UML.USERS
             this.user_type = user_type;
         }
 
-        public void LogIn() {}
-        public void SignUp() {}
+        public UserType LogIn() {
+            string query = $"select UserID, password from sysUser where Email = {_Email}";
+            DataTable id = DataBase.Manager.ExecuteReader(query);
+            string password;
+            if (id != null){
+                _UserID = (int)id.Rows[0]["UserID"];
+                password = id.Rows[0]["Password"].ToString();
+            }
+            else
+                return UserType.None;//put a message please
+            if (password != _UserPassword)
+                return UserType.None;
+            string chechpatient = $"select patientid from patient where patientid = {_UserID}";
+            object patcheck = DataBase.Manager.ExecuteScalar(chechpatient);
+            if (patcheck != null && patcheck != DBNull.Value){
+                return UserType.Patient;}
+            string chechdoctor = $"select doctorid from doctor where doctorid = {_UserID}";
+            object doccheck = DataBase.Manager.ExecuteScalar(chechdoctor);
+            if (doccheck != null && doccheck != DBNull.Value)
+                return UserType.Doctor;
+            string chechAdmin = $"select Adminid from admin where adminid = {_UserID}";
+            object admcheck = DataBase.Manager.ExecuteScalar(chechAdmin);
+            if (admcheck != null && admcheck != DBNull.Value)
+                return UserType.Admin;
+            string chechPHman = $"select ManagerID from PharmacyManager where ManagerID = {_UserID}";
+            object manPHcheck = DataBase.Manager.ExecuteScalar(chechPHman);
+            if (manPHcheck != null && manPHcheck != DBNull.Value)
+                return UserType.PharmacyManager;
+            return UserType.None;
+        }
+        public int SignUp() {
+            string maxid = "select max(patientid) from patient";
+            object id = DataBase.Manager.ExecuteScalar(maxid);
+            if (id != null && id != DBNull.Value)
+                _UserID = (int)id + 1;
+            else
+                return 0;
+
+            string query = $"insert into sysuser values({_UserID}, '{_Email}' , '{_UserPassword}', {_Age}, '{_Gender}', '{_First_Name}', '{_Last_Name}'); ";
+            int userRes = DataBase.Manager.ExecuteNonQuery(query);
+            string patquery = $"insert into patient values({_UserID});";
+            int patres = DataBase.Manager.ExecuteNonQuery(patquery);
+            if (patres == 0 || userRes == 0)
+                return 0;
+            return 1;
+        }
 
         //add more functions as u need
     }

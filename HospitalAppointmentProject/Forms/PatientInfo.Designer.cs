@@ -95,6 +95,7 @@
             this.Home.Name = "Home";
             this.Home.Size = new System.Drawing.Size(37, 24);
             this.Home.Text = "home page";
+            this.Home.Click += new System.EventHandler(this.Home_Click);
             // 
             // settings
             // 
@@ -135,6 +136,7 @@
             this.contactus.Name = "contactus";
             this.contactus.Size = new System.Drawing.Size(37, 24);
             this.contactus.Text = "contact us";
+            this.contactus.Click += new System.EventHandler(this.contactus_Click);
             // 
             // profile
             // 
@@ -175,6 +177,7 @@
             this.exitprogram.Name = "exitprogram";
             this.exitprogram.Size = new System.Drawing.Size(37, 24);
             this.exitprogram.Text = "exit";
+            this.exitprogram.Click += new System.EventHandler(this.exitprogram_Click);
             // 
             // FNlabel
             // 
@@ -324,6 +327,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PatientInfo";
             this.Text = "PatientInfo";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.patinfo_close);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();

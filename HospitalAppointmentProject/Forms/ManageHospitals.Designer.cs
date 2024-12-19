@@ -37,12 +37,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.sat = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.sun = new System.Windows.Forms.CheckBox();
-            this.mon = new System.Windows.Forms.CheckBox();
-            this.tues = new System.Windows.Forms.CheckBox();
-            this.thur = new System.Windows.Forms.CheckBox();
-            this.weden = new System.Windows.Forms.CheckBox();
             this.fri = new System.Windows.Forms.CheckBox();
+            this.weden = new System.Windows.Forms.CheckBox();
+            this.thur = new System.Windows.Forms.CheckBox();
+            this.tues = new System.Windows.Forms.CheckBox();
+            this.mon = new System.Windows.Forms.CheckBox();
+            this.sun = new System.Windows.Forms.CheckBox();
             this.Ava = new System.Windows.Forms.CheckBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -154,45 +154,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Open Days";
             // 
-            // sun
+            // fri
             // 
-            this.sun.AutoSize = true;
-            this.sun.Location = new System.Drawing.Point(24, 57);
-            this.sun.Name = "sun";
-            this.sun.Size = new System.Drawing.Size(75, 20);
-            this.sun.TabIndex = 66;
-            this.sun.Text = "Sunday";
-            this.sun.UseVisualStyleBackColor = true;
-            // 
-            // mon
-            // 
-            this.mon.AutoSize = true;
-            this.mon.Location = new System.Drawing.Point(24, 83);
-            this.mon.Name = "mon";
-            this.mon.Size = new System.Drawing.Size(78, 20);
-            this.mon.TabIndex = 67;
-            this.mon.Text = "Monday";
-            this.mon.UseVisualStyleBackColor = true;
-            // 
-            // tues
-            // 
-            this.tues.AutoSize = true;
-            this.tues.Location = new System.Drawing.Point(24, 109);
-            this.tues.Name = "tues";
-            this.tues.Size = new System.Drawing.Size(83, 20);
-            this.tues.TabIndex = 68;
-            this.tues.Text = "Tuesday";
-            this.tues.UseVisualStyleBackColor = true;
-            // 
-            // thur
-            // 
-            this.thur.AutoSize = true;
-            this.thur.Location = new System.Drawing.Point(24, 161);
-            this.thur.Name = "thur";
-            this.thur.Size = new System.Drawing.Size(86, 20);
-            this.thur.TabIndex = 69;
-            this.thur.Text = "Thursday";
-            this.thur.UseVisualStyleBackColor = true;
+            this.fri.AutoSize = true;
+            this.fri.Location = new System.Drawing.Point(24, 187);
+            this.fri.Name = "fri";
+            this.fri.Size = new System.Drawing.Size(67, 20);
+            this.fri.TabIndex = 71;
+            this.fri.Text = "Friday";
+            this.fri.UseVisualStyleBackColor = true;
             // 
             // weden
             // 
@@ -204,15 +174,45 @@
             this.weden.Text = "Wednesday";
             this.weden.UseVisualStyleBackColor = true;
             // 
-            // fri
+            // thur
             // 
-            this.fri.AutoSize = true;
-            this.fri.Location = new System.Drawing.Point(24, 187);
-            this.fri.Name = "fri";
-            this.fri.Size = new System.Drawing.Size(67, 20);
-            this.fri.TabIndex = 71;
-            this.fri.Text = "Friday";
-            this.fri.UseVisualStyleBackColor = true;
+            this.thur.AutoSize = true;
+            this.thur.Location = new System.Drawing.Point(24, 161);
+            this.thur.Name = "thur";
+            this.thur.Size = new System.Drawing.Size(86, 20);
+            this.thur.TabIndex = 69;
+            this.thur.Text = "Thursday";
+            this.thur.UseVisualStyleBackColor = true;
+            // 
+            // tues
+            // 
+            this.tues.AutoSize = true;
+            this.tues.Location = new System.Drawing.Point(24, 109);
+            this.tues.Name = "tues";
+            this.tues.Size = new System.Drawing.Size(83, 20);
+            this.tues.TabIndex = 68;
+            this.tues.Text = "Tuesday";
+            this.tues.UseVisualStyleBackColor = true;
+            // 
+            // mon
+            // 
+            this.mon.AutoSize = true;
+            this.mon.Location = new System.Drawing.Point(24, 83);
+            this.mon.Name = "mon";
+            this.mon.Size = new System.Drawing.Size(78, 20);
+            this.mon.TabIndex = 67;
+            this.mon.Text = "Monday";
+            this.mon.UseVisualStyleBackColor = true;
+            // 
+            // sun
+            // 
+            this.sun.AutoSize = true;
+            this.sun.Location = new System.Drawing.Point(24, 57);
+            this.sun.Name = "sun";
+            this.sun.Size = new System.Drawing.Size(75, 20);
+            this.sun.TabIndex = 66;
+            this.sun.Text = "Sunday";
+            this.sun.UseVisualStyleBackColor = true;
             // 
             // Ava
             // 
@@ -366,6 +366,7 @@
             this.Home.Name = "Home";
             this.Home.Size = new System.Drawing.Size(37, 24);
             this.Home.Text = "home page";
+            this.Home.Click += new System.EventHandler(this.Home_Click);
             // 
             // settings
             // 
@@ -406,6 +407,7 @@
             this.contactus.Name = "contactus";
             this.contactus.Size = new System.Drawing.Size(37, 24);
             this.contactus.Text = "contact us";
+            this.contactus.Click += new System.EventHandler(this.contactus_Click);
             // 
             // profile
             // 
@@ -453,6 +455,7 @@
             this.exitprogram.Name = "exitprogram";
             this.exitprogram.Size = new System.Drawing.Size(37, 24);
             this.exitprogram.Text = "exit";
+            this.exitprogram.Click += new System.EventHandler(this.exitprogram_Click);
             // 
             // ManageHospitals
             // 
@@ -485,6 +488,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ManageHospitals";
             this.Text = "ManageHospitals";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Manhos_close);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

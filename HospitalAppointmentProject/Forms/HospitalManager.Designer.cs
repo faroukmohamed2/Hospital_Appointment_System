@@ -66,6 +66,7 @@
             this.manHoslabel.Size = new System.Drawing.Size(153, 22);
             this.manHoslabel.TabIndex = 59;
             this.manHoslabel.Text = "Manage Hospitals";
+            this.manHoslabel.Click += new System.EventHandler(this.manHoslabel_Click);
             this.manHoslabel.MouseHover += new System.EventHandler(this.manHoslabel_hover);
             // 
             // greeting
@@ -87,6 +88,7 @@
             this.adddoclabel.Size = new System.Drawing.Size(101, 22);
             this.adddoclabel.TabIndex = 62;
             this.adddoclabel.Text = "Hire Doctor";
+            this.adddoclabel.Click += new System.EventHandler(this.adddoclabel_Click);
             this.adddoclabel.MouseHover += new System.EventHandler(this.adddoclabel_hover);
             // 
             // fireDoclabel
@@ -98,6 +100,7 @@
             this.fireDoclabel.Size = new System.Drawing.Size(141, 22);
             this.fireDoclabel.TabIndex = 64;
             this.fireDoclabel.Text = "Manage Doctors";
+            this.fireDoclabel.Click += new System.EventHandler(this.fireDoclabel_Click);
             this.fireDoclabel.MouseHover += new System.EventHandler(this.fireDoclabel_hover);
             // 
             // toolStrip1
@@ -124,6 +127,7 @@
             this.Home.Name = "Home";
             this.Home.Size = new System.Drawing.Size(37, 24);
             this.Home.Text = "home page";
+            this.Home.Click += new System.EventHandler(this.Home_Click);
             // 
             // settings
             // 
@@ -164,6 +168,7 @@
             this.contactus.Name = "contactus";
             this.contactus.Size = new System.Drawing.Size(37, 24);
             this.contactus.Text = "contact us";
+            this.contactus.Click += new System.EventHandler(this.contactus_Click);
             // 
             // profile
             // 
@@ -211,6 +216,7 @@
             this.exitprogram.Name = "exitprogram";
             this.exitprogram.Size = new System.Drawing.Size(37, 24);
             this.exitprogram.Text = "exit";
+            this.exitprogram.Click += new System.EventHandler(this.exitprogram_Click);
             // 
             // fireDoc
             // 
@@ -221,6 +227,7 @@
             this.fireDoc.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.fireDoc.TabIndex = 65;
             this.fireDoc.TabStop = false;
+            this.fireDoc.Click += new System.EventHandler(this.fireDoc_Click);
             this.fireDoc.MouseHover += new System.EventHandler(this.fireDoc_hover);
             // 
             // addDoc
@@ -232,6 +239,7 @@
             this.addDoc.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.addDoc.TabIndex = 63;
             this.addDoc.TabStop = false;
+            this.addDoc.Click += new System.EventHandler(this.addDoc_Click);
             this.addDoc.MouseHover += new System.EventHandler(this.adddoc_hover);
             // 
             // manHos
@@ -243,6 +251,7 @@
             this.manHos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.manHos.TabIndex = 60;
             this.manHos.TabStop = false;
+            this.manHos.Click += new System.EventHandler(this.manHos_Click);
             this.manHos.MouseHover += new System.EventHandler(this.manHos_hover);
             // 
             // pictureBox1
@@ -273,6 +282,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "HospitalManager";
             this.Text = "HospitalManager";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ManHos_close);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fireDoc)).EndInit();

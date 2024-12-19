@@ -63,6 +63,7 @@
             this.manmedlabel.Size = new System.Drawing.Size(159, 22);
             this.manmedlabel.TabIndex = 68;
             this.manmedlabel.Text = "Manage Medicines";
+            this.manmedlabel.Click += new System.EventHandler(this.manmedlabel_Click);
             this.manmedlabel.MouseHover += new System.EventHandler(this.manmedlabel_hover);
             // 
             // manphlabel
@@ -71,9 +72,10 @@
             this.manphlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.manphlabel.Location = new System.Drawing.Point(216, 171);
             this.manphlabel.Name = "manphlabel";
-            this.manphlabel.Size = new System.Drawing.Size(153, 22);
+            this.manphlabel.Size = new System.Drawing.Size(173, 22);
             this.manphlabel.TabIndex = 66;
-            this.manphlabel.Text = "Manage Hospitals";
+            this.manphlabel.Text = "Manage Pharmacies";
+            this.manphlabel.Click += new System.EventHandler(this.manphlabel_Click);
             // 
             // toolStrip1
             // 
@@ -139,6 +141,7 @@
             this.contactus.Name = "contactus";
             this.contactus.Size = new System.Drawing.Size(37, 24);
             this.contactus.Text = "contact us";
+            this.contactus.Click += new System.EventHandler(this.contactus_Click);
             // 
             // profile
             // 
@@ -186,6 +189,7 @@
             this.exitprogram.Name = "exitprogram";
             this.exitprogram.Size = new System.Drawing.Size(37, 24);
             this.exitprogram.Text = "exit";
+            this.exitprogram.Click += new System.EventHandler(this.exitprogram_Click);
             // 
             // greeting
             // 
@@ -206,6 +210,7 @@
             this.manmed.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.manmed.TabIndex = 69;
             this.manmed.TabStop = false;
+            this.manmed.Click += new System.EventHandler(this.manmed_Click);
             this.manmed.MouseHover += new System.EventHandler(this.manmed_hover);
             // 
             // manph
@@ -217,6 +222,7 @@
             this.manph.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.manph.TabIndex = 67;
             this.manph.TabStop = false;
+            this.manph.Click += new System.EventHandler(this.manph_Click);
             this.manph.MouseHover += new System.EventHandler(this.manph_hover);
             // 
             // pictureBox1
@@ -245,6 +251,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PharmacyManager";
             this.Text = "PharmacyManager";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.phman_close);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.manmed)).EndInit();

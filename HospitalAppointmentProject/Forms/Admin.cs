@@ -82,5 +82,50 @@ namespace HospitalAppointmentSystem
             this.Hide();
             modh.Show();
         }
+
+        private void reportslabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void modHos_Click(object sender, EventArgs e)
+        {
+            ModifyHospitals modh = new ModifyHospitals(this, mainform);
+            this.Hide();
+            modh.Show();
+        }
+
+        private void Modph_Click(object sender, EventArgs e)
+        {
+            ModifyPharmacies modh = new ModifyPharmacies(this, mainform);
+            this.Hide();
+            modh.Show();
+        }
+
+        private void Modphlabel_Click(object sender, EventArgs e)
+        {
+            ModifyPharmacies modh = new ModifyPharmacies(this, mainform);
+            this.Hide();
+            modh.Show();
+        }
+
+        private void log_Click(object sender, EventArgs e)
+        {
+            UserActivities ua = new UserActivities(this, mainform);
+            this.Hide();
+            ua.Show();
+        }
+
+        private void loglabel_Click(object sender, EventArgs e)
+        {
+            UserActivities ua = new UserActivities(this, mainform);
+            this.Hide();
+            ua.Show();
+        }
+
+        private void reports_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

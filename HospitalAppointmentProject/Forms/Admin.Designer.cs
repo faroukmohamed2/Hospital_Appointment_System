@@ -97,19 +97,19 @@
             // viewToolStripMenuItem
             // 
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            this.viewToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.viewToolStripMenuItem.Size = new System.Drawing.Size(125, 26);
             this.viewToolStripMenuItem.Text = "view";
             // 
             // toolsToolStripMenuItem
             // 
             this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
-            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(125, 26);
             this.toolsToolStripMenuItem.Text = "tools";
             // 
             // editToolStripMenuItem
             // 
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(125, 26);
             this.editToolStripMenuItem.Text = "Edit";
             // 
             // contactus
@@ -165,6 +165,7 @@
             this.modHos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.modHos.TabIndex = 58;
             this.modHos.TabStop = false;
+            this.modHos.Click += new System.EventHandler(this.modHos_Click);
             this.modHos.MouseHover += new System.EventHandler(this.modHos_hover);
             // 
             // modHoslabel
@@ -188,6 +189,7 @@
             this.Modphlabel.Size = new System.Drawing.Size(161, 22);
             this.Modphlabel.TabIndex = 59;
             this.Modphlabel.Text = "Modify Pharmacies";
+            this.Modphlabel.Click += new System.EventHandler(this.Modphlabel_Click);
             this.Modphlabel.MouseHover += new System.EventHandler(this.Modphlabel_hover);
             // 
             // log
@@ -199,6 +201,7 @@
             this.log.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.log.TabIndex = 62;
             this.log.TabStop = false;
+            this.log.Click += new System.EventHandler(this.log_Click);
             this.log.MouseHover += new System.EventHandler(this.log_hover);
             // 
             // loglabel
@@ -210,6 +213,7 @@
             this.loglabel.Size = new System.Drawing.Size(124, 22);
             this.loglabel.TabIndex = 61;
             this.loglabel.Text = "User Activities";
+            this.loglabel.Click += new System.EventHandler(this.loglabel_Click);
             this.loglabel.MouseHover += new System.EventHandler(this.loglabel_hover);
             // 
             // Modph
@@ -221,6 +225,7 @@
             this.Modph.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.Modph.TabIndex = 63;
             this.Modph.TabStop = false;
+            this.Modph.Click += new System.EventHandler(this.Modph_Click);
             this.Modph.MouseHover += new System.EventHandler(this.modph_hover);
             // 
             // reports
@@ -232,6 +237,7 @@
             this.reports.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.reports.TabIndex = 65;
             this.reports.TabStop = false;
+            this.reports.Click += new System.EventHandler(this.reports_Click);
             this.reports.MouseHover += new System.EventHandler(this.reports_hover);
             // 
             // reportslabel
@@ -243,6 +249,7 @@
             this.reportslabel.Size = new System.Drawing.Size(137, 22);
             this.reportslabel.TabIndex = 64;
             this.reportslabel.Text = "System Reports";
+            this.reportslabel.Click += new System.EventHandler(this.reportslabel_Click);
             this.reportslabel.MouseHover += new System.EventHandler(this.reportslabel_hover);
             // 
             // Admin

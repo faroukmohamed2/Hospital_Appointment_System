@@ -12,9 +12,35 @@ namespace HospitalAppointmentSystem
 {
     public partial class ManagePharmacy : Form
     {
-        public ManagePharmacy()
+        Form prevform, mainform;
+        public ManagePharmacy(Form prevform, Form mainform)
         {
             InitializeComponent();
+            this.prevform = prevform;
+            this.mainform = mainform;
+        }
+
+        private void contactus_Click(object sender, EventArgs e)
+        {
+            ContactUs cu = new ContactUs(this, mainform);
+            this.Hide();
+            cu.Show();
+        }
+
+        private void Home_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            prevform.Show();
+        }
+
+        private void ManagePharmacy_close(object sender, FormClosedEventArgs e)
+        {
+            prevform.Show();
+        }
+
+        private void exitprogram_Click(object sender, EventArgs e)
+        {
+            mainform.Close();
         }
     }
 }
