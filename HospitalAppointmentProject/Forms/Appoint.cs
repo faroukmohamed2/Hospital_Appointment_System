@@ -33,6 +33,7 @@ namespace HospitalAppointmentSystem
             DataTable dataTable = Department.GetDepartments();
             Departments.ValueMember = "DepartmentID";
             Departments.DisplayMember = "DepartmentName";
+
             Hospitals.ValueMember = "PlaceID";
             Hospitals.DisplayMember = "PlaceName";
             Doctors.ValueMember = "UserID";
@@ -126,6 +127,11 @@ namespace HospitalAppointmentSystem
             hospital._PlaceID = (int)(Hospitals.SelectedValue);
             DataTable dt = hospital.GetDoctorsInDepartment((int)(Departments.SelectedValue));
             Doctors.DataSource = dt;
+        }
+
+        private void Doctors_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

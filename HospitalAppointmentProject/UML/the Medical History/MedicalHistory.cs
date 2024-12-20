@@ -1,7 +1,10 @@
-﻿using HospitalAppointmentProject.UML.Paper;
+﻿using DBapplication;
+using HospitalAppointmentProject.UML.Paper;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -92,6 +95,13 @@ namespace HospitalAppointmentProject.UML.theMedicalHistory
             this.AtYear = AtYear;
             this.IsCured = IsCured;
             this.PrescriptionList = PrescriptionList;
+        }
+
+        public DataTable getmedicalhistory()
+        {
+            string q = $"select DiseaseDescription,AtYear,IsCured from MedicalHistory where PatientID = {_PatientID};";
+            DataTable result = DataBase.Manager.ExecuteReader(q);
+            return result;
         }
 
         //add more functions as u need

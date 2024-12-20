@@ -74,6 +74,7 @@
             this.activityforallusers.RowTemplate.Height = 24;
             this.activityforallusers.Size = new System.Drawing.Size(507, 300);
             this.activityforallusers.TabIndex = 39;
+            this.activityforallusers.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.activityforallusers_CellContentClick);
             // 
             // FNlabel
             // 

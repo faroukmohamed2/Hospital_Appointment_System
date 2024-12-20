@@ -10,10 +10,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using UML = HospitalAppointmentProject.UML;
-<<<<<<< HEAD
 
-=======
->>>>>>> dd8fdbd17058b239a72f7383c3e1102b4d73f068
 namespace HospitalAppointmentSystem
 {
     public partial class ModifyPharmacies : Form
@@ -46,9 +43,7 @@ namespace HospitalAppointmentSystem
 
         private void addPh_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD
-            
-=======
+
             pharmacy = new UML.PLACES.Pharmacy();
             string pharmacyID = phID.Text;
             string pharmacyName = phName.Text;
@@ -115,13 +110,12 @@ namespace HospitalAppointmentSystem
         {
             string emailPattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
             return Regex.IsMatch(pharmacyEmail, emailPattern);
->>>>>>> dd8fdbd17058b239a72f7383c3e1102b4d73f068
+
         }
 
         private void Updateph_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD
-=======
+
             pharmacy = new UML.PLACES.Pharmacy();
             string pharmacyID = phID.Text;
             string pharmacyName = phName.Text;
@@ -246,7 +240,7 @@ namespace HospitalAppointmentSystem
             {
                 MessageBox.Show($"Error deleting pharmacy: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
->>>>>>> dd8fdbd17058b239a72f7383c3e1102b4d73f068
+
         }
 
         public ModifyPharmacies(Form prevform, Form mainform)

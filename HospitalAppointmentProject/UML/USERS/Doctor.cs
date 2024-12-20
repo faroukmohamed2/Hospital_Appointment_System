@@ -1,10 +1,12 @@
-﻿using HospitalAppointmentProject.UML.Appointments;
+﻿using DBapplication;
+using HospitalAppointmentProject.UML.Appointments;
 using HospitalAppointmentProject.UML.FeedBacks;
 using HospitalAppointmentProject.UML.Paper;
 using HospitalAppointmentProject.UML.PLACES;
 using HospitalAppointmentProject.UML.theMedicalHistory;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -128,6 +130,11 @@ namespace HospitalAppointmentProject.UML.USERS
             this.ClinicAppointments = ClinicAppointments;
         }
 
-        //add more functions as u need
+        public DataTable   getfeedback()
+        {
+            string q = $"select FeedbackID,PatientID,theFeedback from Feedback where DoctorID = {_UserID};";
+            DataTable result = DataBase.Manager.ExecuteReader(q);
+            return result;
+        }
     }
 }

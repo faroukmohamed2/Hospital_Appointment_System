@@ -107,6 +107,10 @@ namespace HospitalAppointmentSystem
             }
         }
 
+        private void activityforallusers_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
 
         public UserActivities(Form prevform, Form mainform)
         {
