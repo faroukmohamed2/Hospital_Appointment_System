@@ -1,4 +1,4 @@
-﻿using HospitalAppointmentProject.UML.PLACES;
+using HospitalAppointmentProject.UML.PLACES;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +11,7 @@ namespace HospitalAppointmentProject.UML.USERS
     {
         public HospitalManager(int? UserID = null, string Email = null, string UserPassword = null, int? Age = null, char? Gender = null, string First_Name = null, string Last_Name = null,
            List<ActivityLog> ActivityLogs = null, List<Place> ManagedPlace = null) :
-           base(UserID, Email, UserPassword, Age, Gender, First_Name, Last_Name, ActivityLogs, ManagedPlace)
+           base(UserID, Email, UserPassword, Age, Gender, First_Name, Last_Name, ActivityLogs,UserType.HospitalManager ,ManagedPlace)
         {
         }
 
