@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -26,8 +26,8 @@ namespace HospitalAppointmentProject.UML.USERS
         }
 
         public Manager(int? UserID = null, string Email = null, string UserPassword = null, int? Age = null, char? Gender = null, string First_Name = null, string Last_Name = null,
-            List<ActivityLog> ActivityLogs = null, List<Place> ManagedPlace = null):
-            base(UserID, Email, UserPassword, Age, Gender, First_Name, Last_Name, ActivityLogs, UserType.Manager)
+            List<ActivityLog> ActivityLogs = null,UserType usertype = UserType.None, List<Place> ManagedPlace = null):
+            base(UserID, Email, UserPassword, Age, Gender, First_Name, Last_Name, ActivityLogs, usertype)
         {
             this.ManagedPlace = ManagedPlace;
         }
