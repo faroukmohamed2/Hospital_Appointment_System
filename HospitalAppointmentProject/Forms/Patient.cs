@@ -177,14 +177,14 @@ namespace HospitalAppointmentSystem
 
         private void DocSearch_Click(object sender, EventArgs e)
         {
-            Search_Doctors sd = new Search_Doctors(this, mainform);
+            Search_Doctors sd = new Search_Doctors(this, mainform, this.patient_id);
             this.Hide();
             sd.Show();
         }
 
         private void DocSearchlabel_Click(object sender, EventArgs e)
         {
-            Search_Doctors sd = new Search_Doctors(this, mainform);
+            Search_Doctors sd = new Search_Doctors(this, mainform, this.patient_id);
             this.Hide();
             sd.Show();
         }
@@ -205,14 +205,14 @@ namespace HospitalAppointmentSystem
 
         private void medHistory_Click(object sender, EventArgs e)
         {
-            Medical_History mh = new Medical_History(this, mainform);
+            Medical_History mh = new Medical_History(this, mainform,this.patient_id);
             this.Hide();
             mh.Show();
         }
 
         private void midhistlablel_Click(object sender, EventArgs e)
         {
-            Medical_History mh = new Medical_History(this, mainform);
+            Medical_History mh = new Medical_History(this, mainform,this.patient_id);
             this.Hide();
             mh.Show();
         }
@@ -227,6 +227,11 @@ namespace HospitalAppointmentSystem
             //YourProfile y = new YourProfile;
             //y.Show();   
             //this.Hide();    
+        }
+
+        private void Patient_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

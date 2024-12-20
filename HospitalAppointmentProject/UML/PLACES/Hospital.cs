@@ -68,6 +68,7 @@ namespace HospitalAppointmentProject.UML.PLACES
         }
 
 
+
         public DataTable GetDoctorsInDepartment(int DepartmentId)
         {
             string query = "select U.FirstName,U.UserID " +
@@ -75,7 +76,7 @@ namespace HospitalAppointmentProject.UML.PLACES
                           $"where Dr.HospitalID=H.HospitalID AND Dr.DepartmentID=D.DepartmentID And U.UserID=Dr.DoctorID And D.DepartmentID={DepartmentId} and HD.HospitalID=H.HospitalID and H.HospitalID={this._PlaceID}";
             return DataBase.Manager.ExecuteReader(query);
         }
-        
+  
 
         public int inserthospital()
         {
@@ -106,5 +107,6 @@ namespace HospitalAppointmentProject.UML.PLACES
             int c = (int)DataBase.Manager.ExecuteScalar(query);
             return c > 0;
         }
+
     }
 }

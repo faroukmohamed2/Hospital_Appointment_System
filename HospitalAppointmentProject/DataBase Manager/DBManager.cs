@@ -10,8 +10,12 @@ namespace DBapplication
 {
     public class DBManager
     {
+
        
         static string DB_Connection_String = @"Data Source=DESKTOP-00O8U12\SQLEXPRESS;Initial Catalog=HospitalAppointmentSystem;Integrated Security=True;";
+
+
+      
 
         SqlConnection myConnection;
 

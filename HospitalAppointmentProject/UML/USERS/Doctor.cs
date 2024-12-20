@@ -133,6 +133,7 @@ namespace HospitalAppointmentProject.UML.USERS
 
 
 
+
      
         public DataTable GetAllAvalibleTimes()
         {
@@ -145,6 +146,12 @@ namespace HospitalAppointmentProject.UML.USERS
 
             return null;
         }
-        //add more functions as u need
+        public DataTable   getfeedback()
+        {
+            string q = $"select FeedbackID,PatientID,theFeedback from Feedback where DoctorID = {_UserID};";
+            DataTable result = DataBase.Manager.ExecuteReader(q);
+            return result;
+        }
+
     }
 }

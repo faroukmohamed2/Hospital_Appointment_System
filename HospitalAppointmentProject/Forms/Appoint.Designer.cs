@@ -67,7 +67,7 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(-2, 1);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(158, 86);
+            this.pictureBox1.Size = new System.Drawing.Size(138, 86);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 35;
             this.pictureBox1.TabStop = false;
@@ -76,7 +76,7 @@
             // 
             this.appointlabel.AutoSize = true;
             this.appointlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.appointlabel.Location = new System.Drawing.Point(36, 119);
+            this.appointlabel.Location = new System.Drawing.Point(32, 119);
             this.appointlabel.Name = "appointlabel";
             this.appointlabel.Size = new System.Drawing.Size(158, 22);
             this.appointlabel.TabIndex = 36;
@@ -85,9 +85,9 @@
             // Departments
             // 
             this.Departments.FormattingEnabled = true;
-            this.Departments.Location = new System.Drawing.Point(223, 121);
+            this.Departments.Location = new System.Drawing.Point(195, 121);
             this.Departments.Name = "Departments";
-            this.Departments.Size = new System.Drawing.Size(121, 24);
+            this.Departments.Size = new System.Drawing.Size(106, 24);
             this.Departments.TabIndex = 37;
             this.Departments.SelectedIndexChanged += new System.EventHandler(this.Departments_SelectedIndexChanged);
             // 
@@ -95,7 +95,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(54, 186);
+            this.label1.Location = new System.Drawing.Point(47, 186);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(130, 22);
             this.label1.TabIndex = 39;
@@ -105,7 +105,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(54, 249);
+            this.label2.Location = new System.Drawing.Point(47, 249);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(118, 22);
             this.label2.TabIndex = 40;
@@ -113,18 +113,18 @@
             // 
             // datetoAppoint
             // 
-            this.datetoAppoint.Location = new System.Drawing.Point(424, 232);
+            this.datetoAppoint.Location = new System.Drawing.Point(371, 232);
             this.datetoAppoint.Name = "datetoAppoint";
-            this.datetoAppoint.Size = new System.Drawing.Size(200, 22);
+            this.datetoAppoint.Size = new System.Drawing.Size(176, 24);
             this.datetoAppoint.TabIndex = 41;
             this.datetoAppoint.ValueChanged += new System.EventHandler(this.datetoAppoint_ValueChanged);
             // 
             // addappoint
             // 
             this.addappoint.Image = ((System.Drawing.Image)(resources.GetObject("addappoint.Image")));
-            this.addappoint.Location = new System.Drawing.Point(639, 232);
+            this.addappoint.Location = new System.Drawing.Point(559, 232);
             this.addappoint.Name = "addappoint";
-            this.addappoint.Size = new System.Drawing.Size(67, 57);
+            this.addappoint.Size = new System.Drawing.Size(59, 57);
             this.addappoint.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.addappoint.TabIndex = 42;
             this.addappoint.TabStop = false;
@@ -135,7 +135,7 @@
             // 
             this.Add.AutoSize = true;
             this.Add.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Add.Location = new System.Drawing.Point(712, 251);
+            this.Add.Location = new System.Drawing.Point(623, 251);
             this.Add.Name = "Add";
             this.Add.Size = new System.Drawing.Size(38, 20);
             this.Add.TabIndex = 43;
@@ -146,7 +146,7 @@
             // 
             this.time.AutoSize = true;
             this.time.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.time.Location = new System.Drawing.Point(520, 269);
+            this.time.Location = new System.Drawing.Point(455, 269);
             this.time.Name = "time";
             this.time.Size = new System.Drawing.Size(0, 20);
             this.time.TabIndex = 45;
@@ -154,16 +154,16 @@
             // times
             // 
             this.times.FormattingEnabled = true;
-            this.times.Location = new System.Drawing.Point(539, 269);
+            this.times.Location = new System.Drawing.Point(472, 269);
             this.times.Name = "times";
-            this.times.Size = new System.Drawing.Size(85, 24);
+            this.times.Size = new System.Drawing.Size(75, 24);
             this.times.TabIndex = 46;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(402, 269);
+            this.label3.Location = new System.Drawing.Point(352, 269);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(118, 20);
             this.label3.TabIndex = 47;
@@ -173,9 +173,9 @@
             // 
             this.Hospitals.Enabled = false;
             this.Hospitals.FormattingEnabled = true;
-            this.Hospitals.Location = new System.Drawing.Point(223, 188);
+            this.Hospitals.Location = new System.Drawing.Point(195, 188);
             this.Hospitals.Name = "Hospitals";
-            this.Hospitals.Size = new System.Drawing.Size(121, 24);
+            this.Hospitals.Size = new System.Drawing.Size(106, 24);
             this.Hospitals.TabIndex = 48;
             this.Hospitals.SelectedIndexChanged += new System.EventHandler(this.Hospitals_SelectedIndexChanged);
             // 
@@ -183,9 +183,9 @@
             // 
             this.Doctors.Enabled = false;
             this.Doctors.FormattingEnabled = true;
-            this.Doctors.Location = new System.Drawing.Point(223, 251);
+            this.Doctors.Location = new System.Drawing.Point(195, 251);
             this.Doctors.Name = "Doctors";
-            this.Doctors.Size = new System.Drawing.Size(121, 24);
+            this.Doctors.Size = new System.Drawing.Size(106, 24);
             this.Doctors.TabIndex = 49;
             this.Doctors.SelectedIndexChanged += new System.EventHandler(this.Doctors_SelectedIndexChanged);
             // 
@@ -199,7 +199,7 @@
             this.contactus,
             this.profile,
             this.exitprogram});
-            this.toolStrip1.Location = new System.Drawing.Point(839, 0);
+            this.toolStrip1.Location = new System.Drawing.Point(729, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(40, 509);
             this.toolStrip1.TabIndex = 50;
@@ -300,18 +300,18 @@
             // Bill
             // 
             this.Bill.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Bill.Location = new System.Drawing.Point(223, 351);
+            this.Bill.Location = new System.Drawing.Point(195, 351);
             this.Bill.Name = "Bill";
             this.Bill.RowHeadersWidth = 51;
             this.Bill.RowTemplate.Height = 24;
-            this.Bill.Size = new System.Drawing.Size(456, 72);
+            this.Bill.Size = new System.Drawing.Size(399, 72);
             this.Bill.TabIndex = 51;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(117, 351);
+            this.label4.Location = new System.Drawing.Point(102, 351);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(77, 22);
             this.label4.TabIndex = 52;
@@ -319,10 +319,10 @@
             // 
             // Appoint
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(241)))), ((int)(((byte)(232)))));
-            this.ClientSize = new System.Drawing.Size(879, 509);
+            this.ClientSize = new System.Drawing.Size(769, 509);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.Bill);
             this.Controls.Add(this.toolStrip1);

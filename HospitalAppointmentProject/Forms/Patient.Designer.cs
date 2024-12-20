@@ -140,20 +140,20 @@
             // viewProfileToolStripMenuItem
             // 
             this.viewProfileToolStripMenuItem.Name = "viewProfileToolStripMenuItem";
-            this.viewProfileToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.viewProfileToolStripMenuItem.Size = new System.Drawing.Size(204, 26);
             this.viewProfileToolStripMenuItem.Text = "view profile";
             // 
             // editProfileToolStripMenuItem
             // 
             this.editProfileToolStripMenuItem.Name = "editProfileToolStripMenuItem";
-            this.editProfileToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.editProfileToolStripMenuItem.Size = new System.Drawing.Size(204, 26);
             this.editProfileToolStripMenuItem.Text = "Edit profile";
             this.editProfileToolStripMenuItem.Click += new System.EventHandler(this.editProfileToolStripMenuItem_Click);
             // 
             // removeAccountToolStripMenuItem
             // 
             this.removeAccountToolStripMenuItem.Name = "removeAccountToolStripMenuItem";
-            this.removeAccountToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.removeAccountToolStripMenuItem.Size = new System.Drawing.Size(204, 26);
             this.removeAccountToolStripMenuItem.Text = "Remove Account";
             // 
             // exitprogram
@@ -382,6 +382,7 @@
             this.Name = "Patient";
             this.Text = "Patient";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.patient_close);
+            this.Load += new System.EventHandler(this.Patient_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Prescript)).EndInit();

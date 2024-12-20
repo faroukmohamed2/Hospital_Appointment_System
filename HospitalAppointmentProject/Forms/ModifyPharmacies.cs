@@ -115,6 +115,7 @@ namespace HospitalAppointmentSystem
 
         private void Updateph_Click(object sender, EventArgs e)
         {
+
             pharmacy = new UML.PLACES.Pharmacy();
             string pharmacyID = phID.Text;
             string pharmacyName = phName.Text;
