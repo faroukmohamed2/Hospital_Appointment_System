@@ -35,7 +35,7 @@ namespace HospitalAppointmentProject.UML.USERS
             }
             set
             {
-                // Add validation or query
+                // Add validation or query 
                 _UserID = value;
             }
         }

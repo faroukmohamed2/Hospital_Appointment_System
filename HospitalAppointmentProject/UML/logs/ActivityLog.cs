@@ -1,5 +1,8 @@
-﻿using System;
+﻿using DBapplication;
+using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
@@ -26,7 +29,18 @@ namespace HospitalAppointmentProject.UML.USERS
             this.DatenTime = DatenTime ?? DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"); // Default to current time in standard format
             this.UserID = UserID;
         }
+        public DataTable getallactivities()
+        {
+            string q = $"select * from ActivityLogs where DateAndTime >'{_DatenTime}' ;";
+            DataTable result = DataBase.Manager.ExecuteReader(q);
+            return result;    
+        }
 
-        //add more functions as u need
+        public DataTable getcertainactivities()
+        {
+            string q = $"select DateAndTime,ActivityType from ActivityLogs where UserID ={_UserID}; ";
+            DataTable result = DataBase.Manager.ExecuteReader(q);
+            return result;
+        }
     }
 }

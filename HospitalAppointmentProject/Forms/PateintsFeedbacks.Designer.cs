@@ -54,7 +54,7 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(2, 1);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(158, 86);
+            this.pictureBox1.Size = new System.Drawing.Size(138, 86);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 38;
             this.pictureBox1.TabStop = false;
@@ -69,9 +69,9 @@
             this.contactus,
             this.profile,
             this.exitprogram});
-            this.toolStrip1.Location = new System.Drawing.Point(760, 0);
+            this.toolStrip1.Location = new System.Drawing.Point(792, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(40, 450);
+            this.toolStrip1.Size = new System.Drawing.Size(40, 525);
             this.toolStrip1.TabIndex = 55;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -171,7 +171,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(124, 127);
+            this.label5.Location = new System.Drawing.Point(108, 127);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(98, 22);
             this.label5.TabIndex = 66;
@@ -180,19 +180,19 @@
             // PateintFeedbacks
             // 
             this.PateintFeedbacks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.PateintFeedbacks.Location = new System.Drawing.Point(128, 162);
+            this.PateintFeedbacks.Location = new System.Drawing.Point(112, 162);
             this.PateintFeedbacks.Name = "PateintFeedbacks";
             this.PateintFeedbacks.RowHeadersWidth = 51;
             this.PateintFeedbacks.RowTemplate.Height = 24;
-            this.PateintFeedbacks.Size = new System.Drawing.Size(505, 210);
+            this.PateintFeedbacks.Size = new System.Drawing.Size(442, 210);
             this.PateintFeedbacks.TabIndex = 65;
             // 
             // PateintsFeedbacks
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(241)))), ((int)(((byte)(232)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(832, 525);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.PateintFeedbacks);
             this.Controls.Add(this.toolStrip1);

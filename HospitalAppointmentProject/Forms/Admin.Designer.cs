@@ -61,7 +61,7 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(2, -1);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(158, 86);
+            this.pictureBox1.Size = new System.Drawing.Size(138, 86);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 37;
             this.pictureBox1.TabStop = false;
@@ -75,7 +75,7 @@
             this.contactus,
             this.profile,
             this.exitprogram});
-            this.toolStrip1.Location = new System.Drawing.Point(760, 0);
+            this.toolStrip1.Location = new System.Drawing.Point(749, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(40, 450);
             this.toolStrip1.TabIndex = 52;
@@ -159,9 +159,9 @@
             // modHos
             // 
             this.modHos.Image = ((System.Drawing.Image)(resources.GetObject("modHos.Image")));
-            this.modHos.Location = new System.Drawing.Point(113, 139);
+            this.modHos.Location = new System.Drawing.Point(99, 139);
             this.modHos.Name = "modHos";
-            this.modHos.Size = new System.Drawing.Size(67, 63);
+            this.modHos.Size = new System.Drawing.Size(59, 63);
             this.modHos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.modHos.TabIndex = 58;
             this.modHos.TabStop = false;
@@ -172,7 +172,7 @@
             // 
             this.modHoslabel.AutoSize = true;
             this.modHoslabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.modHoslabel.Location = new System.Drawing.Point(186, 157);
+            this.modHoslabel.Location = new System.Drawing.Point(163, 157);
             this.modHoslabel.Name = "modHoslabel";
             this.modHoslabel.Size = new System.Drawing.Size(141, 22);
             this.modHoslabel.TabIndex = 57;
@@ -184,7 +184,7 @@
             // 
             this.Modphlabel.AutoSize = true;
             this.Modphlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Modphlabel.Location = new System.Drawing.Point(186, 231);
+            this.Modphlabel.Location = new System.Drawing.Point(163, 231);
             this.Modphlabel.Name = "Modphlabel";
             this.Modphlabel.Size = new System.Drawing.Size(161, 22);
             this.Modphlabel.TabIndex = 59;
@@ -195,9 +195,9 @@
             // log
             // 
             this.log.Image = ((System.Drawing.Image)(resources.GetObject("log.Image")));
-            this.log.Location = new System.Drawing.Point(113, 291);
+            this.log.Location = new System.Drawing.Point(99, 291);
             this.log.Name = "log";
-            this.log.Size = new System.Drawing.Size(67, 63);
+            this.log.Size = new System.Drawing.Size(59, 63);
             this.log.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.log.TabIndex = 62;
             this.log.TabStop = false;
@@ -208,7 +208,7 @@
             // 
             this.loglabel.AutoSize = true;
             this.loglabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loglabel.Location = new System.Drawing.Point(186, 309);
+            this.loglabel.Location = new System.Drawing.Point(163, 309);
             this.loglabel.Name = "loglabel";
             this.loglabel.Size = new System.Drawing.Size(124, 22);
             this.loglabel.TabIndex = 61;
@@ -219,9 +219,9 @@
             // Modph
             // 
             this.Modph.Image = ((System.Drawing.Image)(resources.GetObject("Modph.Image")));
-            this.Modph.Location = new System.Drawing.Point(113, 208);
+            this.Modph.Location = new System.Drawing.Point(99, 208);
             this.Modph.Name = "Modph";
-            this.Modph.Size = new System.Drawing.Size(67, 63);
+            this.Modph.Size = new System.Drawing.Size(59, 63);
             this.Modph.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.Modph.TabIndex = 63;
             this.Modph.TabStop = false;
@@ -231,9 +231,9 @@
             // reports
             // 
             this.reports.Image = ((System.Drawing.Image)(resources.GetObject("reports.Image")));
-            this.reports.Location = new System.Drawing.Point(422, 139);
+            this.reports.Location = new System.Drawing.Point(369, 139);
             this.reports.Name = "reports";
-            this.reports.Size = new System.Drawing.Size(67, 63);
+            this.reports.Size = new System.Drawing.Size(59, 63);
             this.reports.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.reports.TabIndex = 65;
             this.reports.TabStop = false;
@@ -244,7 +244,7 @@
             // 
             this.reportslabel.AutoSize = true;
             this.reportslabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.reportslabel.Location = new System.Drawing.Point(495, 157);
+            this.reportslabel.Location = new System.Drawing.Point(433, 157);
             this.reportslabel.Name = "reportslabel";
             this.reportslabel.Size = new System.Drawing.Size(137, 22);
             this.reportslabel.TabIndex = 64;
@@ -254,10 +254,10 @@
             // 
             // Admin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(241)))), ((int)(((byte)(232)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(789, 450);
             this.Controls.Add(this.reports);
             this.Controls.Add(this.reportslabel);
             this.Controls.Add(this.Modph);

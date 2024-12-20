@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DBapplication;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -30,19 +31,32 @@ namespace HospitalAppointmentProject.UML.PLACES
         public string PlaceName
         {
             get { return _PlaceName; }
-            set { _PlaceName = value; }
+            set { _PlaceName = value;
+                string query = $"UPDATE Place SET PlaceName = '{_PlaceName}' WHERE PlaceID = {_PlaceID}";
+                int result = DataBase.Manager.ExecuteNonQuery(query);
+            }
         }
 
         public string Email
         {
             get { return _Email; }
-            set { _Email = value; }
+            set { _Email = value;
+                string query = $"UPDATE Place SET Email = '{_Email}' WHERE PlaceID = {_PlaceID}";
+                int result = DataBase.Manager.ExecuteNonQuery(query);
+                if (result == 0)
+                    _Email = null;
+            }
         }
 
         public string PhoneNumber
         {
             get { return _PhoneNumber; }
-            set { _PhoneNumber = value; }
+            set { _PhoneNumber = value;
+                string query = $"UPDATE Place SET PhoneNumber = '{_PhoneNumber}' WHERE PlaceID = {_PlaceID}";
+                int result = DataBase.Manager.ExecuteNonQuery(query);
+                  if(result== 0)
+                    _PhoneNumber = null;
+            }
         }
 
         public string StartingTime
@@ -66,7 +80,13 @@ namespace HospitalAppointmentProject.UML.PLACES
         public string PlaceLocation
         {
             get { return _PlaceLocation; }
-            set { _PlaceLocation = value; }
+            set {
+                _PlaceLocation = value;
+                string query = $"UPDATE Place SET PlaceLocation = '{_PlaceLocation}' WHERE PlaceID = {_PlaceID}";
+                int result = DataBase.Manager.ExecuteNonQuery(query);
+                if (result == 0)
+                    _PlaceLocation = null;
+            }
         }
 
         public string OpenDays

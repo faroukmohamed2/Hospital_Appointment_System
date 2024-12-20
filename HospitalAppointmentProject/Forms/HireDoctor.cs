@@ -55,6 +55,11 @@ namespace HospitalAppointmentSystem
             prevform.Show();
         }
 
+        private void DocID_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void adddoc_hover(object sender, EventArgs e)
         {
             adddoc.Cursor = Cursors.Hand;

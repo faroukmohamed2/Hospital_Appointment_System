@@ -1,5 +1,8 @@
-﻿using System;
+﻿using DBapplication;
+using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Drawing.Printing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -31,7 +34,36 @@ namespace HospitalAppointmentProject.UML.PLACES
         {
             this.Medicines = Medicines;
         }
+        public int insertp()
+        {
+            string q = $"insert into Place values ({_PlaceID},'{_PlaceName}','{_Email}','{_PhoneNumber}','{_StartingTime}','{_EndingTime}','{_IsAvailable}','{_PlaceLocation}','{_OpenDays}') ";
+            int resultpharmacy = DataBase.Manager.ExecuteNonQuery(q);
+            string pidq = $"insert into Pharmacy values({_PlaceID});";
+            int resultpid = DataBase.Manager.ExecuteNonQuery(pidq);
+            if (resultpid == 0 || resultpharmacy == 0)
+                return 0;
+            return 1;
+        }
+       
+        public bool CheckIfPharmacyExists(int pharmacyID)
+        {
+            string query = $"SELECT COUNT(*) FROM Place WHERE PlaceID = {pharmacyID}";
+            int c = (int)DataBase.Manager.ExecuteScalar(query);
+            return c > 0;
+        }
+        public int deletePharmacy()
+        {
+            string q = $"DELETE FROM Pharmacy where PharmacyID = {_PlaceID}; ";
+            int r = DataBase.Manager.ExecuteNonQuery(q);
+            string query = $"DELETE FROM Place WHERE PlaceID = {_PlaceID};";
+            int resultPharmacy = DataBase.Manager.ExecuteNonQuery(query);
 
-        // Add more methods or functions as needed
+            if (resultPharmacy == 0 || r==0 )
+                return 0;
+
+                return 1;
+          
+        }
+
     }
 }
