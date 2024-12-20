@@ -7,17 +7,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UML = HospitalAppointmentProject.UML;
 
 namespace HospitalAppointmentSystem
 {
     public partial class PateintsFeedbacks : Form
     {
         Form prevform, mainform;
-        public PateintsFeedbacks(Form prevform, Form mainform)
+        int? _UserID;
+        Type currentType;
+        UML.USERS.Doctor doctor;
+
+
+        public PateintsFeedbacks(Form prevform, Form mainform, int? _UserID)
         {
             InitializeComponent();
             this.prevform = prevform;
             this.mainform = mainform;
+            this._UserID = _UserID;
+            currentType = prevform.GetType();
+            doctor = new UML.USERS.Doctor(_UserID);
+            
         }
 
         private void contactus_Click(object sender, EventArgs e)
@@ -35,6 +45,15 @@ namespace HospitalAppointmentSystem
         private void feedback_close(object sender, FormClosedEventArgs e)
         {
             prevform.Show();
+        }
+
+        private void PateintsFeedbacks_Load(object sender, EventArgs e)
+        {
+
+          PateintFeedbacks.DataSource = doctor.FeedBacks;
+            
+
+            PateintFeedbacks.Refresh();
         }
 
         private void Home_Click(object sender, EventArgs e)

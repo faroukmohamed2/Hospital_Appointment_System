@@ -1,4 +1,5 @@
-﻿using HospitalAppointmentProject.UML.Appointments;
+﻿using DBapplication;
+using HospitalAppointmentProject.UML.Appointments;
 using HospitalAppointmentProject.UML.FeedBacks;
 using HospitalAppointmentProject.UML.Paper;
 using HospitalAppointmentProject.UML.PLACES;
@@ -8,18 +9,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
 
 namespace HospitalAppointmentProject.UML.USERS
 {
     internal class Doctor : sysUser
     {
         public Hospital _DoctorHospital;
-        public List<FeedBack> _FeedBacks;
+        public DataTable _FeedBacks;
         public List<Clinic> _Clincs;
-        public List<HospitalAppointment> _Appointments;
+        public DataTable _Appointments;
         public List<Patient> _myPatients;
         public Department _DoctorDepartment;
         public List<ClinicAppointment> _ClinicAppointments;
+        public char _isavailable;
         Hospital DoctorHospital
         {
             get
@@ -33,12 +36,32 @@ namespace HospitalAppointmentProject.UML.USERS
                 _DoctorHospital = value;
             }
         }
+        public char IsAvailable
+        {
+            get
+            {
+                string query = $"select ISAvailable from doctor where doctorid = {_UserID}";
+                _isavailable = (char)DataBase.Manager.ExecuteScalar(query);
+                return _isavailable;
+            }
+            set
+            {
+                string query;
+                if (_isavailable == 'T')
+                    query = $"Update doctor set ISAvailable = 'T' where doctorid = {_UserID}";
+                else
+                    query = $"Update doctor set ISAvailable = 'F' where doctorid = {_UserID}";
 
-        public List<FeedBack> FeedBacks
+                int res = DataBase.Manager.ExecuteNonQuery(query);
+            }
+        }
+        public DataTable FeedBacks
         {
             get
             {
                 // add query
+                string query = $"select thefeedback, email from sysUser,feedback where Userid = patientid and Doctorid = {_UserID}";
+                _FeedBacks = DataBase.Manager.ExecuteReader(query);
                 return _FeedBacks;
             }
             set
@@ -62,11 +85,13 @@ namespace HospitalAppointmentProject.UML.USERS
             }
         }
 
-        public List<HospitalAppointment> Appointments
+        public DataTable Appointments
         {
             get
             {
                 // add query
+                string query = $"select DateAndTime, firstname, lastname from HospitalAppointment,sysUSER where Userid = patientid and doctorid = {_UserID}";
+                _Appointments = DataBase.Manager.ExecuteReader(query);
                 return _Appointments;
             }
             set
@@ -116,7 +141,7 @@ namespace HospitalAppointmentProject.UML.USERS
         }
 
         public Doctor(int? UserID = null, string Email = null, string UserPassword = null, int? Age = null, char? Gender = null, string First_Name = null, string Last_Name = null,
-            List<ActivityLog> ActivityLogs = null,Hospital DoctorHospital = null, List<Clinic> Clincs = null, Department DoctorDepartment = null, List<Bill> Bills = null, List<HospitalAppointment> Appointments = null,List<Patient> myPatients = null,List<ClinicAppointment> ClinicAppointments = null) :
+            List<ActivityLog> ActivityLogs = null,Hospital DoctorHospital = null, List<Clinic> Clincs = null, Department DoctorDepartment = null, List<Bill> Bills = null, DataTable Appointments = null,List<Patient> myPatients = null,List<ClinicAppointment> ClinicAppointments = null) :
             base(UserID, Email, UserPassword, Age, Gender, First_Name, Last_Name, ActivityLogs, UserType.Doctor)
         {
             this.myPatients = myPatients;

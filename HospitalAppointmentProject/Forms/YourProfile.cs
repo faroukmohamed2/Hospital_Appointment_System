@@ -27,6 +27,9 @@ namespace HospitalAppointmentSystem
             uppro.Cursor = Cursors.Hand;
         }
 
+        private void chpass_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }

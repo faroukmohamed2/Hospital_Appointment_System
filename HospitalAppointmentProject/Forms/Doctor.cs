@@ -7,18 +7,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using UML = HospitalAppointmentProject.UML;
 namespace HospitalAppointmentSystem
 {
+
     public partial class Doctor : Form
     {
         Form mainform;
         int? _UserID;
+        UML.USERS.Doctor doctor;
         public Doctor(Form mainform, int? userID)
         {
             InitializeComponent();
             this.mainform = mainform;
             _UserID = userID;
+            doctor = new UML.USERS.Doctor(userID);
         }
 
         private void Appoints_hover(object sender, EventArgs e)
@@ -63,49 +66,49 @@ namespace HospitalAppointmentSystem
 
         private void Appoints_Click(object sender, EventArgs e)
         {
-            Doctor_Appointments ua = new Doctor_Appointments(this, mainform);
+            Doctor_Appointments ua = new Doctor_Appointments(this, mainform, _UserID);
             this.Hide();
             ua.Show();
         }
 
         private void curApplabel_Click(object sender, EventArgs e)
         {
-            Doctor_Appointments ua = new Doctor_Appointments(this, mainform);
+            Doctor_Appointments ua = new Doctor_Appointments(this, mainform, _UserID);
             this.Hide();
             ua.Show();
         }
 
         private void addpre_Click(object sender, EventArgs e)
         {
-            AddPrescription ap = new AddPrescription(this, mainform);
+            AddPrescription ap = new AddPrescription(this, mainform, _UserID);
             this.Hide();
             ap.Show();
         }
 
         private void addprelabel_Click(object sender, EventArgs e)
         {
-            AddPrescription ap = new AddPrescription(this, mainform);
+            AddPrescription ap = new AddPrescription(this, mainform, _UserID);
             this.Hide();
             ap.Show();
         }
 
         private void pInfo_Click(object sender, EventArgs e)
         {
-            PatientInfo pi = new PatientInfo(this, mainform);
+            PatientInfo pi = new PatientInfo(this, mainform, _UserID);
             this.Hide();
             pi.Show();
         }
 
         private void pinfolabel_Click(object sender, EventArgs e)
         {
-            PatientInfo pi = new PatientInfo(this, mainform);
+            PatientInfo pi = new PatientInfo(this, mainform, _UserID);
             this.Hide();
             pi.Show();
         }
 
         private void feedbacks_Click(object sender, EventArgs e)
         {
-            PateintsFeedbacks pfeed = new PateintsFeedbacks(this, mainform);
+            PateintsFeedbacks pfeed = new PateintsFeedbacks(this, mainform, _UserID);
             this.Hide();
             pfeed.Show();
         }

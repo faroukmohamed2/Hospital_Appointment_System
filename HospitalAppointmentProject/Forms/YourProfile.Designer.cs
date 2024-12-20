@@ -140,7 +140,7 @@
             // removeAccountToolStripMenuItem
             // 
             this.removeAccountToolStripMenuItem.Name = "removeAccountToolStripMenuItem";
-            this.removeAccountToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.removeAccountToolStripMenuItem.Size = new System.Drawing.Size(204, 26);
             this.removeAccountToolStripMenuItem.Text = "Remove Account";
             // 
             // exitprogram
@@ -318,6 +318,7 @@
             this.chpass.TabIndex = 124;
             this.chpass.Text = "change password";
             this.chpass.UseVisualStyleBackColor = true;
+            this.chpass.Click += new System.EventHandler(this.chpass_Click);
             // 
             // YourProfile
             // 

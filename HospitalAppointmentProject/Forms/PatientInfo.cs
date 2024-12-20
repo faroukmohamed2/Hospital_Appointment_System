@@ -7,13 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UML = HospitalAppointmentProject.UML;
 
 namespace HospitalAppointmentSystem
 {
     public partial class PatientInfo : Form
     {
         Form prevform, mainform;
-
+        UML.theMedicalHistory.MedicalHistory medHist;
+        int? _UserID;
+        UML.USERS.Patient patient;
+        UML.Paper.Prescription pre;
         private void Home_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -37,11 +41,68 @@ namespace HospitalAppointmentSystem
             prevform.Show();
         }
 
-        public PatientInfo(Form prevform, Form mainform)
+        private void submit_Click(object sender, EventArgs e)
+        {
+            patient = new UML.USERS.Patient(null, pEmail.Text, null, null, null, null, null,null, null, null, null, null,null, null, null);
+            if (addDis.Checked)
+            {
+                if (pEmail.Text == "" || DName.Text == "" || textBoxyear.Text == "")
+                {
+                    MessageBox.Show("please fill all fields");
+                    return;
+                }
+                int? patientid = patient.UserID;
+                int year;
+                if (!int.TryParse(textBoxyear.Text,out year))
+                {
+                    MessageBox.Show("year must be a number");
+                    return;
+                }
+                medHist._PatientID = patientid;
+                medHist._DiseaseDescription = DName.Text;
+                medHist._AtYear = year;
+                int res = medHist.newMedHistory();
+                if (res == 0)
+                {
+                    MessageBox.Show("the email is wrong");
+                    return;
+                }
+            }
+            else if(cured.Checked)
+            {
+                if (pEmail.Text == "" || DName.Text == "")
+                {
+                    MessageBox.Show("the disease discription or email field is empty");
+                    return;
+                }
+                int? patientid = patient.UserID;
+                int year;
+
+                medHist._PatientID = patientid;
+                medHist._DiseaseDescription = DName.Text;
+                int res = medHist.updatemedHistpry();
+                if (res == 0)
+                {
+                    MessageBox.Show("the email is wrong");
+                    return;
+                }
+            }
+            else
+            {
+                MessageBox.Show("select an action");
+                return;
+            }
+        }
+
+
+        public PatientInfo(Form prevform, Form mainform, int? userID)
         {
             InitializeComponent();
             this.prevform = prevform;
             this.mainform = mainform;
+            _UserID = userID;
+            medHist = new UML.theMedicalHistory.MedicalHistory();
+
         }
     }
 }

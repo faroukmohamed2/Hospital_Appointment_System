@@ -31,6 +31,8 @@ namespace HospitalAppointmentProject.UML.USERS
             get
             {
                 // Add query or logic (e.g., log access)
+                string query = $"Select UserID from sysUser where email = '{_Email}'";
+                _UserID = (int)DataBase.Manager.ExecuteScalar(query);
                 return _UserID;
             }
             set

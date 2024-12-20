@@ -170,12 +170,15 @@
             // available
             // 
             this.available.AutoSize = true;
+            this.available.Checked = true;
+            this.available.CheckState = System.Windows.Forms.CheckState.Checked;
             this.available.Location = new System.Drawing.Point(167, 114);
             this.available.Name = "available";
             this.available.Size = new System.Drawing.Size(86, 20);
             this.available.TabIndex = 53;
             this.available.Text = "Available";
             this.available.UseVisualStyleBackColor = true;
+            this.available.CheckedChanged += new System.EventHandler(this.available_CheckedChanged);
             // 
             // DoctorAppointments
             // 
@@ -201,6 +204,7 @@
             this.Name = "Doctor_Appointments";
             this.Text = "Doctor_Appointments";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.DocAppointments_close);
+            this.Load += new System.EventHandler(this.Doctor_Appointments_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();

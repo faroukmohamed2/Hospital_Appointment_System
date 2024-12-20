@@ -201,6 +201,7 @@
             this.Name = "PateintsFeedbacks";
             this.Text = "Feedbacks";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.feedback_close);
+            this.Load += new System.EventHandler(this.PateintsFeedbacks_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();

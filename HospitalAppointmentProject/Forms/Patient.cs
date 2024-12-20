@@ -163,16 +163,16 @@ namespace HospitalAppointmentSystem
 
         private void dfeedlabel_Click(object sender, EventArgs e)
         {
-            PateintsFeedbacks sd = new PateintsFeedbacks(this,  mainform);
+            //PateintsFeedbacks sd = new PateintsFeedbacks(this,  mainform, UserID);
             this.Hide();
-            sd.Show();
+            //sd.Show();
         }
 
         private void dfeed_Click(object sender, EventArgs e)
         {
-            PateintsFeedbacks sd = new PateintsFeedbacks(this, mainform);
+            //PateintsFeedbacks sd = new PateintsFeedbacks(this, mainform);
             this.Hide();
-            sd.Show();
+            //sd.Show();
         }
 
         private void DocSearch_Click(object sender, EventArgs e)

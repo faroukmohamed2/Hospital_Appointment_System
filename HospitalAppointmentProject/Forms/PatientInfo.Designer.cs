@@ -48,13 +48,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.DName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxyear = new System.Windows.Forms.TextBox();
             this.addDis = new System.Windows.Forms.RadioButton();
             this.cured = new System.Windows.Forms.RadioButton();
+            this.submit = new System.Windows.Forms.Button();
+            this.show = new System.Windows.Forms.Button();
             this.PPrescription = new System.Windows.Forms.DataGridView();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.Submit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pMedHist)).BeginInit();
@@ -235,13 +234,13 @@
             this.label1.TabIndex = 64;
             this.label1.Text = "Year";
             // 
-            // textBox1
+            // textBoxyear
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Location = new System.Drawing.Point(186, 324);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(73, 22);
-            this.textBox1.TabIndex = 63;
+            this.textBoxyear.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxyear.Location = new System.Drawing.Point(186, 324);
+            this.textBoxyear.Name = "textBoxyear";
+            this.textBoxyear.Size = new System.Drawing.Size(73, 22);
+            this.textBoxyear.TabIndex = 63;
             // 
             // addDis
             // 
@@ -265,6 +264,25 @@
             this.cured.Text = "Mark As Cured";
             this.cured.UseVisualStyleBackColor = true;
             // 
+            // submit
+            // 
+            this.submit.Location = new System.Drawing.Point(396, 340);
+            this.submit.Name = "submit";
+            this.submit.Size = new System.Drawing.Size(75, 23);
+            this.submit.TabIndex = 68;
+            this.submit.Text = "submit";
+            this.submit.UseVisualStyleBackColor = true;
+            this.submit.Click += new System.EventHandler(this.submit_Click);
+            // 
+            // show
+            // 
+            this.show.Location = new System.Drawing.Point(186, 166);
+            this.show.Name = "show";
+            this.show.Size = new System.Drawing.Size(75, 23);
+            this.show.TabIndex = 69;
+            this.show.Text = "show";
+            this.show.UseVisualStyleBackColor = true;
+            // 
             // PPrescription
             // 
             this.PPrescription.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -275,48 +293,19 @@
             this.PPrescription.Size = new System.Drawing.Size(309, 112);
             this.PPrescription.TabIndex = 67;
             // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Location = new System.Drawing.Point(276, 384);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(451, 96);
-            this.richTextBox1.TabIndex = 68;
-            this.richTextBox1.Text = "";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(50, 384);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(220, 20);
-            this.label3.TabIndex = 69;
-            this.label3.Text = "Provide Feedback on patient";
-            // 
-            // Submit
-            // 
-            this.Submit.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.Submit.Location = new System.Drawing.Point(747, 452);
-            this.Submit.Name = "Submit";
-            this.Submit.Size = new System.Drawing.Size(75, 28);
-            this.Submit.TabIndex = 70;
-            this.Submit.Text = "Submit";
-            this.Submit.UseVisualStyleBackColor = true;
-            // 
             // PatientInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(241)))), ((int)(((byte)(232)))));
             this.ClientSize = new System.Drawing.Size(1102, 606);
-            this.Controls.Add(this.Submit);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.show);
+            this.Controls.Add(this.submit);
             this.Controls.Add(this.PPrescription);
             this.Controls.Add(this.cured);
             this.Controls.Add(this.addDis);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxyear);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.DName);
             this.Controls.Add(this.pMedHist);
@@ -359,12 +348,11 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox DName;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxyear;
         private System.Windows.Forms.RadioButton addDis;
         private System.Windows.Forms.RadioButton cured;
+        private System.Windows.Forms.Button submit;
+        private System.Windows.Forms.Button show;
         private System.Windows.Forms.DataGridView PPrescription;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button Submit;
     }
 }

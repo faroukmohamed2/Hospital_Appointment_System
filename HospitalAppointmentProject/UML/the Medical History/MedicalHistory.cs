@@ -1,4 +1,5 @@
-﻿using HospitalAppointmentProject.UML.Paper;
+﻿using DBapplication;
+using HospitalAppointmentProject.UML.Paper;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -93,7 +94,22 @@ namespace HospitalAppointmentProject.UML.theMedicalHistory
             this.IsCured = IsCured;
             this.PrescriptionList = PrescriptionList;
         }
+        public int newMedHistory()
+        {
 
+            string query = $"insert into MedicalHistory values({_PatientID}, '{_DiseaseDescription}', {_AtYear}, 'F')";
+            int res = DataBase.Manager.ExecuteNonQuery(query);
+            return res;
+        }
+        public int updatemedHistpry()
+        {
+            char cured = 'F';
+            if (_IsCured == true)
+                cured = 'T';
+            string query = $"update MedicalHistory set iscured = 'F' where patientid = {_PatientID} and DiseaseDescription = '{_DiseaseDescription}')";
+            int res = DataBase.Manager.ExecuteNonQuery(query);
+            return res;
+        }
         //add more functions as u need
     }
 }

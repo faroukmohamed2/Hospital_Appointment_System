@@ -52,6 +52,10 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.addprelabel = new System.Windows.Forms.Label();
             this.addpre = new System.Windows.Forms.PictureBox();
+            this.listViewMed = new System.Windows.Forms.ListView();
+            this.label4 = new System.Windows.Forms.Label();
+            this.comboBoxmed = new System.Windows.Forms.ComboBox();
+            this.addmed = new System.Windows.Forms.Button();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.addpre)).BeginInit();
@@ -67,9 +71,9 @@
             this.contactus,
             this.profile,
             this.exitprogram});
-            this.toolStrip1.Location = new System.Drawing.Point(632, 0);
+            this.toolStrip1.Location = new System.Drawing.Point(835, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(40, 468);
+            this.toolStrip1.Size = new System.Drawing.Size(40, 563);
             this.toolStrip1.TabIndex = 53;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -257,6 +261,7 @@
             this.addprelabel.Size = new System.Drawing.Size(38, 20);
             this.addprelabel.TabIndex = 63;
             this.addprelabel.Text = "Add";
+            this.addprelabel.Click += new System.EventHandler(this.addprelabel_Click);
             this.addprelabel.MouseHover += new System.EventHandler(this.addprelabel_hover);
             // 
             // addpre
@@ -268,14 +273,56 @@
             this.addpre.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.addpre.TabIndex = 62;
             this.addpre.TabStop = false;
+            this.addpre.Click += new System.EventHandler(this.addpre_Click);
             this.addpre.MouseHover += new System.EventHandler(this.addpre_hover);
+            // 
+            // listViewMed
+            // 
+            this.listViewMed.HideSelection = false;
+            this.listViewMed.Location = new System.Drawing.Point(602, 126);
+            this.listViewMed.Name = "listViewMed";
+            this.listViewMed.Size = new System.Drawing.Size(211, 97);
+            this.listViewMed.TabIndex = 64;
+            this.listViewMed.UseCompatibleStateImageBehavior = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(389, 87);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(85, 20);
+            this.label4.TabIndex = 65;
+            this.label4.Text = "Medicines";
+            // 
+            // comboBoxmed
+            // 
+            this.comboBoxmed.FormattingEnabled = true;
+            this.comboBoxmed.Location = new System.Drawing.Point(393, 124);
+            this.comboBoxmed.Name = "comboBoxmed";
+            this.comboBoxmed.Size = new System.Drawing.Size(121, 24);
+            this.comboBoxmed.TabIndex = 66;
+            // 
+            // addmed
+            // 
+            this.addmed.Location = new System.Drawing.Point(521, 124);
+            this.addmed.Name = "addmed";
+            this.addmed.Size = new System.Drawing.Size(75, 23);
+            this.addmed.TabIndex = 67;
+            this.addmed.Text = "add";
+            this.addmed.UseVisualStyleBackColor = true;
+            this.addmed.Click += new System.EventHandler(this.addmed_Click);
             // 
             // AddPrescription
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(241)))), ((int)(((byte)(232)))));
-            this.ClientSize = new System.Drawing.Size(672, 468);
+            this.ClientSize = new System.Drawing.Size(875, 563);
+            this.Controls.Add(this.addmed);
+            this.Controls.Add(this.comboBoxmed);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.listViewMed);
             this.Controls.Add(this.addprelabel);
             this.Controls.Add(this.addpre);
             this.Controls.Add(this.label3);
@@ -326,5 +373,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label addprelabel;
         private System.Windows.Forms.PictureBox addpre;
+        private System.Windows.Forms.ListView listViewMed;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox comboBoxmed;
+        private System.Windows.Forms.Button addmed;
     }
 }

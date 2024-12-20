@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Data;
+using DBapplication;
 namespace HospitalAppointmentProject.UML
 {
     internal class Medicine
@@ -29,7 +30,11 @@ namespace HospitalAppointmentProject.UML
             this.Quantity = Quantity;
             this.Dose = Dose;
         }
-
+        public DataTable GetAllMedicines()
+        {
+            string query = "Select * from Medicine";
+            return DataBase.Manager.ExecuteReader(query);
+        }
         //add more functions as u need
     }
 }

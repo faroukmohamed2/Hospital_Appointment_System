@@ -7,13 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UML = HospitalAppointmentProject.UML;
 
 namespace HospitalAppointmentSystem
 {
     public partial class Doctor_Appointments : Form
     {
         Form prevform, mainform;
-
+        int? _UserID;
+        UML.USERS.Doctor doctor;
         private void Home_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -37,11 +39,32 @@ namespace HospitalAppointmentSystem
             prevform.Show();
         }
 
-        public Doctor_Appointments(Form prevform, Form mainform)
+        private void available_CheckedChanged(object sender, EventArgs e)
+        {
+            if (!available.Checked)
+            {
+                doctor.IsAvailable = 'F';
+            }
+            else
+            {
+                doctor.IsAvailable = 'T';
+
+            }
+        }
+
+        private void Doctor_Appointments_Load(object sender, EventArgs e)
+        {
+            DoctorAppointments.DataSource = doctor.Appointments;
+            DoctorAppointments.Refresh();
+        }
+
+        public Doctor_Appointments(Form prevform, Form mainform, int? _UserID)
         {
             InitializeComponent();
             this.prevform = prevform;
             this.mainform = mainform;
+            this._UserID = _UserID;
+            this.doctor = new UML.USERS.Doctor(_UserID);
         }
     }
 }
