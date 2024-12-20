@@ -13,10 +13,12 @@ namespace HospitalAppointmentSystem
     public partial class HospitalManager : Form
     {
         Form mainform;
-        public HospitalManager(Form mainForm)
+        int? _UserID;
+        public HospitalManager(Form mainForm, int? userID)
         {
             InitializeComponent();
             mainform = mainForm;
+            _UserID = userID;
         }
 
         private void manHoslabel_hover(object sender, EventArgs e)

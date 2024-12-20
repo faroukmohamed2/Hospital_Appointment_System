@@ -13,10 +13,12 @@ namespace HospitalAppointmentSystem
     public partial class Doctor : Form
     {
         Form mainform;
-        public Doctor(Form mainform)
+        int? _UserID;
+        public Doctor(Form mainform, int? userID)
         {
             InitializeComponent();
             this.mainform = mainform;
+            _UserID = userID;
         }
 
         private void Appoints_hover(object sender, EventArgs e)

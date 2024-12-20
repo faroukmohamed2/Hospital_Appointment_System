@@ -156,13 +156,13 @@ namespace HospitalAppointmentProject.UML.USERS
         }
 
         public void LogIn() {
-            string query = $"select UserID, password from sysUser where Email = {_Email}";
+            string query = $"select UserID, userPassword from sysUser where Email = '{_Email}'";
             DataTable id = DataBase.Manager.ExecuteReader(query);
             string password;
             if (id != null)
             {
                 _UserID = (int)id.Rows[0]["UserID"];
-                password = id.Rows[0]["Password"].ToString();
+                password = id.Rows[0]["userPassword"].ToString();
             }
             else
             {

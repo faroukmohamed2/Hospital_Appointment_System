@@ -13,10 +13,12 @@ namespace HospitalAppointmentSystem
     public partial class PharmacyManager : Form
     {
         Form mainform;
-        public PharmacyManager(Form mainform)
+        int? _UserID;
+        public PharmacyManager(Form mainform, int? userID)
         {
             InitializeComponent();
             this.mainform = mainform;
+            _UserID = userID;
         }
 
         private void manphlabel_hover(object sender, EventArgs e)

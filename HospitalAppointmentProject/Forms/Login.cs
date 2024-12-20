@@ -230,25 +230,25 @@ namespace HospitalAppointmentSystem
                     MessageBox.Show("Welcome Back Hope You are sick for today");
                     break;
                 case UserType.Doctor:
-                    Doctor d = new Doctor(mainform);
+                    Doctor d = new Doctor(mainform, User._UserID);
                     this.Hide();
                     d.Show();
                     MessageBox.Show("What Would You Cure Today");
                     break;
                 case UserType.PharmacyManager:
-                    PharmacyManager pm = new PharmacyManager(mainform);
+                    PharmacyManager pm = new PharmacyManager(mainform, User._UserID);
                     this.Hide();
                     pm.Show();
                     MessageBox.Show("Welcome Back Who Would u Fire Today");
                     break;
                 case UserType.HospitalManager:
-                    HospitalManager hm = new HospitalManager(mainform);
+                    HospitalManager hm = new HospitalManager(mainform, User._UserID);
                     this.Hide();
                     hm.Show();
                     MessageBox.Show("Welcome Back Who Would u Fire Today");
                     break;
                 case UserType.Admin:
-                    Admin admin = new Admin(mainform);
+                    Admin admin = new Admin(mainform, User._UserID);
                     this.Hide();
                     admin.Show();
                     break;
