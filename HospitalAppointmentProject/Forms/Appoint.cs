@@ -21,6 +21,7 @@ namespace HospitalAppointmentSystem
         UML.Appointments.HospitalAppointment Appointment;
         UML.Department Department;
         UML.PLACES.Hospital hospital;
+        UML.USERS.Doctor doctor;
         public Appoint(Form prevform, Form mainform, int? patientID)
         {
             InitializeComponent();
@@ -30,6 +31,7 @@ namespace HospitalAppointmentSystem
             Appointment = new UML.Appointments.HospitalAppointment();
             Department = new UML.Department();
             hospital = new UML.PLACES.Hospital();
+            doctor = new UML.USERS.Doctor();
             DataTable dataTable = Department.GetDepartments();
             Departments.ValueMember = "DepartmentID";
             Departments.DisplayMember = "DepartmentName";
@@ -37,6 +39,7 @@ namespace HospitalAppointmentSystem
             Hospitals.DisplayMember = "PlaceName";
             Doctors.ValueMember = "UserID";
             Doctors.DisplayMember = "FirstName";
+            datetoAppoint.Enabled = false;
             Departments.DataSource = dataTable;
         }
 
@@ -126,6 +129,22 @@ namespace HospitalAppointmentSystem
             hospital._PlaceID = (int)(Hospitals.SelectedValue);
             DataTable dt = hospital.GetDoctorsInDepartment((int)(Departments.SelectedValue));
             Doctors.DataSource = dt;
+        }
+
+        private void Doctors_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            datetoAppoint.Enabled = Doctors.Enabled && Doctors.SelectedIndex >= 0;
+        }
+
+        private void datetoAppoint_ValueChanged(object sender, EventArgs e)
+        {
+            if (datetoAppoint.Value < DateTime.Now)
+            {
+                times.DataSource = null;
+                return;
+            }
+            DataTable dt = doctor.GetAllAvalibleTimes();
+            times.DataSource = dt;
         }
     }
 }

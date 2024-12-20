@@ -117,6 +117,7 @@
             this.datetoAppoint.Name = "datetoAppoint";
             this.datetoAppoint.Size = new System.Drawing.Size(200, 22);
             this.datetoAppoint.TabIndex = 41;
+            this.datetoAppoint.ValueChanged += new System.EventHandler(this.datetoAppoint_ValueChanged);
             // 
             // addappoint
             // 
@@ -186,6 +187,7 @@
             this.Doctors.Name = "Doctors";
             this.Doctors.Size = new System.Drawing.Size(121, 24);
             this.Doctors.TabIndex = 49;
+            this.Doctors.SelectedIndexChanged += new System.EventHandler(this.Doctors_SelectedIndexChanged);
             // 
             // toolStrip1
             // 

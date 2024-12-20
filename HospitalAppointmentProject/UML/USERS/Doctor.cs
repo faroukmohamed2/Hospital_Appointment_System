@@ -1,13 +1,16 @@
-﻿using HospitalAppointmentProject.UML.Appointments;
+﻿using DBapplication;
+using HospitalAppointmentProject.UML.Appointments;
 using HospitalAppointmentProject.UML.FeedBacks;
 using HospitalAppointmentProject.UML.Paper;
 using HospitalAppointmentProject.UML.PLACES;
 using HospitalAppointmentProject.UML.theMedicalHistory;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 
 namespace HospitalAppointmentProject.UML.USERS
 {
@@ -128,6 +131,20 @@ namespace HospitalAppointmentProject.UML.USERS
             this.ClinicAppointments = ClinicAppointments;
         }
 
+
+
+     
+        public DataTable GetAllAvalibleTimes()
+        {
+            string GetHospitalID = $"select HospitalID from Doctor where DoctorID={this._UserID}";
+            int HospitalID = (int)DataBase.Manager.ExecuteScalar(GetHospitalID);
+
+            string GetAvallableTimws = $"select StartingTime,EndingTime,OpenDays From Place Where PlaceID={HospitalID}";
+            
+
+
+            return null;
+        }
         //add more functions as u need
     }
 }

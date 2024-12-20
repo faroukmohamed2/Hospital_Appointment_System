@@ -186,7 +186,7 @@ namespace HospitalAppointmentSystem
                 else
                 {
                     MessageBox.Show("Hospital details updated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    return;
+                    return; 
                 }
             }
             catch (Exception ex)
