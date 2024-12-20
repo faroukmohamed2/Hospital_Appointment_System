@@ -30,5 +30,10 @@ namespace HospitalAppointmentSystem
         {
             mainprogram.Close();
         }
+
+        private void manHos_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

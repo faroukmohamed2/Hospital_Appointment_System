@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DBapplication;
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,14 +21,28 @@ namespace HospitalAppointmentProject.UML.FeedBacks
         public int? DoctorID { get { return _DoctorID; } set { _DoctorID = value; } }
         public string theFeedBack { get { return _theFeedBack; } set { _theFeedBack = value; } }
 
-        FeedBack(int? FeedBackID = null,string theFeedBack = null, int? PatientID = null, int? DoctorID = null) 
+      public FeedBack(int? FeedBackID = null,string theFeedBack = null, int? PatientID = null, int? DoctorID = null) 
         {
             this.PatientID = PatientID;
             this.FeedBackID = FeedBackID;
             this.theFeedBack = theFeedBack;
             this.DoctorID = DoctorID;
         }
-
-        //add more functions as u need
+        public int addfeedback()
+        {
+            string maxid = $"select max(FeedbackID) from Feedback;";
+            object id = DataBase.Manager.ExecuteScalar(maxid);
+            if (id != null && id != DBNull.Value)
+                _FeedBackID = (int)id + 1;
+            else
+            {
+                _FeedBackID = 5000; // for first time
+            }
+            string q = $"insert into Feedback values ({_FeedBackID},{_DoctorID},{_PatientID},'{_theFeedBack}') ;";
+            int result = DataBase.Manager.ExecuteNonQuery(q);
+            if (result == 0)
+                return 0;
+            return 1;
+        }
     }
 }

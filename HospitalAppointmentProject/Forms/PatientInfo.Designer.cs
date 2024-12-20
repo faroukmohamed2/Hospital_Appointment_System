@@ -54,6 +54,8 @@
             this.submit = new System.Windows.Forms.Button();
             this.show = new System.Windows.Forms.Button();
             this.PPrescription = new System.Windows.Forms.DataGridView();
+            this.showBuutton = new System.Windows.Forms.Button();
+            this.showButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pMedHist)).BeginInit();
@@ -80,9 +82,9 @@
             this.contactus,
             this.profile,
             this.exitprogram});
-            this.toolStrip1.Location = new System.Drawing.Point(1062, 0);
+            this.toolStrip1.Location = new System.Drawing.Point(1033, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(40, 606);
+            this.toolStrip1.Size = new System.Drawing.Size(40, 662);
             this.toolStrip1.TabIndex = 54;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -293,14 +295,34 @@
             this.PPrescription.Size = new System.Drawing.Size(309, 112);
             this.PPrescription.TabIndex = 67;
             // 
+            // showBuutton
+            // 
+            this.showBuutton.Location = new System.Drawing.Point(396, 326);
+            this.showBuutton.Name = "showBuutton";
+            this.showBuutton.Size = new System.Drawing.Size(75, 23);
+            this.showBuutton.TabIndex = 68;
+            this.showBuutton.Text = "submit";
+            this.showBuutton.UseVisualStyleBackColor = true;
+            this.showBuutton.Click += new System.EventHandler(this.showBuutton_Click);
+            // 
+            // showButton
+            // 
+            this.showButton.Location = new System.Drawing.Point(281, 158);
+            this.showButton.Name = "showButton";
+            this.showButton.Size = new System.Drawing.Size(75, 23);
+            this.showButton.TabIndex = 69;
+            this.showButton.Text = "Show";
+            this.showButton.UseVisualStyleBackColor = true;
+            this.showButton.Click += new System.EventHandler(this.showButton_Click);
+            // 
             // PatientInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(241)))), ((int)(((byte)(232)))));
-            this.ClientSize = new System.Drawing.Size(1102, 606);
-            this.Controls.Add(this.show);
-            this.Controls.Add(this.submit);
+            this.ClientSize = new System.Drawing.Size(1073, 662);
+            this.Controls.Add(this.showButton);
+            this.Controls.Add(this.showBuutton);
             this.Controls.Add(this.PPrescription);
             this.Controls.Add(this.cured);
             this.Controls.Add(this.addDis);
@@ -354,5 +376,7 @@
         private System.Windows.Forms.Button submit;
         private System.Windows.Forms.Button show;
         private System.Windows.Forms.DataGridView PPrescription;
+        private System.Windows.Forms.Button showBuutton;
+        private System.Windows.Forms.Button showButton;
     }
 }

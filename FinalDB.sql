@@ -311,6 +311,7 @@ Create Table MedicinePrescription(
 	PrescriptionID int,
 	Dose varchar(60),
 
+	primary key (MedicineID,PrescriptionID);
 	foreign key (MedicineID) references Medicine
 		ON DELETE SET NULL
 		ON UPDATE CASCADE,

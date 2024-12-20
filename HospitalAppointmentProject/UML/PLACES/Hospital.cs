@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
+using DBapplication;
 using HospitalAppointmentProject.UML.Appointments;
 using HospitalAppointmentProject.UML.USERS;
 
@@ -14,7 +17,7 @@ namespace HospitalAppointmentProject.UML.PLACES
         public List<Doctor> _Doctors;
         public List<HospitalAppointment> _Appointments;
 
-        
+
         public List<Department> HospitalsDepartments
         {
             get
@@ -27,7 +30,7 @@ namespace HospitalAppointmentProject.UML.PLACES
             }
         }
 
-       
+
         public List<Doctor> Doctors
         {
             get
@@ -52,7 +55,7 @@ namespace HospitalAppointmentProject.UML.PLACES
             }
         }
 
-        
+
         public Hospital(int? PlaceID = null, string PlaceName = null, string Email = null, string PhoneNumber = null,
                         string StartingTime = null, string EndingTime = null, bool? IsAvailable = null,
                         string PlaceLocation = null, string OpenDays = null, List<Department> HospitalsDepartments = null,
@@ -64,6 +67,46 @@ namespace HospitalAppointmentProject.UML.PLACES
             this.Appointments = Appointments;
         }
 
-        // Add more methods or functions as needed
+
+
+        public DataTable GetDoctorsInDepartment(int DepartmentId)
+        {
+            string query = "select U.FirstName,U.UserID " +
+                           "from Department as D,Hospital as H,HospitalDepartment as HD,Doctor as Dr,sysUser as U " +
+                          $"where Dr.HospitalID=H.HospitalID AND Dr.DepartmentID=D.DepartmentID And U.UserID=Dr.DoctorID And D.DepartmentID={DepartmentId} and HD.HospitalID=H.HospitalID and H.HospitalID={this._PlaceID}";
+            return DataBase.Manager.ExecuteReader(query);
+        }
+  
+
+        public int inserthospital()
+        {
+            string q = $"insert into Place values ({_PlaceID},'{_PlaceName}','{_Email}','{_PhoneNumber}','{_StartingTime}','{_EndingTime}','{_IsAvailable}','{_PlaceLocation}','{_OpenDays}') ";
+            int resulthos = DataBase.Manager.ExecuteNonQuery(q);
+            string hosq = $"insert into Hospital values({_PlaceID});";
+            int resulthid = DataBase.Manager.ExecuteNonQuery(hosq);
+            if (resulthid == 0 || resulthos == 0)
+                return 0;
+            return 1;
+        }
+        public int deletehospital()
+        {
+            string q = $"DELETE FROM Hospital where HospitalID = {_PlaceID}; ";
+            int r = DataBase.Manager.ExecuteNonQuery(q);
+            string query = $"DELETE FROM Place WHERE PlaceID = {_PlaceID};";
+            int resultPharmacy = DataBase.Manager.ExecuteNonQuery(query);
+            if (resultPharmacy == 0 || r == 0)
+                return 0;
+
+            return 1;
+
+        }
+
+        public bool CheckIfHospitalExists(int hid)
+        {
+            string query = $"SELECT COUNT(*) FROM Place WHERE PlaceID = {hid}";
+            int c = (int)DataBase.Manager.ExecuteScalar(query);
+            return c > 0;
+        }
+
     }
 }

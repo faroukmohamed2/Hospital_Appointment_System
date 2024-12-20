@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
 
 namespace HospitalAppointmentProject.UML.Paper
 {
@@ -99,6 +100,12 @@ namespace HospitalAppointmentProject.UML.Paper
 
             }
             return Pres;
+        }
+        public DataTable Getprescriptions()
+        {
+            string query = $"select firstName, LastName, DiseaseName, DiseaseDescription, DateAndTime from sysUser, prescription where userid = patientid and patientid = {_PatientID}";
+            DataTable dt = DataBase.Manager.ExecuteReader(query);
+            return dt;
         }
         //public DataTable
         //add functions as u need

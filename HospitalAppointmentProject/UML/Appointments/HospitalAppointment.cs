@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DBapplication;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -45,6 +46,12 @@ namespace HospitalAppointmentProject.UML.Appointments
             this.DateAndTime = DateAndTime ?? DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"); // Default to current time in standard format
             this.DoctorID = DoctorID;
             this.PatientID = PatientID;
+        }
+
+        public int CancleAppointment()
+        {
+            string query = $"delete from HospitalAppointment Where HospitalAppointmentID={_HospitalAppointmentID}";
+            return DataBase.Manager.ExecuteNonQuery(query);
         }
 
         //add functions as u need

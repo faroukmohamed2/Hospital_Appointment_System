@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UML = HospitalAppointmentProject.UML;
 
 namespace HospitalAppointmentSystem
 {
@@ -15,11 +16,33 @@ namespace HospitalAppointmentSystem
     {
         Form prevform;
         Form mainform;
-        public UpcomingAppointment(Form prevform, Form mainform)
+        UML.USERS.Patient patient;
+        UML.Appointments.HospitalAppointment Appointment;
+        int? userID;
+        public UpcomingAppointment(Form prevform, Form mainform,int? userid)
         {
             InitializeComponent();
             this.prevform = prevform;
             this.mainform = mainform;
+            this.userID = userid;
+
+            patient = new UML.USERS.Patient();
+            Appointment = new UML.Appointments.HospitalAppointment();
+
+
+
+            patient._UserID = userID;
+            DataTable dataTable = patient.UpcomingAppointments();
+           
+            CurrentAppointments.DisplayMember = "DateAndTime";
+            CurrentAppointments.ValueMember = "HospitalAppointmentID";
+            CurrentAppointments.DataSource = dataTable;
+
+            Appointments.DataSource = dataTable;
+            Appointments.Refresh();
+
+
+
         }
 
         private void Cancel_hover(object sender, EventArgs e)
@@ -55,6 +78,30 @@ namespace HospitalAppointmentSystem
             ContactUs cu = new ContactUs(this, mainform);
             this.Hide();
             cu.Show();
+        }
+
+        private void Cancellabel_Click(object sender, EventArgs e)
+        {
+            if (CurrentAppointments.SelectedIndex < 0)
+            {
+                MessageBox.Show("Select The Appointment That you want to delete first, you are really sick bro" + "\nwhat is " + CurrentAppointments.Text + " anyways?" );
+                return;
+            }
+
+            Appointment._HospitalAppointmentID = (int)(CurrentAppointments.SelectedValue);
+            int IsDeleted = Appointment.CancleAppointment();
+            if (IsDeleted == 0)
+            {
+                MessageBox.Show("Nothing is Canceled For some reason");
+                return;
+            }
+            DataTable dataTable = patient.UpcomingAppointments();
+            CurrentAppointments.DisplayMember = "DateAndTime";
+            CurrentAppointments.ValueMember = "HospitalAppointmentID";
+            CurrentAppointments.DataSource = dataTable;
+            Appointments.DataSource = dataTable;
+            Appointments.Refresh();
+            MessageBox.Show("Canceled Successfully");
         }
     }
 }

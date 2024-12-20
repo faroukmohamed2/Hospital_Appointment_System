@@ -94,6 +94,83 @@ namespace HospitalAppointmentSystem
             }
         }
 
+        private void showBuutton_Click(object sender, EventArgs e)
+        {
+            patient = new UML.USERS.Patient(null, pEmail.Text, null, null, null, null, null, null, null, null, null, null, null, null, null);
+            if (addDis.Checked)
+            {
+                if (pEmail.Text == "" || DName.Text == "" || textBoxyear.Text == "")
+                {
+                    MessageBox.Show("please fill all fields");
+                    return;
+                }
+                int? patientid = patient.UserID;
+                int year;
+                if (!int.TryParse(textBoxyear.Text, out year))
+                {
+                    MessageBox.Show("year must be a number");
+                    return;
+                }
+                medHist._PatientID = patientid;
+                medHist._DiseaseDescription = DName.Text;
+                medHist._AtYear = year;
+                int res = medHist.newMedHistory();
+                if (res == 0)
+                {
+                    MessageBox.Show("the email is wrong");
+                    return;
+                }
+            }
+            else if (cured.Checked)
+            {
+                if (pEmail.Text == "" || DName.Text == "")
+                {
+                    MessageBox.Show("the disease discription or email field is empty");
+                    return;
+                }
+                int? patientid = patient.UserID;
+                int year;
+
+                medHist._PatientID = patientid;
+                medHist._DiseaseDescription = DName.Text;
+                int res = medHist.updatemedHistpry();
+                if (res == 0)
+                {
+                    MessageBox.Show("the email is wrong");
+                    return;
+                }
+            }
+            else
+            {
+                MessageBox.Show("select an action");
+                return;
+            }
+            MessageBox.Show("Medical History updated");
+
+        }
+
+        private void showButton_Click(object sender, EventArgs e)
+        {
+            patient = new UML.USERS.Patient(null, pEmail.Text, null, null, null, null, null, null, null, null, null, null, null, null, null);
+            medHist.PatientID = patient.UserID;
+            pMedHist.DataSource = medHist.getmedicalhistory();
+            if (pMedHist.DataSource == null)
+            {
+                MessageBox.Show("the email is wrong");
+                return;
+            }
+            pMedHist.Refresh();
+            DateTime d = new DateTime();
+            pre = new UML.Paper.Prescription(d, null, null, patient.UserID, null, null, null);
+            PPrescription.DataSource = pre.Getprescriptions();
+            PPrescription.Refresh();
+            if (PPrescription.DataSource == null)
+            {
+                MessageBox.Show("the email is wrong");
+                return;
+            }
+
+        }
 
         public PatientInfo(Form prevform, Form mainform, int? userID)
         {

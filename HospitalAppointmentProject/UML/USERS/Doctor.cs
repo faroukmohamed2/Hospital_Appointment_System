@@ -6,10 +6,12 @@ using HospitalAppointmentProject.UML.PLACES;
 using HospitalAppointmentProject.UML.theMedicalHistory;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data;
+
 
 namespace HospitalAppointmentProject.UML.USERS
 {
@@ -153,6 +155,27 @@ namespace HospitalAppointmentProject.UML.USERS
             this.ClinicAppointments = ClinicAppointments;
         }
 
-        //add more functions as u need
+
+
+
+     
+        public DataTable GetAllAvalibleTimes()
+        {
+            string GetHospitalID = $"select HospitalID from Doctor where DoctorID={this._UserID}";
+            int HospitalID = (int)DataBase.Manager.ExecuteScalar(GetHospitalID);
+
+            string GetAvallableTimws = $"select StartingTime,EndingTime,OpenDays From Place Where PlaceID={HospitalID}";
+            
+
+
+            return null;
+        }
+        public DataTable   getfeedback()
+        {
+            string q = $"select FeedbackID,PatientID,theFeedback from Feedback where DoctorID = {_UserID};";
+            DataTable result = DataBase.Manager.ExecuteReader(q);
+            return result;
+        }
+
     }
 }

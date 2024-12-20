@@ -37,7 +37,7 @@ namespace HospitalAppointmentProject.UML.USERS
             }
             set
             {
-                // Add validation or query
+                // Add validation or query 
                 _UserID = value;
             }
         }
@@ -220,7 +220,9 @@ namespace HospitalAppointmentProject.UML.USERS
             if (id != null && id != DBNull.Value)
                 _UserID = (int)id + 1;
             else
-                return 0;
+            {
+                _UserID = 5000;
+            }
 
             string query = $"insert into sysuser values({_UserID}, '{_Email}' , '{_UserPassword}', {_Age}, '{_Gender}', '{_First_Name}', '{_Last_Name}'); ";
             int userRes = DataBase.Manager.ExecuteNonQuery(query);
