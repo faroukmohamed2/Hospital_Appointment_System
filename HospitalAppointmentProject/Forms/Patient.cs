@@ -216,5 +216,17 @@ namespace HospitalAppointmentSystem
             this.Hide();
             mh.Show();
         }
+
+        private void profile_ButtonClick(object sender, EventArgs e)
+        {
+
+        }
+
+        private void editProfileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //YourProfile y = new YourProfile;
+            //y.Show();   
+            //this.Hide();    
+        }
     }
 }

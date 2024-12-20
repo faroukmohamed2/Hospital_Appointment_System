@@ -58,7 +58,7 @@
             // 
             this.manmedlabel.AutoSize = true;
             this.manmedlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.manmedlabel.Location = new System.Drawing.Point(216, 257);
+            this.manmedlabel.Location = new System.Drawing.Point(189, 257);
             this.manmedlabel.Name = "manmedlabel";
             this.manmedlabel.Size = new System.Drawing.Size(159, 22);
             this.manmedlabel.TabIndex = 68;
@@ -70,7 +70,7 @@
             // 
             this.manphlabel.AutoSize = true;
             this.manphlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.manphlabel.Location = new System.Drawing.Point(216, 171);
+            this.manphlabel.Location = new System.Drawing.Point(189, 171);
             this.manphlabel.Name = "manphlabel";
             this.manphlabel.Size = new System.Drawing.Size(173, 22);
             this.manphlabel.TabIndex = 66;
@@ -87,9 +87,9 @@
             this.contactus,
             this.profile,
             this.exitprogram});
-            this.toolStrip1.Location = new System.Drawing.Point(760, 0);
+            this.toolStrip1.Location = new System.Drawing.Point(755, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(40, 450);
+            this.toolStrip1.Size = new System.Drawing.Size(40, 468);
             this.toolStrip1.TabIndex = 70;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -195,7 +195,7 @@
             // 
             this.greeting.AutoSize = true;
             this.greeting.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.greeting.Location = new System.Drawing.Point(159, 109);
+            this.greeting.Location = new System.Drawing.Point(139, 109);
             this.greeting.Name = "greeting";
             this.greeting.Size = new System.Drawing.Size(51, 22);
             this.greeting.TabIndex = 71;
@@ -204,9 +204,9 @@
             // manmed
             // 
             this.manmed.Image = ((System.Drawing.Image)(resources.GetObject("manmed.Image")));
-            this.manmed.Location = new System.Drawing.Point(143, 242);
+            this.manmed.Location = new System.Drawing.Point(125, 242);
             this.manmed.Name = "manmed";
-            this.manmed.Size = new System.Drawing.Size(67, 63);
+            this.manmed.Size = new System.Drawing.Size(59, 63);
             this.manmed.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.manmed.TabIndex = 69;
             this.manmed.TabStop = false;
@@ -216,9 +216,9 @@
             // manph
             // 
             this.manph.Image = ((System.Drawing.Image)(resources.GetObject("manph.Image")));
-            this.manph.Location = new System.Drawing.Point(143, 153);
+            this.manph.Location = new System.Drawing.Point(125, 153);
             this.manph.Name = "manph";
-            this.manph.Size = new System.Drawing.Size(67, 63);
+            this.manph.Size = new System.Drawing.Size(59, 63);
             this.manph.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.manph.TabIndex = 67;
             this.manph.TabStop = false;
@@ -230,17 +230,17 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(-1, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(158, 86);
+            this.pictureBox1.Size = new System.Drawing.Size(138, 86);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 39;
             this.pictureBox1.TabStop = false;
             // 
             // PharmacyManager
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(241)))), ((int)(((byte)(232)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(795, 468);
             this.Controls.Add(this.greeting);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.manmed);

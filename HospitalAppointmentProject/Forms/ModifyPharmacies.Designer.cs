@@ -66,36 +66,37 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(242, 421);
+            this.label8.Location = new System.Drawing.Point(212, 421);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(100, 16);
+            this.label8.Size = new System.Drawing.Size(97, 17);
             this.label8.TabIndex = 94;
             this.label8.Text = "Delete Hospital";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(230, 79);
+            this.label7.Location = new System.Drawing.Point(201, 79);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(106, 16);
+            this.label7.Size = new System.Drawing.Size(107, 17);
             this.label7.TabIndex = 93;
             this.label7.Text = "Add and Update";
             // 
             // delph
             // 
-            this.delph.Location = new System.Drawing.Point(312, 456);
+            this.delph.Location = new System.Drawing.Point(273, 456);
             this.delph.Name = "delph";
-            this.delph.Size = new System.Drawing.Size(119, 23);
+            this.delph.Size = new System.Drawing.Size(104, 23);
             this.delph.TabIndex = 92;
             this.delph.Text = "Delete Pharmacy";
             this.delph.UseVisualStyleBackColor = true;
+            this.delph.Click += new System.EventHandler(this.delph_Click);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(0, 396);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(979, 16);
+            this.label6.Size = new System.Drawing.Size(1223, 17);
             this.label6.TabIndex = 91;
             this.label6.Text = resources.GetString("label6.Text");
             // 
@@ -103,7 +104,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(46, 459);
+            this.label5.Location = new System.Drawing.Point(40, 459);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(101, 20);
             this.label5.TabIndex = 90;
@@ -112,42 +113,44 @@
             // delphid
             // 
             this.delphid.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.delphid.Location = new System.Drawing.Point(153, 457);
+            this.delphid.Location = new System.Drawing.Point(134, 457);
             this.delphid.Name = "delphid";
-            this.delphid.Size = new System.Drawing.Size(127, 22);
+            this.delphid.Size = new System.Drawing.Size(111, 24);
             this.delphid.TabIndex = 89;
             // 
             // Updateph
             // 
-            this.Updateph.Location = new System.Drawing.Point(520, 344);
+            this.Updateph.Location = new System.Drawing.Point(455, 344);
             this.Updateph.Name = "Updateph";
-            this.Updateph.Size = new System.Drawing.Size(136, 23);
+            this.Updateph.Size = new System.Drawing.Size(119, 23);
             this.Updateph.TabIndex = 88;
             this.Updateph.Text = "Update Pharmacy";
             this.Updateph.UseVisualStyleBackColor = true;
+            this.Updateph.Click += new System.EventHandler(this.Updateph_Click);
             // 
             // addPh
             // 
-            this.addPh.Location = new System.Drawing.Point(382, 344);
+            this.addPh.Location = new System.Drawing.Point(334, 344);
             this.addPh.Name = "addPh";
-            this.addPh.Size = new System.Drawing.Size(119, 23);
+            this.addPh.Size = new System.Drawing.Size(104, 23);
             this.addPh.TabIndex = 87;
             this.addPh.Text = "Add Pharmacy";
             this.addPh.UseVisualStyleBackColor = true;
+            this.addPh.Click += new System.EventHandler(this.addPh_Click);
             // 
             // phLoction
             // 
             this.phLoction.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.phLoction.Location = new System.Drawing.Point(230, 344);
+            this.phLoction.Location = new System.Drawing.Point(201, 344);
             this.phLoction.Name = "phLoction";
-            this.phLoction.Size = new System.Drawing.Size(127, 22);
+            this.phLoction.Size = new System.Drawing.Size(111, 24);
             this.phLoction.TabIndex = 86;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(46, 343);
+            this.label4.Location = new System.Drawing.Point(40, 343);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(153, 20);
             this.label4.TabIndex = 85;
@@ -156,16 +159,16 @@
             // phPN
             // 
             this.phPN.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.phPN.Location = new System.Drawing.Point(230, 293);
+            this.phPN.Location = new System.Drawing.Point(201, 293);
             this.phPN.Name = "phPN";
-            this.phPN.Size = new System.Drawing.Size(127, 22);
+            this.phPN.Size = new System.Drawing.Size(111, 24);
             this.phPN.TabIndex = 84;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(29, 295);
+            this.label3.Location = new System.Drawing.Point(25, 295);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(195, 20);
             this.label3.TabIndex = 83;
@@ -174,16 +177,16 @@
             // phEmail
             // 
             this.phEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.phEmail.Location = new System.Drawing.Point(230, 235);
+            this.phEmail.Location = new System.Drawing.Point(201, 235);
             this.phEmail.Name = "phEmail";
-            this.phEmail.Size = new System.Drawing.Size(127, 22);
+            this.phEmail.Size = new System.Drawing.Size(111, 24);
             this.phEmail.TabIndex = 82;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(44, 237);
+            this.label2.Location = new System.Drawing.Point(38, 237);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(131, 20);
             this.label2.TabIndex = 81;
@@ -193,7 +196,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(44, 182);
+            this.label1.Location = new System.Drawing.Point(38, 182);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(133, 20);
             this.label1.TabIndex = 80;
@@ -202,16 +205,16 @@
             // phName
             // 
             this.phName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.phName.Location = new System.Drawing.Point(230, 177);
+            this.phName.Location = new System.Drawing.Point(201, 177);
             this.phName.Name = "phName";
-            this.phName.Size = new System.Drawing.Size(127, 22);
+            this.phName.Size = new System.Drawing.Size(111, 24);
             this.phName.TabIndex = 79;
             // 
             // FNlabel
             // 
             this.FNlabel.AutoSize = true;
             this.FNlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FNlabel.Location = new System.Drawing.Point(44, 122);
+            this.FNlabel.Location = new System.Drawing.Point(38, 122);
             this.FNlabel.Name = "FNlabel";
             this.FNlabel.Size = new System.Drawing.Size(101, 20);
             this.FNlabel.TabIndex = 78;
@@ -220,9 +223,9 @@
             // phID
             // 
             this.phID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.phID.Location = new System.Drawing.Point(230, 120);
+            this.phID.Location = new System.Drawing.Point(201, 120);
             this.phID.Name = "phID";
-            this.phID.Size = new System.Drawing.Size(127, 22);
+            this.phID.Size = new System.Drawing.Size(111, 24);
             this.phID.TabIndex = 77;
             // 
             // pictureBox1
@@ -230,7 +233,7 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(3, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(158, 86);
+            this.pictureBox1.Size = new System.Drawing.Size(138, 86);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 76;
             this.pictureBox1.TabStop = false;
@@ -245,7 +248,7 @@
             this.contactus,
             this.profile,
             this.exitprogram});
-            this.toolStrip1.Location = new System.Drawing.Point(939, 0);
+            this.toolStrip1.Location = new System.Drawing.Point(989, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(40, 513);
             this.toolStrip1.TabIndex = 95;
@@ -338,10 +341,10 @@
             // 
             // ModifyPharmacies
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(241)))), ((int)(((byte)(232)))));
-            this.ClientSize = new System.Drawing.Size(979, 513);
+            this.ClientSize = new System.Drawing.Size(1029, 513);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);

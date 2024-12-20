@@ -76,7 +76,7 @@
             this.contactus,
             this.profile,
             this.exitprogram});
-            this.toolStrip1.Location = new System.Drawing.Point(1048, 0);
+            this.toolStrip1.Location = new System.Drawing.Point(912, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(40, 612);
             this.toolStrip1.TabIndex = 28;
@@ -98,19 +98,19 @@
             // viewToolStripMenuItem
             // 
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            this.viewToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.viewToolStripMenuItem.Size = new System.Drawing.Size(125, 26);
             this.viewToolStripMenuItem.Text = "view";
             // 
             // toolsToolStripMenuItem
             // 
             this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
-            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(125, 26);
             this.toolsToolStripMenuItem.Text = "tools";
             // 
             // editToolStripMenuItem
             // 
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(125, 26);
             this.editToolStripMenuItem.Text = "Edit";
             // 
             // contactus
@@ -135,23 +135,25 @@
             this.profile.Name = "profile";
             this.profile.Size = new System.Drawing.Size(37, 24);
             this.profile.Text = "Your profile";
+            this.profile.ButtonClick += new System.EventHandler(this.profile_ButtonClick);
             // 
             // viewProfileToolStripMenuItem
             // 
             this.viewProfileToolStripMenuItem.Name = "viewProfileToolStripMenuItem";
-            this.viewProfileToolStripMenuItem.Size = new System.Drawing.Size(204, 26);
+            this.viewProfileToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.viewProfileToolStripMenuItem.Text = "view profile";
             // 
             // editProfileToolStripMenuItem
             // 
             this.editProfileToolStripMenuItem.Name = "editProfileToolStripMenuItem";
-            this.editProfileToolStripMenuItem.Size = new System.Drawing.Size(204, 26);
+            this.editProfileToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.editProfileToolStripMenuItem.Text = "Edit profile";
+            this.editProfileToolStripMenuItem.Click += new System.EventHandler(this.editProfileToolStripMenuItem_Click);
             // 
             // removeAccountToolStripMenuItem
             // 
             this.removeAccountToolStripMenuItem.Name = "removeAccountToolStripMenuItem";
-            this.removeAccountToolStripMenuItem.Size = new System.Drawing.Size(204, 26);
+            this.removeAccountToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.removeAccountToolStripMenuItem.Text = "Remove Account";
             // 
             // exitprogram
@@ -168,7 +170,7 @@
             // 
             this.appointlabel.AutoSize = true;
             this.appointlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.appointlabel.Location = new System.Drawing.Point(238, 183);
+            this.appointlabel.Location = new System.Drawing.Point(208, 183);
             this.appointlabel.Name = "appointlabel";
             this.appointlabel.Size = new System.Drawing.Size(151, 22);
             this.appointlabel.TabIndex = 29;
@@ -180,7 +182,7 @@
             // 
             this.greeting.AutoSize = true;
             this.greeting.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.greeting.Location = new System.Drawing.Point(21, 101);
+            this.greeting.Location = new System.Drawing.Point(18, 101);
             this.greeting.Name = "greeting";
             this.greeting.Size = new System.Drawing.Size(51, 22);
             this.greeting.TabIndex = 35;
@@ -190,7 +192,7 @@
             // 
             this.showAppointmentslabel.AutoSize = true;
             this.showAppointmentslabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.showAppointmentslabel.Location = new System.Drawing.Point(238, 270);
+            this.showAppointmentslabel.Location = new System.Drawing.Point(208, 270);
             this.showAppointmentslabel.Name = "showAppointmentslabel";
             this.showAppointmentslabel.Size = new System.Drawing.Size(204, 22);
             this.showAppointmentslabel.TabIndex = 37;
@@ -202,7 +204,7 @@
             // 
             this.EditAppointmentslabel.AutoSize = true;
             this.EditAppointmentslabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EditAppointmentslabel.Location = new System.Drawing.Point(238, 369);
+            this.EditAppointmentslabel.Location = new System.Drawing.Point(208, 369);
             this.EditAppointmentslabel.Name = "EditAppointmentslabel";
             this.EditAppointmentslabel.Size = new System.Drawing.Size(155, 22);
             this.EditAppointmentslabel.TabIndex = 39;
@@ -214,7 +216,7 @@
             // 
             this.DocSearchlabel.AutoSize = true;
             this.DocSearchlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DocSearchlabel.Location = new System.Drawing.Point(648, 183);
+            this.DocSearchlabel.Location = new System.Drawing.Point(567, 183);
             this.DocSearchlabel.Name = "DocSearchlabel";
             this.DocSearchlabel.Size = new System.Drawing.Size(134, 22);
             this.DocSearchlabel.TabIndex = 41;
@@ -226,7 +228,7 @@
             // 
             this.Prescriptionslabel.AutoSize = true;
             this.Prescriptionslabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Prescriptionslabel.Location = new System.Drawing.Point(648, 261);
+            this.Prescriptionslabel.Location = new System.Drawing.Point(567, 261);
             this.Prescriptionslabel.Name = "Prescriptionslabel";
             this.Prescriptionslabel.Size = new System.Drawing.Size(114, 22);
             this.Prescriptionslabel.TabIndex = 43;
@@ -237,9 +239,9 @@
             // Prescript
             // 
             this.Prescript.Image = ((System.Drawing.Image)(resources.GetObject("Prescript.Image")));
-            this.Prescript.Location = new System.Drawing.Point(575, 242);
+            this.Prescript.Location = new System.Drawing.Point(503, 242);
             this.Prescript.Name = "Prescript";
-            this.Prescript.Size = new System.Drawing.Size(67, 50);
+            this.Prescript.Size = new System.Drawing.Size(59, 50);
             this.Prescript.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.Prescript.TabIndex = 42;
             this.Prescript.TabStop = false;
@@ -249,9 +251,9 @@
             // DocSearch
             // 
             this.DocSearch.Image = ((System.Drawing.Image)(resources.GetObject("DocSearch.Image")));
-            this.DocSearch.Location = new System.Drawing.Point(575, 165);
+            this.DocSearch.Location = new System.Drawing.Point(503, 165);
             this.DocSearch.Name = "DocSearch";
-            this.DocSearch.Size = new System.Drawing.Size(67, 59);
+            this.DocSearch.Size = new System.Drawing.Size(59, 59);
             this.DocSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.DocSearch.TabIndex = 40;
             this.DocSearch.TabStop = false;
@@ -261,9 +263,9 @@
             // EditAppointments
             // 
             this.EditAppointments.Image = ((System.Drawing.Image)(resources.GetObject("EditAppointments.Image")));
-            this.EditAppointments.Location = new System.Drawing.Point(165, 342);
+            this.EditAppointments.Location = new System.Drawing.Point(144, 342);
             this.EditAppointments.Name = "EditAppointments";
-            this.EditAppointments.Size = new System.Drawing.Size(67, 69);
+            this.EditAppointments.Size = new System.Drawing.Size(59, 69);
             this.EditAppointments.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.EditAppointments.TabIndex = 38;
             this.EditAppointments.TabStop = false;
@@ -273,9 +275,9 @@
             // showappoints
             // 
             this.showappoints.Image = ((System.Drawing.Image)(resources.GetObject("showappoints.Image")));
-            this.showappoints.Location = new System.Drawing.Point(161, 251);
+            this.showappoints.Location = new System.Drawing.Point(141, 251);
             this.showappoints.Name = "showappoints";
-            this.showappoints.Size = new System.Drawing.Size(71, 67);
+            this.showappoints.Size = new System.Drawing.Size(62, 67);
             this.showappoints.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.showappoints.TabIndex = 36;
             this.showappoints.TabStop = false;
@@ -285,9 +287,9 @@
             // addappoint
             // 
             this.addappoint.Image = ((System.Drawing.Image)(resources.GetObject("addappoint.Image")));
-            this.addappoint.Location = new System.Drawing.Point(165, 165);
+            this.addappoint.Location = new System.Drawing.Point(144, 165);
             this.addappoint.Name = "addappoint";
-            this.addappoint.Size = new System.Drawing.Size(67, 63);
+            this.addappoint.Size = new System.Drawing.Size(59, 63);
             this.addappoint.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.addappoint.TabIndex = 34;
             this.addappoint.TabStop = false;
@@ -299,7 +301,7 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(158, 86);
+            this.pictureBox1.Size = new System.Drawing.Size(138, 86);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 33;
             this.pictureBox1.TabStop = false;
@@ -308,9 +310,9 @@
             // medHistory
             // 
             this.medHistory.Image = ((System.Drawing.Image)(resources.GetObject("medHistory.Image")));
-            this.medHistory.Location = new System.Drawing.Point(575, 332);
+            this.medHistory.Location = new System.Drawing.Point(503, 332);
             this.medHistory.Name = "medHistory";
-            this.medHistory.Size = new System.Drawing.Size(67, 59);
+            this.medHistory.Size = new System.Drawing.Size(59, 59);
             this.medHistory.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.medHistory.TabIndex = 44;
             this.medHistory.TabStop = false;
@@ -321,7 +323,7 @@
             // 
             this.midhistlablel.AutoSize = true;
             this.midhistlablel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.midhistlablel.Location = new System.Drawing.Point(648, 356);
+            this.midhistlablel.Location = new System.Drawing.Point(567, 356);
             this.midhistlablel.Name = "midhistlablel";
             this.midhistlablel.Size = new System.Drawing.Size(175, 22);
             this.midhistlablel.TabIndex = 45;
@@ -332,9 +334,9 @@
             // dfeed
             // 
             this.dfeed.Image = ((System.Drawing.Image)(resources.GetObject("dfeed.Image")));
-            this.dfeed.Location = new System.Drawing.Point(165, 429);
+            this.dfeed.Location = new System.Drawing.Point(144, 429);
             this.dfeed.Name = "dfeed";
-            this.dfeed.Size = new System.Drawing.Size(67, 63);
+            this.dfeed.Size = new System.Drawing.Size(59, 63);
             this.dfeed.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.dfeed.TabIndex = 62;
             this.dfeed.TabStop = false;
@@ -345,7 +347,7 @@
             // 
             this.dfeedlabel.AutoSize = true;
             this.dfeedlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dfeedlabel.Location = new System.Drawing.Point(238, 447);
+            this.dfeedlabel.Location = new System.Drawing.Point(208, 447);
             this.dfeedlabel.Name = "dfeedlabel";
             this.dfeedlabel.Size = new System.Drawing.Size(156, 22);
             this.dfeedlabel.TabIndex = 61;
@@ -355,10 +357,10 @@
             // 
             // Patient
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(241)))), ((int)(((byte)(232)))));
-            this.ClientSize = new System.Drawing.Size(1088, 612);
+            this.ClientSize = new System.Drawing.Size(952, 612);
             this.Controls.Add(this.dfeed);
             this.Controls.Add(this.dfeedlabel);
             this.Controls.Add(this.midhistlablel);

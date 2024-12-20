@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DBapplication;
 using HospitalAppointmentProject.UML.Appointments;
 using HospitalAppointmentProject.UML.USERS;
 
@@ -64,6 +65,34 @@ namespace HospitalAppointmentProject.UML.PLACES
             this.Appointments = Appointments;
         }
 
-        // Add more methods or functions as needed
+        public int inserthospital()
+        {
+            string q = $"insert into Place values ({_PlaceID},'{_PlaceName}','{_Email}','{_PhoneNumber}','{_StartingTime}','{_EndingTime}','{_IsAvailable}','{_PlaceLocation}','{_OpenDays}') ";
+            int resulthos = DataBase.Manager.ExecuteNonQuery(q);
+            string hosq = $"insert into Hospital values({_PlaceID});";
+            int resulthid = DataBase.Manager.ExecuteNonQuery(hosq);
+            if (resulthid == 0 || resulthos == 0)
+                return 0;
+            return 1;
+        }
+        public int deletehospital()
+        {
+            string q = $"DELETE FROM Hospital where HospitalID = {_PlaceID}; ";
+            int r = DataBase.Manager.ExecuteNonQuery(q);
+            string query = $"DELETE FROM Place WHERE PlaceID = {_PlaceID};";
+            int resultPharmacy = DataBase.Manager.ExecuteNonQuery(query);
+            if (resultPharmacy == 0 || r == 0)
+                return 0;
+
+            return 1;
+
+        }
+
+        public bool CheckIfHospitalExists(int hid)
+        {
+            string query = $"SELECT COUNT(*) FROM Place WHERE PlaceID = {hid}";
+            int c = (int)DataBase.Manager.ExecuteScalar(query);
+            return c > 0;
+        }
     }
 }

@@ -12,7 +12,7 @@ namespace DBapplication
     {
         //TODO: Make Sure to change Connection String to your Database 
 
-        static string DB_Connection_String = @"Data Source=DESKTOP-V28B0V2\SQLEXPRESS;Initial Catalog=HospitalAppointmentSystem;Integrated Security=True;";
+        static string DB_Connection_String = @"Data Source=Dell\SQLEXPRESS;Initial Catalog=HospitalAppointmentSystem;Integrated Security=True;";
         SqlConnection myConnection;
 
         public DBManager()
