@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -155,39 +155,62 @@ namespace HospitalAppointmentProject.UML.USERS
             this.user_type = user_type;
         }
 
-        public UserType LogIn() {
+        public void LogIn() {
             string query = $"select UserID, password from sysUser where Email = {_Email}";
             DataTable id = DataBase.Manager.ExecuteReader(query);
             string password;
-            if (id != null){
+            if (id != null)
+            {
                 _UserID = (int)id.Rows[0]["UserID"];
                 password = id.Rows[0]["Password"].ToString();
             }
             else
-                return UserType.None;//put a message please
+            {
+                user_type = UserType.None;
+                return;
+            }
             if (password != _UserPassword)
-                return UserType.None;
+            {
+                user_type = UserType.None;
+                return;
+            }
             string chechpatient = $"select patientid from patient where patientid = {_UserID}";
             object patcheck = DataBase.Manager.ExecuteScalar(chechpatient);
-            if (patcheck != null && patcheck != DBNull.Value){
-                return UserType.Patient;}
+            if (patcheck != null && patcheck != DBNull.Value)            
+            {
+                    user_type = UserType.Patient;
+                    return;
+            }
             string chechdoctor = $"select doctorid from doctor where doctorid = {_UserID}";
             object doccheck = DataBase.Manager.ExecuteScalar(chechdoctor);
             if (doccheck != null && doccheck != DBNull.Value)
-                return UserType.Doctor;
+            {
+                    user_type = UserType.Doctor;
+                    return;
+            }
+
             string chechAdmin = $"select Adminid from admin where adminid = {_UserID}";
             object admcheck = DataBase.Manager.ExecuteScalar(chechAdmin);
             if (admcheck != null && admcheck != DBNull.Value)
-                return UserType.Admin;
+            {
+                user_type = UserType.Admin;
+                return;
+            }
             string chechPHman = $"select ManagerID from PharmacyManager where ManagerID = {_UserID}";
             object manPHcheck = DataBase.Manager.ExecuteScalar(chechPHman);
             if (manPHcheck != null && manPHcheck != DBNull.Value)
-                return UserType.PharmacyManager;
+            {   
+                user_type = UserType.PharmacyManager;
+                return;
+            }
             string chechhosman = $"select ManagerID from HospitalManager where ManagerID = {_UserID}";
             object manhoscheck = DataBase.Manager.ExecuteScalar(chechhosman);
             if (manhoscheck != null && manhoscheck != DBNull.Value)
-                return UserType.HospitalManager;
-            return UserType.None;
+            {
+                user_type = UserType.HospitalManager;
+                return;
+            }
+            user_type =  UserType.None;
         }
         public int SignUp() {
             string maxid = "select max(patientid) from patient";
