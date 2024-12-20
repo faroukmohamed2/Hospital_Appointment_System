@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,9 +13,10 @@ namespace HospitalAppointmentSystem
     public partial class HospitalManager : Form
     {
         Form mainform;
-        public HospitalManager()
+        public HospitalManager(Form mainForm)
         {
             InitializeComponent();
+            mainform = mainForm;
         }
 
         private void manHoslabel_hover(object sender, EventArgs e)
