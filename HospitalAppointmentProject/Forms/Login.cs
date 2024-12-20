@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -217,18 +217,42 @@ namespace HospitalAppointmentSystem
             }
             User = new sysUser(null, Email.Text, Password.Text, null, null, null, null);
 
-            UserType user = User.LogIn();
-            MessageBox.Show(user.ToString());
-            switch(user)
+            User.LogIn();
+            switch(User.user_type)
             {
+                case UserType.None:
+                    MessageBox.Show("Wrong Email or Password");
+                    break;
                 case UserType.Patient:
                     Patient p = new Patient(mainform, User._UserID);
                     this.Hide();
                     p.Show();
+                    MessageBox.Show("Welcome Back Hope You are sick for today");
                     break;
-
+                case UserType.Doctor:
+                    Doctor d = new Doctor(mainform);
+                    this.Hide();
+                    d.Show();
+                    MessageBox.Show("What Would You Cure Today");
+                    break;
+                case UserType.PharmacyManager:
+                    PharmacyManager pm = new PharmacyManager(mainform);
+                    this.Hide();
+                    pm.Show();
+                    MessageBox.Show("Welcome Back Who Would u Fire Today");
+                    break;
+                case UserType.HospitalManager:
+                    HospitalManager hm = new HospitalManager(mainform);
+                    this.Hide();
+                    hm.Show();
+                    MessageBox.Show("Welcome Back Who Would u Fire Today");
+                    break;
+                case UserType.Admin:
+                    Admin admin = new Admin(mainform);
+                    this.Hide();
+                    admin.Show();
+                    break;
             }
-
         }
         private bool isvalidemail()
         {
