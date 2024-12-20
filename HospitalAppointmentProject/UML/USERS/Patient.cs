@@ -7,6 +7,8 @@ using HospitalAppointmentProject.UML.FeedBacks;
 using HospitalAppointmentProject.UML.theMedicalHistory;
 using HospitalAppointmentProject.UML.Paper;
 using HospitalAppointmentProject.UML.Appointments;
+using System.Data;
+using DBapplication;
 
 namespace HospitalAppointmentProject.UML.USERS
 {
@@ -91,17 +93,17 @@ namespace HospitalAppointmentProject.UML.USERS
 
         public List<Doctor> myDoctors
         {
-            get 
+            get
             {
                 return _myDoctors;
             }
-            set 
+            set
             {
                 _myDoctors = value;
             }
         }
 
-        public List<ClinicAppointment> ClinicAppointments  
+        public List<ClinicAppointment> ClinicAppointments
         {
             get
             {
@@ -113,7 +115,7 @@ namespace HospitalAppointmentProject.UML.USERS
             }
         }
         public Patient(int? UserID = null, string Email = null, string UserPassword = null, int? Age = null, char? Gender = null, string First_Name = null, string Last_Name = null,
-            List<ActivityLog> ActivityLogs = null, List<MedicalHistory> MedicalHistories = null, List<FeedBack> FeedBacks = null, List<Bill> Bills = null, List<HospitalAppointment> Appointments = null, List<Prescription> prescriptions = null, List<Doctor> myDoctors = null,List<ClinicAppointment> ClinicAppointments = null) :
+            List<ActivityLog> ActivityLogs = null, List<MedicalHistory> MedicalHistories = null, List<FeedBack> FeedBacks = null, List<Bill> Bills = null, List<HospitalAppointment> Appointments = null, List<Prescription> prescriptions = null, List<Doctor> myDoctors = null, List<ClinicAppointment> ClinicAppointments = null) :
             base(UserID, Email, UserPassword, Age, Gender, First_Name, Last_Name, ActivityLogs, UserType.Patient)
         {
             this.MedicalHistories = MedicalHistories;
@@ -128,6 +130,19 @@ namespace HospitalAppointmentProject.UML.USERS
         public void GetUnBaidBills() { /**load the Bills into the list Bills then use it**/ }
         public void AddFeedBack(int DoctorID) { }
 
+
+        public DataTable UpcomingAppointments()
+        {
+            string query = "select P.PlaceName,U.FirstName,U.LastName,HA.DateAndTime,HA.HospitalAppointmentID " +
+                            "from PLACE as P, sysUser as U,Doctor as D ,HospitalAppointment as HA " +
+                           $"where HA.DoctorID=U.UserID And HA.patientid={this._UserID} And D.DoctorID=U.UserID And D.HospitalID=P.PlaceID AND HA.DateAndTime > GETDATE() " +
+                            "ORDER BY DATEANDTIME";
+            DataTable dt = DataBase.Manager.ExecuteReader(query);
+            return dt;
+        }
+
+
+        
         //add more fubctions as u need
     }
 }

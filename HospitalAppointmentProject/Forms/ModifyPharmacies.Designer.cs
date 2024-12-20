@@ -125,6 +125,7 @@
             this.Updateph.TabIndex = 88;
             this.Updateph.Text = "Update Pharmacy";
             this.Updateph.UseVisualStyleBackColor = true;
+            this.Updateph.Click += new System.EventHandler(this.Updateph_Click);
             // 
             // addPh
             // 
@@ -134,6 +135,7 @@
             this.addPh.TabIndex = 87;
             this.addPh.Text = "Add Pharmacy";
             this.addPh.UseVisualStyleBackColor = true;
+            this.addPh.Click += new System.EventHandler(this.addPh_Click);
             // 
             // phLoction
             // 

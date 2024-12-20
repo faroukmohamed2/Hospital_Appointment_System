@@ -89,6 +89,7 @@
             this.Departments.Name = "Departments";
             this.Departments.Size = new System.Drawing.Size(121, 24);
             this.Departments.TabIndex = 37;
+            this.Departments.SelectedIndexChanged += new System.EventHandler(this.Departments_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -175,6 +176,7 @@
             this.Hospitals.Name = "Hospitals";
             this.Hospitals.Size = new System.Drawing.Size(121, 24);
             this.Hospitals.TabIndex = 48;
+            this.Hospitals.SelectedIndexChanged += new System.EventHandler(this.Hospitals_SelectedIndexChanged);
             // 
             // Doctors
             // 

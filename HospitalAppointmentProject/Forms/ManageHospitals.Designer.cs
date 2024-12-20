@@ -354,7 +354,7 @@
             this.exitprogram});
             this.toolStrip1.Location = new System.Drawing.Point(928, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(40, 668);
+            this.toolStrip1.Size = new System.Drawing.Size(40, 695);
             this.toolStrip1.TabIndex = 85;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -462,7 +462,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(241)))), ((int)(((byte)(232)))));
-            this.ClientSize = new System.Drawing.Size(968, 668);
+            this.ClientSize = new System.Drawing.Size(968, 695);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.upHos);
             this.Controls.Add(this.HosLoction);

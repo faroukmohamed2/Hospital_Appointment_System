@@ -81,6 +81,7 @@
             this.Cancellabel.Size = new System.Drawing.Size(66, 22);
             this.Cancellabel.TabIndex = 44;
             this.Cancellabel.Text = "Cancel";
+            this.Cancellabel.Click += new System.EventHandler(this.Cancellabel_Click);
             this.Cancellabel.MouseHover += new System.EventHandler(this.cancellabel_hover);
             // 
             // toolStrip1

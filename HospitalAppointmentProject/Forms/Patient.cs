@@ -34,7 +34,7 @@ namespace HospitalAppointmentSystem
 
         private void addappoint_Click(object sender, EventArgs e)
         {
-            Appoint app = new Appoint(this, mainform);
+            Appoint app = new Appoint(this, mainform,this.patient_id);
             this.Hide();
             app.Show();
         }
@@ -111,7 +111,7 @@ namespace HospitalAppointmentSystem
 
         private void appointlabel_Click(object sender, EventArgs e)
         {
-            Appoint app = new Appoint(this, mainform);
+            Appoint app = new Appoint(this, mainform,this.patient_id);
             this.Hide();
             app.Show();
         }
@@ -123,7 +123,7 @@ namespace HospitalAppointmentSystem
 
         private void showappoints_Click(object sender, EventArgs e)
         {
-            UpcomingAppointment upapp = new UpcomingAppointment(this, mainform);
+            UpcomingAppointment upapp = new UpcomingAppointment(this, mainform, this.patient_id);
             this.Hide();
             upapp.Show();
         }
@@ -142,7 +142,7 @@ namespace HospitalAppointmentSystem
 
         private void showAppointmentslabel_Click(object sender, EventArgs e)
         {
-            UpcomingAppointment upapp = new UpcomingAppointment(this, mainform);
+            UpcomingAppointment upapp = new UpcomingAppointment(this, mainform,this.patient_id);
             this.Hide();
             upapp.Show();
         }

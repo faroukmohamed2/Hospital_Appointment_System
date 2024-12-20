@@ -217,8 +217,7 @@ namespace HospitalAppointmentProject.UML.USERS
             object id = DataBase.Manager.ExecuteScalar(maxid);
             if (id != null && id != DBNull.Value)
                 _UserID = (int)id + 1;
-            else
-                return 0;
+            
 
             string query = $"insert into sysuser values({_UserID}, '{_Email}' , '{_UserPassword}', {_Age}, '{_Gender}', '{_First_Name}', '{_Last_Name}'); ";
             int userRes = DataBase.Manager.ExecuteNonQuery(query);
