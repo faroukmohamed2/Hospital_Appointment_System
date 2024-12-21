@@ -31,14 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Admin));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.settings = new System.Windows.Forms.ToolStripSplitButton();
-            this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contactus = new System.Windows.Forms.ToolStripButton();
             this.profile = new System.Windows.Forms.ToolStripSplitButton();
             this.viewProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitprogram = new System.Windows.Forms.ToolStripButton();
             this.modHos = new System.Windows.Forms.PictureBox();
             this.modHoslabel = new System.Windows.Forms.Label();
@@ -61,7 +56,7 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(2, -1);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(138, 86);
+            this.pictureBox1.Size = new System.Drawing.Size(158, 86);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 37;
             this.pictureBox1.TabStop = false;
@@ -71,46 +66,14 @@
             this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Right;
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.settings,
             this.contactus,
             this.profile,
             this.exitprogram});
-            this.toolStrip1.Location = new System.Drawing.Point(749, 0);
+            this.toolStrip1.Location = new System.Drawing.Point(862, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(40, 450);
             this.toolStrip1.TabIndex = 52;
             this.toolStrip1.Text = "toolStrip1";
-            // 
-            // settings
-            // 
-            this.settings.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.settings.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.viewToolStripMenuItem,
-            this.toolsToolStripMenuItem,
-            this.editToolStripMenuItem});
-            this.settings.Image = ((System.Drawing.Image)(resources.GetObject("settings.Image")));
-            this.settings.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.settings.Name = "settings";
-            this.settings.Size = new System.Drawing.Size(37, 24);
-            this.settings.Text = "Settings";
-            // 
-            // viewToolStripMenuItem
-            // 
-            this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            this.viewToolStripMenuItem.Size = new System.Drawing.Size(125, 26);
-            this.viewToolStripMenuItem.Text = "view";
-            // 
-            // toolsToolStripMenuItem
-            // 
-            this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
-            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(125, 26);
-            this.toolsToolStripMenuItem.Text = "tools";
-            // 
-            // editToolStripMenuItem
-            // 
-            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(125, 26);
-            this.editToolStripMenuItem.Text = "Edit";
             // 
             // contactus
             // 
@@ -126,8 +89,7 @@
             // 
             this.profile.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.profile.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.viewProfileToolStripMenuItem,
-            this.editProfileToolStripMenuItem});
+            this.viewProfileToolStripMenuItem});
             this.profile.Image = ((System.Drawing.Image)(resources.GetObject("profile.Image")));
             this.profile.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.profile.Name = "profile";
@@ -137,14 +99,9 @@
             // viewProfileToolStripMenuItem
             // 
             this.viewProfileToolStripMenuItem.Name = "viewProfileToolStripMenuItem";
-            this.viewProfileToolStripMenuItem.Size = new System.Drawing.Size(170, 26);
+            this.viewProfileToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.viewProfileToolStripMenuItem.Text = "view profile";
-            // 
-            // editProfileToolStripMenuItem
-            // 
-            this.editProfileToolStripMenuItem.Name = "editProfileToolStripMenuItem";
-            this.editProfileToolStripMenuItem.Size = new System.Drawing.Size(170, 26);
-            this.editProfileToolStripMenuItem.Text = "Edit profile";
+            this.viewProfileToolStripMenuItem.Click += new System.EventHandler(this.viewProfileToolStripMenuItem_Click);
             // 
             // exitprogram
             // 
@@ -159,9 +116,9 @@
             // modHos
             // 
             this.modHos.Image = ((System.Drawing.Image)(resources.GetObject("modHos.Image")));
-            this.modHos.Location = new System.Drawing.Point(99, 139);
+            this.modHos.Location = new System.Drawing.Point(113, 139);
             this.modHos.Name = "modHos";
-            this.modHos.Size = new System.Drawing.Size(59, 63);
+            this.modHos.Size = new System.Drawing.Size(67, 63);
             this.modHos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.modHos.TabIndex = 58;
             this.modHos.TabStop = false;
@@ -172,7 +129,7 @@
             // 
             this.modHoslabel.AutoSize = true;
             this.modHoslabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.modHoslabel.Location = new System.Drawing.Point(163, 157);
+            this.modHoslabel.Location = new System.Drawing.Point(186, 157);
             this.modHoslabel.Name = "modHoslabel";
             this.modHoslabel.Size = new System.Drawing.Size(141, 22);
             this.modHoslabel.TabIndex = 57;
@@ -184,7 +141,7 @@
             // 
             this.Modphlabel.AutoSize = true;
             this.Modphlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Modphlabel.Location = new System.Drawing.Point(163, 231);
+            this.Modphlabel.Location = new System.Drawing.Point(186, 231);
             this.Modphlabel.Name = "Modphlabel";
             this.Modphlabel.Size = new System.Drawing.Size(161, 22);
             this.Modphlabel.TabIndex = 59;
@@ -195,9 +152,9 @@
             // log
             // 
             this.log.Image = ((System.Drawing.Image)(resources.GetObject("log.Image")));
-            this.log.Location = new System.Drawing.Point(99, 291);
+            this.log.Location = new System.Drawing.Point(113, 291);
             this.log.Name = "log";
-            this.log.Size = new System.Drawing.Size(59, 63);
+            this.log.Size = new System.Drawing.Size(67, 63);
             this.log.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.log.TabIndex = 62;
             this.log.TabStop = false;
@@ -208,7 +165,7 @@
             // 
             this.loglabel.AutoSize = true;
             this.loglabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loglabel.Location = new System.Drawing.Point(163, 309);
+            this.loglabel.Location = new System.Drawing.Point(186, 309);
             this.loglabel.Name = "loglabel";
             this.loglabel.Size = new System.Drawing.Size(124, 22);
             this.loglabel.TabIndex = 61;
@@ -219,9 +176,9 @@
             // Modph
             // 
             this.Modph.Image = ((System.Drawing.Image)(resources.GetObject("Modph.Image")));
-            this.Modph.Location = new System.Drawing.Point(99, 208);
+            this.Modph.Location = new System.Drawing.Point(113, 208);
             this.Modph.Name = "Modph";
-            this.Modph.Size = new System.Drawing.Size(59, 63);
+            this.Modph.Size = new System.Drawing.Size(67, 63);
             this.Modph.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.Modph.TabIndex = 63;
             this.Modph.TabStop = false;
@@ -231,9 +188,9 @@
             // reports
             // 
             this.reports.Image = ((System.Drawing.Image)(resources.GetObject("reports.Image")));
-            this.reports.Location = new System.Drawing.Point(369, 139);
+            this.reports.Location = new System.Drawing.Point(422, 139);
             this.reports.Name = "reports";
-            this.reports.Size = new System.Drawing.Size(59, 63);
+            this.reports.Size = new System.Drawing.Size(67, 63);
             this.reports.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.reports.TabIndex = 65;
             this.reports.TabStop = false;
@@ -244,7 +201,7 @@
             // 
             this.reportslabel.AutoSize = true;
             this.reportslabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.reportslabel.Location = new System.Drawing.Point(433, 157);
+            this.reportslabel.Location = new System.Drawing.Point(495, 157);
             this.reportslabel.Name = "reportslabel";
             this.reportslabel.Size = new System.Drawing.Size(137, 22);
             this.reportslabel.TabIndex = 64;
@@ -254,10 +211,10 @@
             // 
             // Admin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(241)))), ((int)(((byte)(232)))));
-            this.ClientSize = new System.Drawing.Size(789, 450);
+            this.ClientSize = new System.Drawing.Size(902, 450);
             this.Controls.Add(this.reports);
             this.Controls.Add(this.reportslabel);
             this.Controls.Add(this.Modph);
@@ -288,14 +245,9 @@
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripSplitButton settings;
-        private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem toolsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
         private System.Windows.Forms.ToolStripButton contactus;
         private System.Windows.Forms.ToolStripSplitButton profile;
         private System.Windows.Forms.ToolStripMenuItem viewProfileToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem editProfileToolStripMenuItem;
         private System.Windows.Forms.ToolStripButton exitprogram;
         private System.Windows.Forms.PictureBox modHos;
         private System.Windows.Forms.Label modHoslabel;

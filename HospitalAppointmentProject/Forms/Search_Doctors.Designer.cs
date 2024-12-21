@@ -40,14 +40,9 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.Home = new System.Windows.Forms.ToolStripButton();
-            this.settings = new System.Windows.Forms.ToolStripSplitButton();
-            this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contactus = new System.Windows.Forms.ToolStripButton();
             this.profile = new System.Windows.Forms.ToolStripSplitButton();
             this.viewProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.removeAccountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitprogram = new System.Windows.Forms.ToolStripButton();
             this.PateintFeedbacks = new System.Windows.Forms.DataGridView();
@@ -62,9 +57,9 @@
             // 
             this.Doctors.Enabled = false;
             this.Doctors.FormattingEnabled = true;
-            this.Doctors.Location = new System.Drawing.Point(211, 228);
+            this.Doctors.Location = new System.Drawing.Point(241, 228);
             this.Doctors.Name = "Doctors";
-            this.Doctors.Size = new System.Drawing.Size(106, 24);
+            this.Doctors.Size = new System.Drawing.Size(121, 24);
             this.Doctors.TabIndex = 56;
             this.Doctors.SelectedIndexChanged += new System.EventHandler(this.Doctors_SelectedIndexChanged);
             // 
@@ -72,9 +67,9 @@
             // 
             this.Hospitals.Enabled = false;
             this.Hospitals.FormattingEnabled = true;
-            this.Hospitals.Location = new System.Drawing.Point(211, 165);
+            this.Hospitals.Location = new System.Drawing.Point(241, 165);
             this.Hospitals.Name = "Hospitals";
-            this.Hospitals.Size = new System.Drawing.Size(106, 24);
+            this.Hospitals.Size = new System.Drawing.Size(121, 24);
             this.Hospitals.TabIndex = 55;
             this.Hospitals.SelectedIndexChanged += new System.EventHandler(this.Hospitals_SelectedIndexChanged_1);
             // 
@@ -82,7 +77,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(63, 226);
+            this.label2.Location = new System.Drawing.Point(72, 226);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(118, 22);
             this.label2.TabIndex = 53;
@@ -92,7 +87,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(63, 163);
+            this.label1.Location = new System.Drawing.Point(72, 163);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(130, 22);
             this.label1.TabIndex = 52;
@@ -101,9 +96,9 @@
             // Departments
             // 
             this.Departments.FormattingEnabled = true;
-            this.Departments.Location = new System.Drawing.Point(211, 98);
+            this.Departments.Location = new System.Drawing.Point(241, 98);
             this.Departments.Name = "Departments";
-            this.Departments.Size = new System.Drawing.Size(106, 24);
+            this.Departments.Size = new System.Drawing.Size(121, 24);
             this.Departments.TabIndex = 51;
             this.Departments.SelectedIndexChanged += new System.EventHandler(this.Departments_SelectedIndexChanged_1);
             // 
@@ -111,7 +106,7 @@
             // 
             this.appointlabel.AutoSize = true;
             this.appointlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.appointlabel.Location = new System.Drawing.Point(47, 96);
+            this.appointlabel.Location = new System.Drawing.Point(54, 96);
             this.appointlabel.Name = "appointlabel";
             this.appointlabel.Size = new System.Drawing.Size(158, 22);
             this.appointlabel.TabIndex = 50;
@@ -119,9 +114,9 @@
             // 
             // feedbacktxtbox
             // 
-            this.feedbacktxtbox.Location = new System.Drawing.Point(211, 305);
+            this.feedbacktxtbox.Location = new System.Drawing.Point(241, 305);
             this.feedbacktxtbox.Name = "feedbacktxtbox";
-            this.feedbacktxtbox.Size = new System.Drawing.Size(373, 96);
+            this.feedbacktxtbox.Size = new System.Drawing.Size(426, 96);
             this.feedbacktxtbox.TabIndex = 57;
             this.feedbacktxtbox.Text = "";
             // 
@@ -129,7 +124,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(63, 305);
+            this.label3.Location = new System.Drawing.Point(72, 305);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(132, 22);
             this.label3.TabIndex = 58;
@@ -140,7 +135,7 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(1, -3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(138, 86);
+            this.pictureBox1.Size = new System.Drawing.Size(158, 86);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 61;
             this.pictureBox1.TabStop = false;
@@ -151,11 +146,10 @@
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.Home,
-            this.settings,
             this.contactus,
             this.profile,
             this.exitprogram});
-            this.toolStrip1.Location = new System.Drawing.Point(782, 0);
+            this.toolStrip1.Location = new System.Drawing.Point(899, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(40, 483);
             this.toolStrip1.TabIndex = 62;
@@ -170,37 +164,6 @@
             this.Home.Size = new System.Drawing.Size(37, 24);
             this.Home.Text = "home page";
             this.Home.Click += new System.EventHandler(this.Home_Click);
-            // 
-            // settings
-            // 
-            this.settings.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.settings.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.viewToolStripMenuItem,
-            this.toolsToolStripMenuItem,
-            this.editToolStripMenuItem});
-            this.settings.Image = ((System.Drawing.Image)(resources.GetObject("settings.Image")));
-            this.settings.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.settings.Name = "settings";
-            this.settings.Size = new System.Drawing.Size(37, 24);
-            this.settings.Text = "Settings";
-            // 
-            // viewToolStripMenuItem
-            // 
-            this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            this.viewToolStripMenuItem.Size = new System.Drawing.Size(125, 26);
-            this.viewToolStripMenuItem.Text = "view";
-            // 
-            // toolsToolStripMenuItem
-            // 
-            this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
-            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(125, 26);
-            this.toolsToolStripMenuItem.Text = "tools";
-            // 
-            // editToolStripMenuItem
-            // 
-            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(125, 26);
-            this.editToolStripMenuItem.Text = "Edit";
             // 
             // contactus
             // 
@@ -217,7 +180,6 @@
             this.profile.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.profile.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.viewProfileToolStripMenuItem,
-            this.editProfileToolStripMenuItem,
             this.removeAccountToolStripMenuItem});
             this.profile.Image = ((System.Drawing.Image)(resources.GetObject("profile.Image")));
             this.profile.ImageTransparentColor = System.Drawing.Color.Magenta;
@@ -228,19 +190,14 @@
             // viewProfileToolStripMenuItem
             // 
             this.viewProfileToolStripMenuItem.Name = "viewProfileToolStripMenuItem";
-            this.viewProfileToolStripMenuItem.Size = new System.Drawing.Size(204, 26);
+            this.viewProfileToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.viewProfileToolStripMenuItem.Text = "view profile";
-            // 
-            // editProfileToolStripMenuItem
-            // 
-            this.editProfileToolStripMenuItem.Name = "editProfileToolStripMenuItem";
-            this.editProfileToolStripMenuItem.Size = new System.Drawing.Size(204, 26);
-            this.editProfileToolStripMenuItem.Text = "Edit profile";
+            this.viewProfileToolStripMenuItem.Click += new System.EventHandler(this.viewProfileToolStripMenuItem_Click);
             // 
             // removeAccountToolStripMenuItem
             // 
             this.removeAccountToolStripMenuItem.Name = "removeAccountToolStripMenuItem";
-            this.removeAccountToolStripMenuItem.Size = new System.Drawing.Size(204, 26);
+            this.removeAccountToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.removeAccountToolStripMenuItem.Text = "Remove Account";
             // 
             // exitprogram
@@ -256,11 +213,11 @@
             // PateintFeedbacks
             // 
             this.PateintFeedbacks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.PateintFeedbacks.Location = new System.Drawing.Point(372, 96);
+            this.PateintFeedbacks.Location = new System.Drawing.Point(425, 96);
             this.PateintFeedbacks.Name = "PateintFeedbacks";
             this.PateintFeedbacks.RowHeadersWidth = 51;
             this.PateintFeedbacks.RowTemplate.Height = 24;
-            this.PateintFeedbacks.Size = new System.Drawing.Size(373, 104);
+            this.PateintFeedbacks.Size = new System.Drawing.Size(426, 104);
             this.PateintFeedbacks.TabIndex = 63;
             this.PateintFeedbacks.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.PateintFeedbacks_CellContentClick);
             // 
@@ -268,7 +225,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(368, 61);
+            this.label5.Location = new System.Drawing.Point(421, 61);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(98, 22);
             this.label5.TabIndex = 64;
@@ -278,9 +235,9 @@
             // Submit
             // 
             this.Submit.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.Submit.Location = new System.Drawing.Point(607, 373);
+            this.Submit.Location = new System.Drawing.Point(694, 373);
             this.Submit.Name = "Submit";
-            this.Submit.Size = new System.Drawing.Size(66, 28);
+            this.Submit.Size = new System.Drawing.Size(75, 28);
             this.Submit.TabIndex = 65;
             this.Submit.Text = "Submit";
             this.Submit.UseVisualStyleBackColor = true;
@@ -288,10 +245,10 @@
             // 
             // Search_Doctors
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(241)))), ((int)(((byte)(232)))));
-            this.ClientSize = new System.Drawing.Size(822, 483);
+            this.ClientSize = new System.Drawing.Size(939, 483);
             this.Controls.Add(this.Submit);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.PateintFeedbacks);
@@ -331,14 +288,9 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton Home;
-        private System.Windows.Forms.ToolStripSplitButton settings;
-        private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem toolsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
         private System.Windows.Forms.ToolStripButton contactus;
         private System.Windows.Forms.ToolStripSplitButton profile;
         private System.Windows.Forms.ToolStripMenuItem viewProfileToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem editProfileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem removeAccountToolStripMenuItem;
         private System.Windows.Forms.ToolStripButton exitprogram;
         private System.Windows.Forms.DataGridView PateintFeedbacks;

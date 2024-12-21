@@ -34,14 +34,9 @@
             this.Cancellabel = new System.Windows.Forms.Label();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.Home = new System.Windows.Forms.ToolStripButton();
-            this.settings = new System.Windows.Forms.ToolStripSplitButton();
-            this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contactus = new System.Windows.Forms.ToolStripButton();
             this.profile = new System.Windows.Forms.ToolStripSplitButton();
             this.viewProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.removeAccountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitprogram = new System.Windows.Forms.ToolStripButton();
             this.label1 = new System.Windows.Forms.Label();
@@ -90,7 +85,6 @@
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.Home,
-            this.settings,
             this.contactus,
             this.profile,
             this.exitprogram});
@@ -110,37 +104,6 @@
             this.Home.Text = "home page";
             this.Home.Click += new System.EventHandler(this.Home_Click);
             // 
-            // settings
-            // 
-            this.settings.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.settings.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.viewToolStripMenuItem,
-            this.toolsToolStripMenuItem,
-            this.editToolStripMenuItem});
-            this.settings.Image = ((System.Drawing.Image)(resources.GetObject("settings.Image")));
-            this.settings.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.settings.Name = "settings";
-            this.settings.Size = new System.Drawing.Size(37, 24);
-            this.settings.Text = "Settings";
-            // 
-            // viewToolStripMenuItem
-            // 
-            this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            this.viewToolStripMenuItem.Size = new System.Drawing.Size(125, 26);
-            this.viewToolStripMenuItem.Text = "view";
-            // 
-            // toolsToolStripMenuItem
-            // 
-            this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
-            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(125, 26);
-            this.toolsToolStripMenuItem.Text = "tools";
-            // 
-            // editToolStripMenuItem
-            // 
-            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(125, 26);
-            this.editToolStripMenuItem.Text = "Edit";
-            // 
             // contactus
             // 
             this.contactus.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -156,7 +119,6 @@
             this.profile.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.profile.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.viewProfileToolStripMenuItem,
-            this.editProfileToolStripMenuItem,
             this.removeAccountToolStripMenuItem});
             this.profile.Image = ((System.Drawing.Image)(resources.GetObject("profile.Image")));
             this.profile.ImageTransparentColor = System.Drawing.Color.Magenta;
@@ -167,19 +129,14 @@
             // viewProfileToolStripMenuItem
             // 
             this.viewProfileToolStripMenuItem.Name = "viewProfileToolStripMenuItem";
-            this.viewProfileToolStripMenuItem.Size = new System.Drawing.Size(204, 26);
+            this.viewProfileToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.viewProfileToolStripMenuItem.Text = "view profile";
-            // 
-            // editProfileToolStripMenuItem
-            // 
-            this.editProfileToolStripMenuItem.Name = "editProfileToolStripMenuItem";
-            this.editProfileToolStripMenuItem.Size = new System.Drawing.Size(204, 26);
-            this.editProfileToolStripMenuItem.Text = "Edit profile";
+            this.viewProfileToolStripMenuItem.Click += new System.EventHandler(this.viewProfileToolStripMenuItem_Click);
             // 
             // removeAccountToolStripMenuItem
             // 
             this.removeAccountToolStripMenuItem.Name = "removeAccountToolStripMenuItem";
-            this.removeAccountToolStripMenuItem.Size = new System.Drawing.Size(204, 26);
+            this.removeAccountToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.removeAccountToolStripMenuItem.Text = "Remove Account";
             // 
             // exitprogram
@@ -269,14 +226,9 @@
         private System.Windows.Forms.Label Cancellabel;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton Home;
-        private System.Windows.Forms.ToolStripSplitButton settings;
-        private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem toolsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
         private System.Windows.Forms.ToolStripButton contactus;
         private System.Windows.Forms.ToolStripSplitButton profile;
         private System.Windows.Forms.ToolStripMenuItem viewProfileToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem editProfileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem removeAccountToolStripMenuItem;
         private System.Windows.Forms.ToolStripButton exitprogram;
         private System.Windows.Forms.Label label1;

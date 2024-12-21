@@ -149,5 +149,12 @@ namespace HospitalAppointmentSystem
             times.DataSource = dt;
 
         }
+
+        private void viewProfileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            YourProfile yp = new YourProfile(this, mainform, patientID);
+            this.Hide();
+            yp.Show();
+        }
     }
 }

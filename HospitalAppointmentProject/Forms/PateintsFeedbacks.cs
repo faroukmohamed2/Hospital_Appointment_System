@@ -56,6 +56,13 @@ namespace HospitalAppointmentSystem
             PateintFeedbacks.Refresh();
         }
 
+        private void viewProfileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            YourProfile yp = new YourProfile(this, mainform, _UserID);
+            this.Hide();
+            yp.Show();
+        }
+
         private void Home_Click(object sender, EventArgs e)
         {
             this.Hide();

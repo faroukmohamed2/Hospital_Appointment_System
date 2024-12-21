@@ -171,6 +171,13 @@ namespace HospitalAppointmentSystem
 
         }
 
+        private void viewProfileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            YourProfile yp = new YourProfile(this, mainform, patientID);
+            this.Hide();
+            yp.Show();
+        }
+
         private void Home_Click(object sender, EventArgs e)
         {
             this.Hide();

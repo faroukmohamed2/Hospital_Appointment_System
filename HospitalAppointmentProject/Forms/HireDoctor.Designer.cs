@@ -43,14 +43,9 @@
             this.adddoclabel = new System.Windows.Forms.Label();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.Home = new System.Windows.Forms.ToolStripButton();
-            this.settings = new System.Windows.Forms.ToolStripSplitButton();
-            this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contactus = new System.Windows.Forms.ToolStripButton();
             this.profile = new System.Windows.Forms.ToolStripSplitButton();
             this.viewProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.removeAccountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitprogram = new System.Windows.Forms.ToolStripButton();
@@ -66,25 +61,25 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(29, 108);
+            this.label1.Location = new System.Drawing.Point(33, 108);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(317, 17);
+            this.label1.Size = new System.Drawing.Size(295, 16);
             this.label1.TabIndex = 40;
             this.label1.Text = "fill the boxes with the doctor data you need to hire";
             // 
             // HosPN
             // 
             this.HosPN.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.HosPN.Location = new System.Drawing.Point(136, 255);
+            this.HosPN.Location = new System.Drawing.Point(155, 255);
             this.HosPN.Name = "HosPN";
-            this.HosPN.Size = new System.Drawing.Size(111, 24);
+            this.HosPN.Size = new System.Drawing.Size(127, 22);
             this.HosPN.TabIndex = 89;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(51, 257);
+            this.label7.Location = new System.Drawing.Point(58, 257);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(38, 20);
             this.label7.TabIndex = 88;
@@ -93,16 +88,16 @@
             // HosEmail
             // 
             this.HosEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.HosEmail.Location = new System.Drawing.Point(136, 197);
+            this.HosEmail.Location = new System.Drawing.Point(155, 197);
             this.HosEmail.Name = "HosEmail";
-            this.HosEmail.Size = new System.Drawing.Size(111, 24);
+            this.HosEmail.Size = new System.Drawing.Size(127, 22);
             this.HosEmail.TabIndex = 87;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(51, 199);
+            this.label8.Location = new System.Drawing.Point(58, 199);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(91, 20);
             this.label8.TabIndex = 86;
@@ -112,7 +107,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(51, 144);
+            this.label9.Location = new System.Drawing.Point(58, 144);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(92, 20);
             this.label9.TabIndex = 85;
@@ -121,9 +116,9 @@
             // HosName
             // 
             this.HosName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.HosName.Location = new System.Drawing.Point(136, 144);
+            this.HosName.Location = new System.Drawing.Point(155, 144);
             this.HosName.Name = "HosName";
-            this.HosName.Size = new System.Drawing.Size(111, 24);
+            this.HosName.Size = new System.Drawing.Size(127, 22);
             this.HosName.TabIndex = 84;
             // 
             // gender
@@ -132,16 +127,16 @@
             this.gender.Items.AddRange(new object[] {
             "Male",
             "Female"});
-            this.gender.Location = new System.Drawing.Point(136, 302);
+            this.gender.Location = new System.Drawing.Point(155, 302);
             this.gender.Name = "gender";
-            this.gender.Size = new System.Drawing.Size(106, 24);
+            this.gender.Size = new System.Drawing.Size(121, 24);
             this.gender.TabIndex = 92;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(51, 302);
+            this.label2.Location = new System.Drawing.Point(58, 302);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(64, 20);
             this.label2.TabIndex = 93;
@@ -151,7 +146,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(289, 144);
+            this.label3.Location = new System.Drawing.Point(330, 144);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(77, 20);
             this.label3.TabIndex = 95;
@@ -160,9 +155,9 @@
             // DocID
             // 
             this.DocID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.DocID.Location = new System.Drawing.Point(373, 140);
+            this.DocID.Location = new System.Drawing.Point(426, 140);
             this.DocID.Name = "DocID";
-            this.DocID.Size = new System.Drawing.Size(121, 24);
+            this.DocID.Size = new System.Drawing.Size(138, 22);
             this.DocID.TabIndex = 94;
             this.DocID.TextChanged += new System.EventHandler(this.DocID_TextChanged);
             // 
@@ -170,7 +165,7 @@
             // 
             this.adddoclabel.AutoSize = true;
             this.adddoclabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.adddoclabel.Location = new System.Drawing.Point(437, 306);
+            this.adddoclabel.Location = new System.Drawing.Point(499, 306);
             this.adddoclabel.Name = "adddoclabel";
             this.adddoclabel.Size = new System.Drawing.Size(38, 20);
             this.adddoclabel.TabIndex = 97;
@@ -183,11 +178,10 @@
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.Home,
-            this.settings,
             this.contactus,
             this.profile,
             this.exitprogram});
-            this.toolStrip1.Location = new System.Drawing.Point(660, 0);
+            this.toolStrip1.Location = new System.Drawing.Point(760, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(40, 450);
             this.toolStrip1.TabIndex = 98;
@@ -202,37 +196,6 @@
             this.Home.Size = new System.Drawing.Size(37, 24);
             this.Home.Text = "home page";
             this.Home.Click += new System.EventHandler(this.Home_Click);
-            // 
-            // settings
-            // 
-            this.settings.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.settings.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.viewToolStripMenuItem,
-            this.toolsToolStripMenuItem,
-            this.editToolStripMenuItem});
-            this.settings.Image = ((System.Drawing.Image)(resources.GetObject("settings.Image")));
-            this.settings.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.settings.Name = "settings";
-            this.settings.Size = new System.Drawing.Size(37, 24);
-            this.settings.Text = "Settings";
-            // 
-            // viewToolStripMenuItem
-            // 
-            this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            this.viewToolStripMenuItem.Size = new System.Drawing.Size(125, 26);
-            this.viewToolStripMenuItem.Text = "view";
-            // 
-            // toolsToolStripMenuItem
-            // 
-            this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
-            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(125, 26);
-            this.toolsToolStripMenuItem.Text = "tools";
-            // 
-            // editToolStripMenuItem
-            // 
-            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(125, 26);
-            this.editToolStripMenuItem.Text = "Edit";
             // 
             // contactus
             // 
@@ -249,7 +212,6 @@
             this.profile.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.profile.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.viewProfileToolStripMenuItem,
-            this.editProfileToolStripMenuItem,
             this.logoutToolStripMenuItem,
             this.removeAccountToolStripMenuItem});
             this.profile.Image = ((System.Drawing.Image)(resources.GetObject("profile.Image")));
@@ -261,25 +223,20 @@
             // viewProfileToolStripMenuItem
             // 
             this.viewProfileToolStripMenuItem.Name = "viewProfileToolStripMenuItem";
-            this.viewProfileToolStripMenuItem.Size = new System.Drawing.Size(204, 26);
+            this.viewProfileToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.viewProfileToolStripMenuItem.Text = "view profile";
-            // 
-            // editProfileToolStripMenuItem
-            // 
-            this.editProfileToolStripMenuItem.Name = "editProfileToolStripMenuItem";
-            this.editProfileToolStripMenuItem.Size = new System.Drawing.Size(204, 26);
-            this.editProfileToolStripMenuItem.Text = "Edit profile";
+            this.viewProfileToolStripMenuItem.Click += new System.EventHandler(this.viewProfileToolStripMenuItem_Click);
             // 
             // logoutToolStripMenuItem
             // 
             this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(204, 26);
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.logoutToolStripMenuItem.Text = "logout";
             // 
             // removeAccountToolStripMenuItem
             // 
             this.removeAccountToolStripMenuItem.Name = "removeAccountToolStripMenuItem";
-            this.removeAccountToolStripMenuItem.Size = new System.Drawing.Size(204, 26);
+            this.removeAccountToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.removeAccountToolStripMenuItem.Text = "Remove Account";
             // 
             // exitprogram
@@ -295,9 +252,9 @@
             // adddoc
             // 
             this.adddoc.Image = ((System.Drawing.Image)(resources.GetObject("adddoc.Image")));
-            this.adddoc.Location = new System.Drawing.Point(373, 287);
+            this.adddoc.Location = new System.Drawing.Point(426, 287);
             this.adddoc.Name = "adddoc";
-            this.adddoc.Size = new System.Drawing.Size(59, 57);
+            this.adddoc.Size = new System.Drawing.Size(67, 57);
             this.adddoc.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.adddoc.TabIndex = 96;
             this.adddoc.TabStop = false;
@@ -309,7 +266,7 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(-2, 1);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(138, 86);
+            this.pictureBox1.Size = new System.Drawing.Size(158, 86);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 39;
             this.pictureBox1.TabStop = false;
@@ -317,26 +274,26 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(373, 185);
+            this.comboBox1.Location = new System.Drawing.Point(426, 185);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
+            this.comboBox1.Size = new System.Drawing.Size(138, 24);
             this.comboBox1.TabIndex = 99;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(285, 188);
+            this.label4.Location = new System.Drawing.Point(326, 188);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(82, 17);
+            this.label4.Size = new System.Drawing.Size(77, 16);
             this.label4.TabIndex = 100;
             this.label4.Text = "Department";
             // 
             // HireDoctor
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(241)))), ((int)(((byte)(232)))));
-            this.ClientSize = new System.Drawing.Size(700, 450);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.toolStrip1);
@@ -385,14 +342,9 @@
         private System.Windows.Forms.PictureBox adddoc;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton Home;
-        private System.Windows.Forms.ToolStripSplitButton settings;
-        private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem toolsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
         private System.Windows.Forms.ToolStripButton contactus;
         private System.Windows.Forms.ToolStripSplitButton profile;
         private System.Windows.Forms.ToolStripMenuItem viewProfileToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem editProfileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem removeAccountToolStripMenuItem;
         private System.Windows.Forms.ToolStripButton exitprogram;

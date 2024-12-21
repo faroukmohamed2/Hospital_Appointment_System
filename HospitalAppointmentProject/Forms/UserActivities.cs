@@ -13,7 +13,8 @@ namespace HospitalAppointmentSystem
     public partial class UserActivities : Form
     {
         Form prevform, mainform;
-        UML.USERS.ActivityLog activityLog;  
+        UML.USERS.ActivityLog activityLog;
+        int? _UserID;
         private void exitprogram_Click(object sender, EventArgs e)
         {
             mainform.Close();
@@ -112,11 +113,19 @@ namespace HospitalAppointmentSystem
 
         }
 
-        public UserActivities(Form prevform, Form mainform)
+        private void viewProfileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            YourProfile yp = new YourProfile(this, mainform, _UserID);
+            this.Hide();
+            yp.Show();
+        }
+
+        public UserActivities(Form prevform, Form mainform, int? userID)
         {
             InitializeComponent();
             this.prevform = prevform;
             this.mainform = mainform;
+            _UserID = userID;
         }
     }
 }

@@ -33,35 +33,30 @@
             this.greeting = new System.Windows.Forms.Label();
             this.adddoclabel = new System.Windows.Forms.Label();
             this.fireDoclabel = new System.Windows.Forms.Label();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.Home = new System.Windows.Forms.ToolStripButton();
-            this.settings = new System.Windows.Forms.ToolStripSplitButton();
-            this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.contactus = new System.Windows.Forms.ToolStripButton();
-            this.profile = new System.Windows.Forms.ToolStripSplitButton();
-            this.viewProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.removeAccountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exitprogram = new System.Windows.Forms.ToolStripButton();
             this.fireDoc = new System.Windows.Forms.PictureBox();
             this.addDoc = new System.Windows.Forms.PictureBox();
             this.manHos = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.toolStrip1.SuspendLayout();
+            this.Home = new System.Windows.Forms.ToolStripButton();
+            this.contactus = new System.Windows.Forms.ToolStripButton();
+            this.profile = new System.Windows.Forms.ToolStripSplitButton();
+            this.viewProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.removeAccountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitprogram = new System.Windows.Forms.ToolStripButton();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             ((System.ComponentModel.ISupportInitialize)(this.fireDoc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.addDoc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.manHos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // manHoslabel
             // 
             this.manHoslabel.AutoSize = true;
             this.manHoslabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.manHoslabel.Location = new System.Drawing.Point(154, 167);
+            this.manHoslabel.Location = new System.Drawing.Point(176, 167);
             this.manHoslabel.Name = "manHoslabel";
             this.manHoslabel.Size = new System.Drawing.Size(153, 22);
             this.manHoslabel.TabIndex = 59;
@@ -73,7 +68,7 @@
             // 
             this.greeting.AutoSize = true;
             this.greeting.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.greeting.Location = new System.Drawing.Point(104, 104);
+            this.greeting.Location = new System.Drawing.Point(119, 104);
             this.greeting.Name = "greeting";
             this.greeting.Size = new System.Drawing.Size(51, 22);
             this.greeting.TabIndex = 61;
@@ -83,7 +78,7 @@
             // 
             this.adddoclabel.AutoSize = true;
             this.adddoclabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.adddoclabel.Location = new System.Drawing.Point(154, 249);
+            this.adddoclabel.Location = new System.Drawing.Point(176, 249);
             this.adddoclabel.Name = "adddoclabel";
             this.adddoclabel.Size = new System.Drawing.Size(101, 22);
             this.adddoclabel.TabIndex = 62;
@@ -95,7 +90,7 @@
             // 
             this.fireDoclabel.AutoSize = true;
             this.fireDoclabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fireDoclabel.Location = new System.Drawing.Point(154, 328);
+            this.fireDoclabel.Location = new System.Drawing.Point(176, 328);
             this.fireDoclabel.Name = "fireDoclabel";
             this.fireDoclabel.Size = new System.Drawing.Size(141, 22);
             this.fireDoclabel.TabIndex = 64;
@@ -103,21 +98,51 @@
             this.fireDoclabel.Click += new System.EventHandler(this.fireDoclabel_Click);
             this.fireDoclabel.MouseHover += new System.EventHandler(this.fireDoclabel_hover);
             // 
-            // toolStrip1
+            // fireDoc
             // 
-            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.Home,
-            this.settings,
-            this.contactus,
-            this.profile,
-            this.exitprogram});
-            this.toolStrip1.Location = new System.Drawing.Point(868, 0);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(40, 611);
-            this.toolStrip1.TabIndex = 66;
-            this.toolStrip1.Text = "toolStrip1";
+            this.fireDoc.Image = ((System.Drawing.Image)(resources.GetObject("fireDoc.Image")));
+            this.fireDoc.Location = new System.Drawing.Point(103, 313);
+            this.fireDoc.Name = "fireDoc";
+            this.fireDoc.Size = new System.Drawing.Size(67, 63);
+            this.fireDoc.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.fireDoc.TabIndex = 65;
+            this.fireDoc.TabStop = false;
+            this.fireDoc.Click += new System.EventHandler(this.fireDoc_Click);
+            this.fireDoc.MouseHover += new System.EventHandler(this.fireDoc_hover);
+            // 
+            // addDoc
+            // 
+            this.addDoc.Image = ((System.Drawing.Image)(resources.GetObject("addDoc.Image")));
+            this.addDoc.Location = new System.Drawing.Point(103, 231);
+            this.addDoc.Name = "addDoc";
+            this.addDoc.Size = new System.Drawing.Size(67, 63);
+            this.addDoc.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.addDoc.TabIndex = 63;
+            this.addDoc.TabStop = false;
+            this.addDoc.Click += new System.EventHandler(this.addDoc_Click);
+            this.addDoc.MouseHover += new System.EventHandler(this.adddoc_hover);
+            // 
+            // manHos
+            // 
+            this.manHos.Image = ((System.Drawing.Image)(resources.GetObject("manHos.Image")));
+            this.manHos.Location = new System.Drawing.Point(103, 149);
+            this.manHos.Name = "manHos";
+            this.manHos.Size = new System.Drawing.Size(67, 63);
+            this.manHos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.manHos.TabIndex = 60;
+            this.manHos.TabStop = false;
+            this.manHos.Click += new System.EventHandler(this.manHos_Click);
+            this.manHos.MouseHover += new System.EventHandler(this.manHos_hover);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 1);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(158, 86);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 38;
+            this.pictureBox1.TabStop = false;
             // 
             // Home
             // 
@@ -128,37 +153,6 @@
             this.Home.Size = new System.Drawing.Size(37, 24);
             this.Home.Text = "home page";
             this.Home.Click += new System.EventHandler(this.Home_Click);
-            // 
-            // settings
-            // 
-            this.settings.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.settings.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.viewToolStripMenuItem,
-            this.toolsToolStripMenuItem,
-            this.editToolStripMenuItem});
-            this.settings.Image = ((System.Drawing.Image)(resources.GetObject("settings.Image")));
-            this.settings.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.settings.Name = "settings";
-            this.settings.Size = new System.Drawing.Size(37, 24);
-            this.settings.Text = "Settings";
-            // 
-            // viewToolStripMenuItem
-            // 
-            this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            this.viewToolStripMenuItem.Size = new System.Drawing.Size(125, 26);
-            this.viewToolStripMenuItem.Text = "view";
-            // 
-            // toolsToolStripMenuItem
-            // 
-            this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
-            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(125, 26);
-            this.toolsToolStripMenuItem.Text = "tools";
-            // 
-            // editToolStripMenuItem
-            // 
-            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(125, 26);
-            this.editToolStripMenuItem.Text = "Edit";
             // 
             // contactus
             // 
@@ -175,7 +169,6 @@
             this.profile.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.profile.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.viewProfileToolStripMenuItem,
-            this.editProfileToolStripMenuItem,
             this.logoutToolStripMenuItem,
             this.removeAccountToolStripMenuItem});
             this.profile.Image = ((System.Drawing.Image)(resources.GetObject("profile.Image")));
@@ -187,25 +180,20 @@
             // viewProfileToolStripMenuItem
             // 
             this.viewProfileToolStripMenuItem.Name = "viewProfileToolStripMenuItem";
-            this.viewProfileToolStripMenuItem.Size = new System.Drawing.Size(204, 26);
+            this.viewProfileToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.viewProfileToolStripMenuItem.Text = "view profile";
-            // 
-            // editProfileToolStripMenuItem
-            // 
-            this.editProfileToolStripMenuItem.Name = "editProfileToolStripMenuItem";
-            this.editProfileToolStripMenuItem.Size = new System.Drawing.Size(204, 26);
-            this.editProfileToolStripMenuItem.Text = "Edit profile";
+            this.viewProfileToolStripMenuItem.Click += new System.EventHandler(this.viewProfileToolStripMenuItem_Click);
             // 
             // logoutToolStripMenuItem
             // 
             this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(204, 26);
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.logoutToolStripMenuItem.Text = "logout";
             // 
             // removeAccountToolStripMenuItem
             // 
             this.removeAccountToolStripMenuItem.Name = "removeAccountToolStripMenuItem";
-            this.removeAccountToolStripMenuItem.Size = new System.Drawing.Size(204, 26);
+            this.removeAccountToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.removeAccountToolStripMenuItem.Text = "Remove Account";
             // 
             // exitprogram
@@ -218,58 +206,27 @@
             this.exitprogram.Text = "exit";
             this.exitprogram.Click += new System.EventHandler(this.exitprogram_Click);
             // 
-            // fireDoc
+            // toolStrip1
             // 
-            this.fireDoc.Image = ((System.Drawing.Image)(resources.GetObject("fireDoc.Image")));
-            this.fireDoc.Location = new System.Drawing.Point(90, 313);
-            this.fireDoc.Name = "fireDoc";
-            this.fireDoc.Size = new System.Drawing.Size(59, 63);
-            this.fireDoc.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.fireDoc.TabIndex = 65;
-            this.fireDoc.TabStop = false;
-            this.fireDoc.Click += new System.EventHandler(this.fireDoc_Click);
-            this.fireDoc.MouseHover += new System.EventHandler(this.fireDoc_hover);
-            // 
-            // addDoc
-            // 
-            this.addDoc.Image = ((System.Drawing.Image)(resources.GetObject("addDoc.Image")));
-            this.addDoc.Location = new System.Drawing.Point(90, 231);
-            this.addDoc.Name = "addDoc";
-            this.addDoc.Size = new System.Drawing.Size(59, 63);
-            this.addDoc.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.addDoc.TabIndex = 63;
-            this.addDoc.TabStop = false;
-            this.addDoc.Click += new System.EventHandler(this.addDoc_Click);
-            this.addDoc.MouseHover += new System.EventHandler(this.adddoc_hover);
-            // 
-            // manHos
-            // 
-            this.manHos.Image = ((System.Drawing.Image)(resources.GetObject("manHos.Image")));
-            this.manHos.Location = new System.Drawing.Point(90, 149);
-            this.manHos.Name = "manHos";
-            this.manHos.Size = new System.Drawing.Size(59, 63);
-            this.manHos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.manHos.TabIndex = 60;
-            this.manHos.TabStop = false;
-            this.manHos.Click += new System.EventHandler(this.manHos_Click);
-            this.manHos.MouseHover += new System.EventHandler(this.manHos_hover);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 1);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(138, 86);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 38;
-            this.pictureBox1.TabStop = false;
+            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.Home,
+            this.contactus,
+            this.profile,
+            this.exitprogram});
+            this.toolStrip1.Location = new System.Drawing.Point(998, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(40, 611);
+            this.toolStrip1.TabIndex = 66;
+            this.toolStrip1.Text = "toolStrip1";
             // 
             // HospitalManager
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(241)))), ((int)(((byte)(232)))));
-            this.ClientSize = new System.Drawing.Size(908, 611);
+            this.ClientSize = new System.Drawing.Size(1038, 611);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.fireDoc);
             this.Controls.Add(this.fireDoclabel);
@@ -283,12 +240,12 @@
             this.Name = "HospitalManager";
             this.Text = "HospitalManager";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ManHos_close);
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fireDoc)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.addDoc)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.manHos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -304,18 +261,13 @@
         private System.Windows.Forms.Label adddoclabel;
         private System.Windows.Forms.PictureBox fireDoc;
         private System.Windows.Forms.Label fireDoclabel;
-        private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton Home;
-        private System.Windows.Forms.ToolStripSplitButton settings;
-        private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem toolsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
         private System.Windows.Forms.ToolStripButton contactus;
         private System.Windows.Forms.ToolStripSplitButton profile;
         private System.Windows.Forms.ToolStripMenuItem viewProfileToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem editProfileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem removeAccountToolStripMenuItem;
         private System.Windows.Forms.ToolStripButton exitprogram;
+        private System.Windows.Forms.ToolStrip toolStrip1;
     }
 }

@@ -58,6 +58,13 @@ namespace HospitalAppointmentSystem
             DoctorAppointments.Refresh();
         }
 
+        private void viewProfileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            YourProfile yp = new YourProfile(this, mainform, _UserID);
+            this.Hide();
+            yp.Show();
+        }
+
         public Doctor_Appointments(Form prevform, Form mainform, int? _UserID)
         {
             InitializeComponent();

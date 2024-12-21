@@ -247,13 +247,29 @@ namespace HospitalAppointmentProject.UML.USERS
         }
         public bool updateYourprofile()
         {
-            string query1 = $"update sysUser set Age = '{_Age}'";
+            string query1 = $"update sysUser set Age = '{_Age}' where userid = {_UserID}";
             int res1 = DataBase.Manager.ExecuteNonQuery(query1);
-            string query2 = $"update sysUser set lastname = '{_Last_Name}'";
+            string query2 = $"update sysUser set lastname = '{_Last_Name}' where userid = {_UserID}";
             int res2 = DataBase.Manager.ExecuteNonQuery(query2);
-            string query3= $"update sysUser set firstname = '{_First_Name}'";
+            string query3= $"update sysUser set firstname = '{_First_Name}' where userid =  {_UserID}";
             int res3 = DataBase.Manager.ExecuteNonQuery(query3);
             return res1 == 0 && res2 == 0 && res3 == 0;
+        }
+        public int  changePassword()
+        {
+            string query = $"update sysUser set userPassword = '{_UserPassword}' where userid = '{_UserID}'";
+            int res = DataBase.Manager.ExecuteNonQuery(query);
+            return res;
+        }
+        public bool checkPassword()
+        {
+            string query = $"select userPassword from sysUser where userid = {_UserID}";
+            DataTable id = DataBase.Manager.ExecuteReader(query);
+            string password = id.Rows[0]["userPassword"].ToString();
+            if (password != _UserPassword)
+                return false;
+            return true;
+
         }
         //add more functions as u need
     }

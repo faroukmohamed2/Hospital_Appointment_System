@@ -60,6 +60,13 @@ namespace HospitalAppointmentSystem
 
         }
 
+        private void viewProfileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            YourProfile yp = new YourProfile(this, mainform, null);
+            this.Hide();
+            yp.Show();
+        }
+
         private void adddoc_hover(object sender, EventArgs e)
         {
             adddoc.Cursor = Cursors.Hand;

@@ -120,7 +120,20 @@ namespace HospitalAppointmentSystem
 
         private void Doctor_Close(object sender, FormClosedEventArgs e)
         {
-            mainform.Close();
+            mainform.Show();
+        }
+
+        private void viewProfileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            YourProfile yp = new YourProfile(this, mainform, _UserID);
+            this.Hide();
+            yp.Show();
+        }
+
+        private void editProfileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            mainform.Show();
+            this.Close();
         }
     }
 }

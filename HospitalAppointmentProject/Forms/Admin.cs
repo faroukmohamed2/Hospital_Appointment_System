@@ -113,14 +113,14 @@ namespace HospitalAppointmentSystem
 
         private void log_Click(object sender, EventArgs e)
         {
-            UserActivities ua = new UserActivities(this, mainform);
+            UserActivities ua = new UserActivities(this, mainform, _UserID);
             this.Hide();
             ua.Show();
         }
 
         private void loglabel_Click(object sender, EventArgs e)
         {
-            UserActivities ua = new UserActivities(this, mainform);
+            UserActivities ua = new UserActivities(this, mainform, _UserID);
             this.Hide();
             ua.Show();
         }
@@ -128,6 +128,13 @@ namespace HospitalAppointmentSystem
         private void reports_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void viewProfileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            YourProfile yp = new YourProfile(this, mainform, _UserID);
+            this.Hide();
+            yp.Show();
         }
     }
 }

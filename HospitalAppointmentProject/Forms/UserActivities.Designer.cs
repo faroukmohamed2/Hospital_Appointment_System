@@ -38,14 +38,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.Home = new System.Windows.Forms.ToolStripButton();
-            this.settings = new System.Windows.Forms.ToolStripSplitButton();
-            this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contactus = new System.Windows.Forms.ToolStripButton();
             this.profile = new System.Windows.Forms.ToolStripSplitButton();
             this.viewProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitprogram = new System.Windows.Forms.ToolStripButton();
             this.startingtime = new System.Windows.Forms.DateTimePicker();
             this.GetActivityForuser = new System.Windows.Forms.Button();
@@ -58,9 +53,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(-4, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(-5, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(138, 86);
+            this.pictureBox1.Size = new System.Drawing.Size(158, 86);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 38;
             this.pictureBox1.TabStop = false;
@@ -68,11 +63,11 @@
             // activityforallusers
             // 
             this.activityforallusers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.activityforallusers.Location = new System.Drawing.Point(265, 49);
+            this.activityforallusers.Location = new System.Drawing.Point(303, 49);
             this.activityforallusers.Name = "activityforallusers";
             this.activityforallusers.RowHeadersWidth = 51;
             this.activityforallusers.RowTemplate.Height = 24;
-            this.activityforallusers.Size = new System.Drawing.Size(507, 300);
+            this.activityforallusers.Size = new System.Drawing.Size(579, 300);
             this.activityforallusers.TabIndex = 39;
             this.activityforallusers.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.activityforallusers_CellContentClick);
             // 
@@ -80,7 +75,7 @@
             // 
             this.FNlabel.AutoSize = true;
             this.FNlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FNlabel.Location = new System.Drawing.Point(33, 136);
+            this.FNlabel.Location = new System.Drawing.Point(38, 136);
             this.FNlabel.Name = "FNlabel";
             this.FNlabel.Size = new System.Drawing.Size(115, 20);
             this.FNlabel.TabIndex = 79;
@@ -89,19 +84,19 @@
             // activityforcertainuser
             // 
             this.activityforcertainuser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.activityforcertainuser.Location = new System.Drawing.Point(265, 465);
+            this.activityforcertainuser.Location = new System.Drawing.Point(303, 465);
             this.activityforcertainuser.Name = "activityforcertainuser";
             this.activityforcertainuser.RowHeadersWidth = 51;
             this.activityforcertainuser.RowTemplate.Height = 24;
-            this.activityforcertainuser.Size = new System.Drawing.Size(507, 145);
+            this.activityforcertainuser.Size = new System.Drawing.Size(579, 145);
             this.activityforcertainuser.TabIndex = 80;
             // 
             // UserIDtextbox
             // 
             this.UserIDtextbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.UserIDtextbox.Location = new System.Drawing.Point(117, 465);
+            this.UserIDtextbox.Location = new System.Drawing.Point(134, 465);
             this.UserIDtextbox.Name = "UserIDtextbox";
-            this.UserIDtextbox.Size = new System.Drawing.Size(111, 24);
+            this.UserIDtextbox.Size = new System.Drawing.Size(127, 22);
             this.UserIDtextbox.TabIndex = 81;
             this.UserIDtextbox.TextChanged += new System.EventHandler(this.UserID_TextChanged);
             // 
@@ -109,7 +104,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(49, 467);
+            this.label1.Location = new System.Drawing.Point(56, 467);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(62, 20);
             this.label1.TabIndex = 82;
@@ -118,9 +113,9 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(10, 435);
+            this.label2.Location = new System.Drawing.Point(11, 435);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(287, 17);
+            this.label2.Size = new System.Drawing.Size(275, 16);
             this.label2.TabIndex = 83;
             this.label2.Text = "Write the userID to see a specific user Activity";
             // 
@@ -130,11 +125,10 @@
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.Home,
-            this.settings,
             this.contactus,
             this.profile,
             this.exitprogram});
-            this.toolStrip1.Location = new System.Drawing.Point(1156, 0);
+            this.toolStrip1.Location = new System.Drawing.Point(1327, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(40, 699);
             this.toolStrip1.TabIndex = 84;
@@ -150,37 +144,6 @@
             this.Home.Text = "home page";
             this.Home.Click += new System.EventHandler(this.Home_Click);
             // 
-            // settings
-            // 
-            this.settings.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.settings.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.viewToolStripMenuItem,
-            this.toolsToolStripMenuItem,
-            this.editToolStripMenuItem});
-            this.settings.Image = ((System.Drawing.Image)(resources.GetObject("settings.Image")));
-            this.settings.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.settings.Name = "settings";
-            this.settings.Size = new System.Drawing.Size(37, 24);
-            this.settings.Text = "Settings";
-            // 
-            // viewToolStripMenuItem
-            // 
-            this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            this.viewToolStripMenuItem.Size = new System.Drawing.Size(125, 26);
-            this.viewToolStripMenuItem.Text = "view";
-            // 
-            // toolsToolStripMenuItem
-            // 
-            this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
-            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(125, 26);
-            this.toolsToolStripMenuItem.Text = "tools";
-            // 
-            // editToolStripMenuItem
-            // 
-            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(125, 26);
-            this.editToolStripMenuItem.Text = "Edit";
-            // 
             // contactus
             // 
             this.contactus.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -195,8 +158,7 @@
             // 
             this.profile.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.profile.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.viewProfileToolStripMenuItem,
-            this.editProfileToolStripMenuItem});
+            this.viewProfileToolStripMenuItem});
             this.profile.Image = ((System.Drawing.Image)(resources.GetObject("profile.Image")));
             this.profile.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.profile.Name = "profile";
@@ -206,14 +168,9 @@
             // viewProfileToolStripMenuItem
             // 
             this.viewProfileToolStripMenuItem.Name = "viewProfileToolStripMenuItem";
-            this.viewProfileToolStripMenuItem.Size = new System.Drawing.Size(170, 26);
+            this.viewProfileToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.viewProfileToolStripMenuItem.Text = "view profile";
-            // 
-            // editProfileToolStripMenuItem
-            // 
-            this.editProfileToolStripMenuItem.Name = "editProfileToolStripMenuItem";
-            this.editProfileToolStripMenuItem.Size = new System.Drawing.Size(170, 26);
-            this.editProfileToolStripMenuItem.Text = "Edit profile";
+            this.viewProfileToolStripMenuItem.Click += new System.EventHandler(this.viewProfileToolStripMenuItem_Click);
             // 
             // exitprogram
             // 
@@ -227,17 +184,17 @@
             // 
             // startingtime
             // 
-            this.startingtime.Location = new System.Drawing.Point(37, 179);
+            this.startingtime.Location = new System.Drawing.Point(42, 179);
             this.startingtime.Name = "startingtime";
-            this.startingtime.Size = new System.Drawing.Size(200, 24);
+            this.startingtime.Size = new System.Drawing.Size(228, 22);
             this.startingtime.TabIndex = 86;
             this.startingtime.ValueChanged += new System.EventHandler(this.startingtime_ValueChanged);
             // 
             // GetActivityForuser
             // 
-            this.GetActivityForuser.Location = new System.Drawing.Point(108, 525);
+            this.GetActivityForuser.Location = new System.Drawing.Point(123, 525);
             this.GetActivityForuser.Name = "GetActivityForuser";
-            this.GetActivityForuser.Size = new System.Drawing.Size(120, 23);
+            this.GetActivityForuser.Size = new System.Drawing.Size(137, 23);
             this.GetActivityForuser.TabIndex = 87;
             this.GetActivityForuser.Text = "Get Activities";
             this.GetActivityForuser.UseVisualStyleBackColor = true;
@@ -245,10 +202,10 @@
             // 
             // UserActivities
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(241)))), ((int)(((byte)(232)))));
-            this.ClientSize = new System.Drawing.Size(1196, 699);
+            this.ClientSize = new System.Drawing.Size(1367, 699);
             this.Controls.Add(this.GetActivityForuser);
             this.Controls.Add(this.startingtime);
             this.Controls.Add(this.toolStrip1);
@@ -284,14 +241,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton Home;
-        private System.Windows.Forms.ToolStripSplitButton settings;
-        private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem toolsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
         private System.Windows.Forms.ToolStripButton contactus;
         private System.Windows.Forms.ToolStripSplitButton profile;
         private System.Windows.Forms.ToolStripMenuItem viewProfileToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem editProfileToolStripMenuItem;
         private System.Windows.Forms.ToolStripButton exitprogram;
         private System.Windows.Forms.DateTimePicker startingtime;
         private System.Windows.Forms.Button GetActivityForuser;

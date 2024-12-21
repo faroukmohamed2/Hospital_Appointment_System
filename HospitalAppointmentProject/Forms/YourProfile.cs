@@ -122,6 +122,11 @@ namespace HospitalAppointmentSystem
             prevform.Show();
         }
 
+        private void removeAccountToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void chpass_Click(object sender, EventArgs e)
         {
             EditProfile ep = new EditProfile(this, mainform, _UserID);

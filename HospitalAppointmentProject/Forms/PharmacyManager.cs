@@ -87,5 +87,12 @@ namespace HospitalAppointmentSystem
             this.Hide();
             med.Show();
         }
+
+        private void viewProfileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            YourProfile yp = new YourProfile(this, mainform, _UserID);
+            this.Hide();
+            yp.Show();
+        }
     }
 }

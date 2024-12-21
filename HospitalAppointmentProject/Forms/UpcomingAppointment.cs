@@ -103,5 +103,12 @@ namespace HospitalAppointmentSystem
             Appointments.Refresh();
             MessageBox.Show("Canceled Successfully");
         }
+
+        private void viewProfileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            YourProfile yp = new YourProfile(this, mainform, userID);
+            this.Hide();
+            yp.Show();
+        }
     }
 }

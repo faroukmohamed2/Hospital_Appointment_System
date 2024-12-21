@@ -52,6 +52,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.chpass = new System.Windows.Forms.Button();
+            this.lgToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uppro)).BeginInit();
@@ -96,6 +97,7 @@
             // 
             this.profile.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.profile.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.lgToolStripMenuItem,
             this.removeAccountToolStripMenuItem});
             this.profile.Image = ((System.Drawing.Image)(resources.GetObject("profile.Image")));
             this.profile.ImageTransparentColor = System.Drawing.Color.Magenta;
@@ -108,6 +110,7 @@
             this.removeAccountToolStripMenuItem.Name = "removeAccountToolStripMenuItem";
             this.removeAccountToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.removeAccountToolStripMenuItem.Text = "Remove Account";
+            this.removeAccountToolStripMenuItem.Click += new System.EventHandler(this.removeAccountToolStripMenuItem_Click);
             // 
             // exitprogram
             // 
@@ -286,6 +289,12 @@
             this.chpass.UseVisualStyleBackColor = true;
             this.chpass.Click += new System.EventHandler(this.chpass_Click);
             // 
+            // lgToolStripMenuItem
+            // 
+            this.lgToolStripMenuItem.Name = "lgToolStripMenuItem";
+            this.lgToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.lgToolStripMenuItem.Text = "Logout";
+            // 
             // YourProfile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -349,5 +358,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button chpass;
+        private System.Windows.Forms.ToolStripMenuItem lgToolStripMenuItem;
     }
 }

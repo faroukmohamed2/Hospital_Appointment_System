@@ -136,6 +136,20 @@ namespace HospitalAppointmentSystem
                 MessageBox.Show("the prescription inserted successfully");
         }
 
+        private void viewProfileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            YourProfile yp = new YourProfile(this, mainform, _UserID);
+            this.Hide();
+            yp.Show();
+        }
+
+        private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            prevform.Close();
+            mainform.Show();
+        }
+
         private void addprelabel_hover(object sender, EventArgs e)
         {
             addprelabel.Cursor = Cursors.Hand;
