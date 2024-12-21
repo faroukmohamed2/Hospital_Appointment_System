@@ -16,12 +16,16 @@ namespace HospitalAppointmentSystem
         Form mainform;
         int? _UserID;
         UML.USERS.Doctor doctor;
+        UML.USERS.sysUser user;
+
         public Doctor(Form mainform, int? userID)
         {
             InitializeComponent();
             this.mainform = mainform;
             _UserID = userID;
             doctor = new UML.USERS.Doctor(userID);
+            user = new UML.USERS.sysUser(_UserID);
+
         }
 
         private void Appoints_hover(object sender, EventArgs e)
@@ -121,6 +125,24 @@ namespace HospitalAppointmentSystem
         private void Doctor_Close(object sender, FormClosedEventArgs e)
         {
             mainform.Close();
+        }
+
+        private void removeAccountToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            mainform.Show();
+        }
+
+        private void removeAccountToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void viewProfileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            YourProfile yp = new YourProfile(this, mainform, _UserID);
+            this.Hide();
+            yp.Show();
         }
     }
 }

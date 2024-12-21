@@ -126,7 +126,7 @@ namespace HospitalAppointmentSystem
         {
             EditProfile ep = new EditProfile(this, mainform, _UserID);
             ep.Show();
-            this.Hide();
+           this.Hide();
         }
     }
 }

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UML = HospitalAppointmentProject.UML;
 
 namespace HospitalAppointmentSystem
 {
@@ -14,11 +15,15 @@ namespace HospitalAppointmentSystem
     {
         Form mainform;
         int? _UserID;
+        UML.USERS.sysUser user;
+
         public PharmacyManager(Form mainform, int? userID)
         {
             InitializeComponent();
             this.mainform = mainform;
             _UserID = userID;
+            user = new UML.USERS.sysUser(_UserID);
+
         }
 
         private void manphlabel_hover(object sender, EventArgs e)
@@ -86,6 +91,24 @@ namespace HospitalAppointmentSystem
             medicines med = new medicines(this, mainform);
             this.Hide();
             med.Show();
+        }
+
+        private void viewProfileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            YourProfile yp = new YourProfile(this, mainform, _UserID);
+            this.Hide();
+            yp.Show();
+        }
+
+        private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            mainform.Show();
+        }
+
+        private void removeAccountToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

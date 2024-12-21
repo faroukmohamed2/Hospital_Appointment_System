@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using HospitalAppointmentProject.UML.USERS;
+using UML = HospitalAppointmentProject.UML;
 
 namespace HospitalAppointmentSystem
 {
@@ -15,11 +16,15 @@ namespace HospitalAppointmentSystem
     {
         Form mainform;
         int? patient_id;
+        UML.USERS.sysUser user;
+
         public Patient(Form mainform, int? patient_id)
         {
             InitializeComponent();
             this.mainform = mainform;
             this.patient_id = patient_id;
+            user = new UML.USERS.sysUser(this.patient_id);
+
         }
 
         private void newAppointmentToolStripMenuItem_Click(object sender, EventArgs e)
@@ -239,6 +244,17 @@ namespace HospitalAppointmentSystem
             YourProfile yp = new YourProfile(this, mainform, patient_id);
             this.Hide();
             yp.Show();
+        }
+
+        private void removeAccountToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void removeAccountToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            mainform.Show();
         }
     }
 }

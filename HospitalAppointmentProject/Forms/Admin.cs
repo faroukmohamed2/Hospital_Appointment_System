@@ -7,18 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using UML = HospitalAppointmentProject.UML;
 namespace HospitalAppointmentSystem
 {
     public partial class Admin : Form
     {
         Form mainform;
         int? _UserID;
+        UML.USERS.sysUser user;
         public Admin(Form mainform, int? _UserID)
         {
             InitializeComponent();
             this.mainform = mainform;
             this._UserID = _UserID;
+            user = new UML.USERS.sysUser(_UserID);
         }
 
         private void modHos_hover(object sender, EventArgs e)
@@ -128,6 +130,24 @@ namespace HospitalAppointmentSystem
         private void reports_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void viewProfileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            YourProfile yp = new YourProfile(this, mainform, _UserID);
+            this.Hide();
+            yp.Show();
+        }
+
+        private void editProfileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            mainform.Show();
+        }
+
+        private void removeAccountToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

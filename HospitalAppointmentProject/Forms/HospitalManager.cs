@@ -4,9 +4,11 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UML = HospitalAppointmentProject.UML;
 
 namespace HospitalAppointmentSystem
 {
@@ -14,11 +16,15 @@ namespace HospitalAppointmentSystem
     {
         Form mainform;
         int? _UserID;
+        UML.USERS.sysUser user;
+
         public HospitalManager(Form mainForm, int? userID)
         {
             InitializeComponent();
             mainform = mainForm;
             _UserID = userID;
+            user = new UML.USERS.sysUser(_UserID);
+
         }
 
         private void manHoslabel_hover(object sender, EventArgs e)
@@ -114,6 +120,24 @@ namespace HospitalAppointmentSystem
         private void ManHos_close(object sender, FormClosedEventArgs e)
         {
             mainform.Close();
+        }
+
+        private void viewProfileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            YourProfile yp = new YourProfile(this, mainform, _UserID);
+            this.Hide();
+            yp.Show();
+        }
+
+        private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            mainform.Show();
+        }
+
+        private void removeAccountToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
