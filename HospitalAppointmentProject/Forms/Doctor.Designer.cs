@@ -29,31 +29,42 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Doctor));
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.Home = new System.Windows.Forms.ToolStripButton();
+            this.settings = new System.Windows.Forms.ToolStripSplitButton();
+            this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contactus = new System.Windows.Forms.ToolStripButton();
             this.profile = new System.Windows.Forms.ToolStripSplitButton();
             this.viewProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.removeAccountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitprogram = new System.Windows.Forms.ToolStripButton();
-            this.greeting = new System.Windows.Forms.Label();
-            this.curApplabel = new System.Windows.Forms.Label();
-            this.addprelabel = new System.Windows.Forms.Label();
-            this.pinfolabel = new System.Windows.Forms.Label();
-            this.feedbacklabel = new System.Windows.Forms.Label();
-            this.feedbacks = new System.Windows.Forms.PictureBox();
-            this.pInfo = new System.Windows.Forms.PictureBox();
-            this.addpre = new System.Windows.Forms.PictureBox();
             this.Appoints = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.toolStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.feedbacks)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pInfo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.addpre)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Appoints)).BeginInit();
+            this.greeting = new System.Windows.Forms.Label();
+            this.curApp = new System.Windows.Forms.Label();
+            this.addappoint = new System.Windows.Forms.PictureBox();
+            this.appointlabel = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.toolStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Appoints)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.addappoint)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(1, -1);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(158, 86);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 36;
+            this.pictureBox1.TabStop = false;
             // 
             // toolStrip1
             // 
@@ -61,6 +72,7 @@
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.Home,
+            this.settings,
             this.contactus,
             this.profile,
             this.exitprogram});
@@ -78,6 +90,37 @@
             this.Home.Name = "Home";
             this.Home.Size = new System.Drawing.Size(37, 24);
             this.Home.Text = "home page";
+            // 
+            // settings
+            // 
+            this.settings.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.settings.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.viewToolStripMenuItem,
+            this.toolsToolStripMenuItem,
+            this.editToolStripMenuItem});
+            this.settings.Image = ((System.Drawing.Image)(resources.GetObject("settings.Image")));
+            this.settings.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.settings.Name = "settings";
+            this.settings.Size = new System.Drawing.Size(37, 24);
+            this.settings.Text = "Settings";
+            // 
+            // viewToolStripMenuItem
+            // 
+            this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
+            this.viewToolStripMenuItem.Size = new System.Drawing.Size(125, 26);
+            this.viewToolStripMenuItem.Text = "view";
+            // 
+            // toolsToolStripMenuItem
+            // 
+            this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
+            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(125, 26);
+            this.toolsToolStripMenuItem.Text = "tools";
+            // 
+            // editToolStripMenuItem
+            // 
+            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(125, 26);
+            this.editToolStripMenuItem.Text = "Edit";
             // 
             // contactus
             // 
@@ -104,16 +147,14 @@
             // viewProfileToolStripMenuItem
             // 
             this.viewProfileToolStripMenuItem.Name = "viewProfileToolStripMenuItem";
-            this.viewProfileToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.viewProfileToolStripMenuItem.Size = new System.Drawing.Size(204, 26);
             this.viewProfileToolStripMenuItem.Text = "view profile";
-            this.viewProfileToolStripMenuItem.Click += new System.EventHandler(this.viewProfileToolStripMenuItem_Click);
             // 
             // editProfileToolStripMenuItem
             // 
             this.editProfileToolStripMenuItem.Name = "editProfileToolStripMenuItem";
-            this.editProfileToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.editProfileToolStripMenuItem.Text = "Logout";
-            this.editProfileToolStripMenuItem.Click += new System.EventHandler(this.editProfileToolStripMenuItem_Click);
+            this.editProfileToolStripMenuItem.Size = new System.Drawing.Size(204, 26);
+            this.editProfileToolStripMenuItem.Text = "Edit profile";
             // 
             // removeAccountToolStripMenuItem
             // 
@@ -129,7 +170,16 @@
             this.exitprogram.Name = "exitprogram";
             this.exitprogram.Size = new System.Drawing.Size(37, 24);
             this.exitprogram.Text = "exit";
-            this.exitprogram.Click += new System.EventHandler(this.exitprogram_Click);
+            // 
+            // Appoints
+            // 
+            this.Appoints.Image = ((System.Drawing.Image)(resources.GetObject("Appoints.Image")));
+            this.Appoints.Location = new System.Drawing.Point(165, 149);
+            this.Appoints.Name = "Appoints";
+            this.Appoints.Size = new System.Drawing.Size(67, 63);
+            this.Appoints.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.Appoints.TabIndex = 52;
+            this.Appoints.TabStop = false;
             // 
             // greeting
             // 
@@ -141,110 +191,55 @@
             this.greeting.TabIndex = 53;
             this.greeting.Text = "Hello";
             // 
-            // curApplabel
+            // curApp
             // 
-            this.curApplabel.AutoSize = true;
-            this.curApplabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.curApplabel.Location = new System.Drawing.Point(238, 171);
-            this.curApplabel.Name = "curApplabel";
-            this.curApplabel.Size = new System.Drawing.Size(184, 22);
-            this.curApplabel.TabIndex = 54;
-            this.curApplabel.Text = "Current Appointments";
-            this.curApplabel.Click += new System.EventHandler(this.curApplabel_Click);
-            this.curApplabel.MouseHover += new System.EventHandler(this.curApplable_hover);
+            this.curApp.AutoSize = true;
+            this.curApp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.curApp.Location = new System.Drawing.Point(238, 171);
+            this.curApp.Name = "curApp";
+            this.curApp.Size = new System.Drawing.Size(184, 22);
+            this.curApp.TabIndex = 54;
+            this.curApp.Text = "Current Appointments";
             // 
-            // addprelabel
+            // addappoint
             // 
-            this.addprelabel.AutoSize = true;
-            this.addprelabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addprelabel.Location = new System.Drawing.Point(238, 252);
-            this.addprelabel.Name = "addprelabel";
-            this.addprelabel.Size = new System.Drawing.Size(146, 22);
-            this.addprelabel.TabIndex = 55;
-            this.addprelabel.Text = "New Prescription";
-            this.addprelabel.Click += new System.EventHandler(this.addprelabel_Click);
-            this.addprelabel.MouseHover += new System.EventHandler(this.addprelabel_hover);
+            this.addappoint.Image = ((System.Drawing.Image)(resources.GetObject("addappoint.Image")));
+            this.addappoint.Location = new System.Drawing.Point(165, 234);
+            this.addappoint.Name = "addappoint";
+            this.addappoint.Size = new System.Drawing.Size(67, 63);
+            this.addappoint.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.addappoint.TabIndex = 56;
+            this.addappoint.TabStop = false;
             // 
-            // pinfolabel
+            // appointlabel
             // 
-            this.pinfolabel.AutoSize = true;
-            this.pinfolabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pinfolabel.Location = new System.Drawing.Point(238, 334);
-            this.pinfolabel.Name = "pinfolabel";
-            this.pinfolabel.Size = new System.Drawing.Size(100, 22);
-            this.pinfolabel.TabIndex = 57;
-            this.pinfolabel.Text = "Patient Info";
-            this.pinfolabel.Click += new System.EventHandler(this.pinfolabel_Click);
-            this.pinfolabel.MouseHover += new System.EventHandler(this.pinfolabel_hover);
+            this.appointlabel.AutoSize = true;
+            this.appointlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.appointlabel.Location = new System.Drawing.Point(238, 252);
+            this.appointlabel.Name = "appointlabel";
+            this.appointlabel.Size = new System.Drawing.Size(146, 22);
+            this.appointlabel.TabIndex = 55;
+            this.appointlabel.Text = "New Prescription";
             // 
-            // feedbacklabel
+            // pictureBox2
             // 
-            this.feedbacklabel.AutoSize = true;
-            this.feedbacklabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.feedbacklabel.Location = new System.Drawing.Point(583, 171);
-            this.feedbacklabel.Name = "feedbacklabel";
-            this.feedbacklabel.Size = new System.Drawing.Size(159, 22);
-            this.feedbacklabel.TabIndex = 59;
-            this.feedbacklabel.Text = "Patient Feedbacks";
-            this.feedbacklabel.MouseHover += new System.EventHandler(this.feedbackslabel_hover);
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(165, 316);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(67, 63);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox2.TabIndex = 58;
+            this.pictureBox2.TabStop = false;
             // 
-            // feedbacks
+            // label1
             // 
-            this.feedbacks.Image = ((System.Drawing.Image)(resources.GetObject("feedbacks.Image")));
-            this.feedbacks.Location = new System.Drawing.Point(510, 153);
-            this.feedbacks.Name = "feedbacks";
-            this.feedbacks.Size = new System.Drawing.Size(67, 63);
-            this.feedbacks.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.feedbacks.TabIndex = 60;
-            this.feedbacks.TabStop = false;
-            this.feedbacks.Click += new System.EventHandler(this.feedbacks_Click);
-            this.feedbacks.MouseHover += new System.EventHandler(this.feedbacks_hover);
-            // 
-            // pInfo
-            // 
-            this.pInfo.Image = ((System.Drawing.Image)(resources.GetObject("pInfo.Image")));
-            this.pInfo.Location = new System.Drawing.Point(165, 316);
-            this.pInfo.Name = "pInfo";
-            this.pInfo.Size = new System.Drawing.Size(67, 63);
-            this.pInfo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pInfo.TabIndex = 58;
-            this.pInfo.TabStop = false;
-            this.pInfo.Click += new System.EventHandler(this.pInfo_Click);
-            this.pInfo.MouseHover += new System.EventHandler(this.pInfo_hover);
-            // 
-            // addpre
-            // 
-            this.addpre.Image = ((System.Drawing.Image)(resources.GetObject("addpre.Image")));
-            this.addpre.Location = new System.Drawing.Point(165, 234);
-            this.addpre.Name = "addpre";
-            this.addpre.Size = new System.Drawing.Size(67, 63);
-            this.addpre.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.addpre.TabIndex = 56;
-            this.addpre.TabStop = false;
-            this.addpre.Click += new System.EventHandler(this.addpre_Click);
-            this.addpre.MouseHover += new System.EventHandler(this.addpre_hover);
-            // 
-            // Appoints
-            // 
-            this.Appoints.Image = ((System.Drawing.Image)(resources.GetObject("Appoints.Image")));
-            this.Appoints.Location = new System.Drawing.Point(165, 149);
-            this.Appoints.Name = "Appoints";
-            this.Appoints.Size = new System.Drawing.Size(67, 63);
-            this.Appoints.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.Appoints.TabIndex = 52;
-            this.Appoints.TabStop = false;
-            this.Appoints.Click += new System.EventHandler(this.Appoints_Click);
-            this.Appoints.MouseHover += new System.EventHandler(this.Appoints_hover);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1, -1);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(158, 86);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 36;
-            this.pictureBox1.TabStop = false;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(238, 334);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(100, 22);
+            this.label1.TabIndex = 57;
+            this.label1.Text = "Patient Info";
             // 
             // Doctor
             // 
@@ -252,13 +247,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(241)))), ((int)(((byte)(232)))));
             this.ClientSize = new System.Drawing.Size(990, 476);
-            this.Controls.Add(this.feedbacks);
-            this.Controls.Add(this.feedbacklabel);
-            this.Controls.Add(this.pInfo);
-            this.Controls.Add(this.pinfolabel);
-            this.Controls.Add(this.addpre);
-            this.Controls.Add(this.addprelabel);
-            this.Controls.Add(this.curApplabel);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.addappoint);
+            this.Controls.Add(this.appointlabel);
+            this.Controls.Add(this.curApp);
             this.Controls.Add(this.greeting);
             this.Controls.Add(this.Appoints);
             this.Controls.Add(this.toolStrip1);
@@ -266,14 +259,12 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Doctor";
             this.Text = "Doctor";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Doctor_Close);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.feedbacks)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pInfo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.addpre)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Appoints)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.addappoint)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -284,6 +275,10 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton Home;
+        private System.Windows.Forms.ToolStripSplitButton settings;
+        private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
         private System.Windows.Forms.ToolStripButton contactus;
         private System.Windows.Forms.ToolStripSplitButton profile;
         private System.Windows.Forms.ToolStripMenuItem viewProfileToolStripMenuItem;
@@ -292,12 +287,10 @@
         private System.Windows.Forms.ToolStripButton exitprogram;
         private System.Windows.Forms.PictureBox Appoints;
         private System.Windows.Forms.Label greeting;
-        private System.Windows.Forms.Label curApplabel;
-        private System.Windows.Forms.PictureBox addpre;
-        private System.Windows.Forms.Label addprelabel;
-        private System.Windows.Forms.PictureBox pInfo;
-        private System.Windows.Forms.Label pinfolabel;
-        private System.Windows.Forms.PictureBox feedbacks;
-        private System.Windows.Forms.Label feedbacklabel;
+        private System.Windows.Forms.Label curApp;
+        private System.Windows.Forms.PictureBox addappoint;
+        private System.Windows.Forms.Label appointlabel;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label1;
     }
 }

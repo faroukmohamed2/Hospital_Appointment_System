@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace HospitalAppointmentSystem
 {
-    public partial class PateintsFeedbacks : Form
+    public partial class Medicla_History : Form
     {
-        public PateintsFeedbacks()
+        public Medicla_History()
         {
             InitializeComponent();
         }
