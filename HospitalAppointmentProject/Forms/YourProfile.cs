@@ -99,9 +99,34 @@ namespace HospitalAppointmentSystem
             user.Age = ag;
         }
 
+        private void exitprogram_Click(object sender, EventArgs e)
+        {
+            mainform.Close();
+        }
+
+        private void Home_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            prevform.Show();
+        }
+
+        private void contactus_Click(object sender, EventArgs e)
+        {
+            ContactUs cu = new ContactUs(this, mainform);
+            this.Hide();
+            cu.Show();
+        }
+
+        private void your_profileclose(object sender, FormClosedEventArgs e)
+        {
+            prevform.Show();
+        }
+
         private void chpass_Click(object sender, EventArgs e)
         {
-
+            EditProfile ep = new EditProfile(this, mainform, _UserID);
+            ep.Show();
+            this.Hide();
         }
     }
 }
