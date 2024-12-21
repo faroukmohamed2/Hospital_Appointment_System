@@ -83,6 +83,8 @@ namespace HospitalAppointmentProject.UML.USERS
                 if (value.HasValue && value < 0)
                     throw new ArgumentException("Age cannot be negative.");
                 _Age = value;
+
+
             }
         }
 
@@ -113,6 +115,7 @@ namespace HospitalAppointmentProject.UML.USERS
             {
                 // Add validation or query
                 _First_Name = value;
+   
             }
         }
         public string Last_Name
@@ -120,12 +123,15 @@ namespace HospitalAppointmentProject.UML.USERS
             get
             {
                 // Add query or logic
+
                 return _Last_Name;
             }
             set
             {
                 // Add validation or query
                 _Last_Name = value;
+
+         
             }
         }
 
@@ -232,7 +238,23 @@ namespace HospitalAppointmentProject.UML.USERS
                 return 0;
             return 1;
         }
-
+        public DataTable getusreinfo()
+        {
+            string query = $"Select firstName, LastName, Age, Email from sysUser where userid = {_UserID}";
+            DataTable dt = DataBase.Manager.ExecuteReader(query);
+            return dt;
+                
+        }
+        public bool updateYourprofile()
+        {
+            string query1 = $"update sysUser set Age = '{_Age}'";
+            int res1 = DataBase.Manager.ExecuteNonQuery(query1);
+            string query2 = $"update sysUser set lastname = '{_Last_Name}'";
+            int res2 = DataBase.Manager.ExecuteNonQuery(query2);
+            string query3= $"update sysUser set firstname = '{_First_Name}'";
+            int res3 = DataBase.Manager.ExecuteNonQuery(query3);
+            return res1 == 0 && res2 == 0 && res3 == 0;
+        }
         //add more functions as u need
     }
 }
